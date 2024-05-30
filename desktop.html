@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop</title>
+    <link rel="stylesheet" href="dashbord.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="w-full h-screen">
+      <div class="dashboard w-full h-full bg-no-repeat relative">
+        <div
+          class="navbar flex items-center justify-end gap-8 p-2 md:p-4 lg:p-3"
+        >
+          <i class="ri-search-line text-white text-2xl"></i>
+          <i
+            id="notification-icon"
+            class="ri-notification-line text-white text-2xl"
+          ></i>
+          <i class="ri-wifi-line text-white text-2xl"></i>
+          <i class="ri-volume-up-line text-white text-2xl"></i>
+          <i class="ri-battery-fill text-white text-2xl"></i>
+        </div>
+        <div class="clock text-center" id="clock"></div>
+        <div class="sidebar w-16 h-max p-1 rounded-lg">
+          <img class="mb-1" src="/images/Dairy.png" alt="Dairy" />
+          <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
+          <img class="mb-1" src="/images/Appstore.png" alt="Appstore" />
+          <img class="mb-1" src="/images/EmptyBin.png" alt="EmptyBin" />
+        </div>
+        <div id="notification" class="Notification w-56 h-48 rounded-lg hidden">
+          <div class="border-b-2 p-5 text-center">
+            <h1 class="text-normal">Notification Center</h1>
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <p>Empty</p>
+          </div>
+        </div>
+        <div id="administrator" class="Administrator h-max rounded-md hidden">
+          <div class="flex items-center gap-2 p-5">
+            <div class="logo">
+              <img class="w-16" src="/images/profile.png" alt="user image" />
+            </div>
+            <div class="user-info">
+              <h1 class="text-lg underline decoration-yellow-700">
+                Administrator
+              </h1>
+              <h4 class="text-sm">Username</h4>
+            </div>
+          </div>
+          <div class="bottom border-t-2 border-slate-400">
+            <div class="features-list p-5">
+              <ul>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-folder-line"></i>
+                  <a href="#">File manage</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-bar-chart-fill"></i>
+                  <a href="#">Backend</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-user-line"></i>
+                  <a href="#">User manage</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-apps-fill"></i>
+                  <a href="#">Plugin</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-global-line"></i>
+                  <a href="#">Language</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-fullscreen-line"></i>
+                  <a href="#">Full screen</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-information-fill"></i>
+                  <a href="#">About</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-download-line"></i>
+                  <a href="#">Downloads</a>
+                </li>
+                <li class="flex items-center gap-5 mb-4">
+                  <i class="ri-mail-line"></i>
+                  <a href="#">Free edition</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="tooltip" class="tooltip bubble-bottom-left">
+          <div class="bubble">
+            <div class="bubble-content">
+              <h1>Hello!</h1>
+              <p>What are you looking for? &#128522;</p>
+            </div>
+          </div>
+        </div>
+        <footer
+          class="fixed bottom-0 flex items-center justify-between w-full px-5"
+        >
+          <button
+            id="footerButton"
+            class="text-black px-4 py-3 rounded-md hover:bg-black hover:text-white"
+          >
+            File
+          </button>
+          <img
+            id="footer-logo"
+            class="w-12 h-12"
+            src="/images/logo.png"
+            alt="Logo"
+          />
+        </footer>
+        <div class="desktop-sidebar absolute top-0 left-0 w-1/4 lg:w-1/6">
+          <div class="desktop-logo h-20 px-10 py-3">
+            <img class="w-12 h-12" src="/images/logo.png" alt="Logo" />
+          </div>
+          <div class="sidebar-content w-full bg-no-repeat bg-cover bg-center">
+            <div class="px-10 pt-8">
+              <h1 class="text-base">Favourites</h1>
+            </div>
+            <nav class="mt-2">
+              <ul class="grid gap-2">
+                <li>
+                  <a id="link-desktop"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    href="desktop.html"
+                  >
+                    <span class="text-base font-normal px-10">Desktop</span>
+                  </a>
+                </li>
+                <li>
+                  <a id="link-recent"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    href="Recent.html"
+                  >
+                    <span class="text-base font-normal px-10"> Recent </span>
+                  </a>
+                </li>
+                <li>
+                  <a id="link-downloads"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    href="downloads.html"
+                  >
+                    <span class="text-base font-normal px-10"> Downloads </span>
+                  </a>
+                </li>
+                <li>
+                  <a id="link-filemanager"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    href="filemanager.html"
+                  >
+                    <span class="text-base font-normal px-10"> File </span>
+                  </a>
+                </li>
+                <li>
+                  <a id="link-documents"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    href="documents.html"
+                  >
+                    <span class="text-base font-normal px-10"> Documents </span>
+                  </a>
+                </li>
+                <li>
+                  <a  id="link-applications"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    href="applications.html"
+                  >
+                    <span class="text-base font-normal px-10">
+                      Applications
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function updateClock() {
+        const clock = document.getElementById("clock");
+        const now = new Date();
+
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+
+        const days = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        const day = days[now.getDay()];
+        const month = months[now.getMonth()];
+        const date = now.getDate();
+
+        const timeString = `${hours}:${minutes}`;
+        const dateString = `${day}, ${month} ${date}`;
+
+        clock.innerHTML = `<div class="time text-white text-5xl font-medium">${timeString}</div><div class="date font-medium">${dateString}</div>`;
+      }
+
+      updateClock();
+      setInterval(updateClock, 60000);
+
+      document
+        .getElementById("notification-icon")
+        .addEventListener("click", function () {
+          const notificationDiv = document.getElementById("notification");
+          notificationDiv.classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("footer-logo")
+        .addEventListener("click", function () {
+          const administratorDiv = document.getElementById("administrator");
+          administratorDiv.classList.toggle("hidden");
+        });
+
+      const footerButton = document.getElementById("footerButton");
+      const tooltip = document.getElementById("tooltip");
+
+      footerButton.addEventListener("mouseenter", function () {
+        tooltip.style.display = "block";
+      });
+
+      footerButton.addEventListener("mouseleave", function () {
+        tooltip.style.display = "none";
+      });
+
+
+       document.addEventListener("DOMContentLoaded", () => {
+        const links = {
+          'desktop.html': 'link-desktop',
+          'Recent.html': 'link-recent',
+          'downloads.html': 'link-downloads',
+          'filemanager.html': 'link-filemanager',
+          'documents.html': 'link-documents',
+          'applications.html': 'link-applications'
+        };
+
+        const currentPage = window.location.pathname.split('/').pop();
+
+        const activeLinkId = links[currentPage];
+        if (activeLinkId) {
+          const activeLink = document.getElementById(activeLinkId);
+          if (activeLink) {
+            activeLink.classList.add('bg-black', 'text-orange-500', 'font-semibold');
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
