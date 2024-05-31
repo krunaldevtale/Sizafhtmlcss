@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Light App</title>
     <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="Lightapp.css" />
+     <link rel="stylesheet" href="root.css">
   </head>
   <body>
     <div class="lightapp w-full h-screen">
@@ -316,11 +317,9 @@
                 >
                   <div class="p-4 md:p-5 text-center">
                     <div
-                      class="delete-header flex items-center gap-4 border-b-2"
+                      class="delete-header flex items-center gap-2 border-b-2"
                     >
-                      <i
-                        class="ri-delete-bin-6-line text-yellow-400 text-2xl"
-                      ></i>
+                     <i class="fa-regular fa-trash-can" style="color: #FFD43B;"></i>
                       <h1 class="font-medium">Delete File</h1>
                     </div>
                     <div class="mt-4 flex items-center justify-center">
@@ -330,11 +329,12 @@
                     </div>
                     <div class="flex items-center justify-center gap-3 mt-6">
                       <button
-                        class="bg-black text-white px-14 py-2 rounded-full"
+                        type="submit"
+                        style="background-color: black; color: white; padding: 9px 64px; border-radius: 50px;"
                       >
                         OK
                       </button>
-                      <button
+                      <button data-modal-hide="popup-modal"
                         class="bg-white text-yellow-300 px-12 py-2 rounded-full border border-yellow-300"
                       >
                         Cancel
@@ -413,16 +413,16 @@
                 </div>
                 <h1 class="font-medium">${item.name}</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="flex items-center justify-between gap-5 text-yellow-300 rounded-md text-lg py-2 px-8" type="button">Add <i class="text-white ri-arrow-down-s-line"></i>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="flex items-center justify-between gap-5 text-yellow-300 rounded-md text-lg py-2 px-8" type="button"><a href="https://www.google.com/">Add</a> <i class="fa-solid fa-chevron-down text-white"></i>
                     </button>
 
                     <div id="dropdown${item.id}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button data-modal-target="Edit-modal${item.id}" data-modal-toggle="Edit-modal${item.id}" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex gap-2"><i class="ri-edit-box-line"></i>Edit</button>
+                            <button data-modal-target="Edit-modal${item.id}" data-modal-toggle="Edit-modal${item.id}" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Edit</button>
                           </li>
                           <li>
-                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex gap-2"><i class="ri-delete-bin-6-line"></i>Delete</a>
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-trash-can"></i>Delete</a>
                           </li>
                         </ul>
                     </div>

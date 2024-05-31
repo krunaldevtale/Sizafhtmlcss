@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugin</title>
+    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Plugin.css" />
+     <link rel="stylesheet" href="root.css">
+  </head>
+  <body>
+    <div class="plugin w-full h-screen">
+      <div class="plugin-container w-full flex">
+        <div class="plugin-sidebar h-full w-1/4 md:1/4 lg:w-1/6 bg-no-repeat bg-cover bg-center">
+          <div class="plugin-logo px-9 py-7">
+            <img class="w-16 h-16" src="/images/logo.png" alt="logo" />
+          </div>
+          <nav>
+            <ul class="grid">
+              <li>
+                <a class="flex items-center rounded-r-md py-3 bg-black text-sm hover:bg-black" href="#">
+                  <span id="All" class="text-base font-normal px-10">All</span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> Installed </span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#" >
+                  <span class="text-base font-normal px-10"> Update </span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm ransition-colors hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> Enterprise </span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> File </span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> Security </span>
+                </a>
+              </li>
+              <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> Utilities </span>
+                </a>
+              </li>
+               <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> Media </span>
+                </a>
+              </li>
+               <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> Others </span>
+                </a>
+              </li>
+               <li>
+                <a class="flex items-center rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                  <span class="text-base font-normal px-10"> Customization </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="right-container h-full w-3/4 md:3/4 lg:w-5/6 bg-no-repeat bg-cover" >
+          <div class="plugin-header w-full h-28">
+            <div class="flex items-center py-3 px-6">
+              <h1 class="text-base font-medium mb-2">Plugin</h1>
+            </div>
+            <div class="plugin-yellowbar w-full h-12 bg-no-repeat bg-cover bg-center flex items-center justify-between px-7" >
+              <span class="text-base font-medium">All</span>
+              <span class="relative">
+                 <input
+                  class="py-1 px-6 outline-none rounded-sm border-none"
+                  type="search"
+                  placeholder="Search"
+                />
+                <i id="searchicon" class="fa-solid fa-magnifying-glass absolute right-3 top-2"></i>
+              </span>
+            </div>
+          </div>
+          <div class="plugin-content flex gap-10 flex-wrap p-5">
+        
+          </div>
+        </div>
+      </div>
+      <footer class="w-full h-14 flex items-center justify-between px-9">
+        <button
+          id="footerButton"
+          class="text-black px-4 py-3 rounded-md hover:bg-black hover:text-white"
+        >
+          File
+        </button>
+        <img
+          id="footer-logo"
+          class="w-10 h-10"
+          src="/images/logo.png"
+          alt="Logo"
+        />
+      </footer>
+    </div>
+
+    <script>
+      //Dynamically added the containers
+      const container = document.querySelector(".plugin-content");
+      const data = [
+        { id: 1, name: "Office", image: "/images/OfficeImg.png" },
+        { id: 2, name: "WebDAV Mount", image: "/images/WebdavImg.png" },
+        { id: 3, name: "Internet access", image: "/images/internetaccessImg.png" },
+        { id: 4, name: "Picasa Viewer", image: "/images/Picasa.png" },
+        { id: 5, name: "Minder Diagram", image: "/images/MinderImg.png" },
+      ];
+
+      data.forEach((item) => {
+        const smallContainer = document.createElement("div");
+        smallContainer.id = `${item.id}`;
+        smallContainer.className =
+          "small-container w-48 h-56 rounded-lg flex flex-col items-center justify-center gap-5";
+
+        smallContainer.innerHTML = `
+                <div class="img-container w-16 h-16 rounded-lg bg-white shadow-black flex items-center justify-center">
+                    <img class="w-10 h-10" src="${item.image}" alt="${item.name} Image">
+                </div>
+                <h1 class="font-medium">${item.name}</h1>
+                <div> 
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="dropdown-button flex items-center justify-between gap-2 text-yellow-300 rounded-md text-lg py-2 px-8 w-min" type="button">Enable<i class="fa-solid fa-chevron-down fa-sm" style="color: #ffffff;"></i>
+                    </button>
+
+                    <div id="dropdown${item.id}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                          <li>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Update</button>
+                          </li>
+                          <li>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-trash-can"></i>Manual update</a>
+                          </li>
+                           <li>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Configure</a>
+                          </li>
+                           <li>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-trash-can"></i>Disable</a>
+                          </li>
+                           <li>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Uninstall</a>
+                          </li>
+                            <li>
+                          <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Enable</button>
+                      </li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+        container.appendChild(smallContainer);
+       const dropdownButton = smallContainer.querySelector('.dropdown-button');
+        const dropdownMenu = smallContainer.querySelector(`#dropdown${item.id}`);
+        const dropdownItems = smallContainer.querySelectorAll('.dropdown-item');
+
+     
+
+        dropdownItems.forEach(dropdownItem => {
+          dropdownItem.addEventListener('click', function() {
+            dropdownButton.innerHTML = this.textContent + '<i class="text-white ri-arrow-down-s-line"></i>';
+            dropdownMenu.classList.add('hidden');
+          });
+        });
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>

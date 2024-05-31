@@ -37,62 +37,91 @@
   display: none;
 }
 
-.dashboard .tooltip{
-    position: absolute;
-    width: 200px;
-    height: 150px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #ffc400;
-    bottom: 60px;
-    z-index: 999;
-    display: none;
+.dashboard .tooltip {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #ffc400;
+  bottom: 60px;
+  z-index: 999;
+  display: none;
 }
 
-
-.bubble-bottom-left:before{
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 24px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 12px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-bottom-right-radius: 90%;
-    left: 40px;
-    bottom: -5px;
-    background-color: #ffc400;
-
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 24px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-bottom-right-radius: 90%;
+  left: 40px;
+  bottom: -5px;
+  background-color: #ffc400;
 }
 
-.bubble-content{
+.bubble-content {
   padding: 30px;
 }
 
-.bubble-content h1{
+.bubble-content h1 {
   font-size: 2vw;
   font-weight: 500;
 }
 
-.bubble-content p{
+.bubble-content p {
   font-size: 1vw;
 }
 
-footer{
+footer {
   background-color: rgba(255, 255, 255, 0.648);
   height: 60px;
 }
 
-.desktop-sidebar{
+.desktop-sidebar {
   height: calc(100% - 60px);
 }
 
-.sidebar-content{
+.sidebar-content {
   height: calc(100% - 80px);
   background-image: url("/images/Rectanglebg.png");
 }
 
-.desktop-apps{
+.desktop-apps {
   height: calc(100% - 108px);
+}
+
+.context-menu {
+  position: absolute;
+  z-index: 1000;
+  width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.context-menu ul li {
+  padding: 0px 0;
+}
+.context-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px 10px;
+}
+.context-menu ul li a:hover {
+ background: #FDCF01;
+}
+.hidden {
+  display: none;
 }

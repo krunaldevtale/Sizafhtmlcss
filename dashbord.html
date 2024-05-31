@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-  
-    <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="dashbord.css" />
+    <link rel="stylesheet" href="root.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-      <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
@@ -22,22 +20,42 @@
   <body>
     <div class="w-full h-screen">
       <div class="dashboard w-full h-full bg-no-repeat">
-        <div class="navbar h-12 md:h-16 lg:h-12 pr-5 flex items-center justify-end gap-8 ">
-          <i class="ri-search-line text-white text-2xl"></i>
-          <i id="notification-icon" class="ri-notification-line text-white text-2xl"></i>
-          <i class="ri-wifi-line text-white text-2xl"></i>
-          <i class="ri-volume-up-line text-white text-2xl"></i>
-          <i class="ri-battery-fill text-white text-2xl"></i>
+        <div id="context-menu" class="context-menu hidden">
+          <ul>
+            <li><a href="#">Refresh</a></li>
+            <li><a href="#">Upload File</a></li>
+            <hr>
+            <li><a href="#">New Folder</a></li>
+            <li><a href="#">New File</a></li>
+            <li><a href="#">Sort by</a></li>
+            <li><a href="#">Icon size</a></li>
+            <li><a href="#">Attribute</a></li>
+            <li><a href="#">More</a></li>
+            <li><a href="#">Light app</a></li>
+            <li><a href="#">Wallpaper</a></li>
+            <li><a href="#">Personal</a></li>
+          </ul>
         </div>
-        <div class="desktop-apps w-0 gap-5 flex flex-col flex-wrap p-5">
-        
+        <div
+          class="navbar h-12 md:h-16 lg:h-12 pr-5 flex items-center justify-end gap-8"
+        >
+          <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
+          <i
+            id="notification-icon"
+            class="fa-regular fa-bell"
+            style="color: #ffffff"
+          ></i>
+          <i class="fa-solid fa-wifi" style="color: #ffffff"></i>
+          <i class="fa-solid fa-volume-high" style="color: #ffffff"></i>
+          <i class="fa-solid fa-battery-half" style="color: #ffffff"></i>
         </div>
-        <div class="clock text-center" id="clock"></div>
-        <div class="sidebar w-16 h-max p-1 rounded-lg">
-          <img class="mb-1" src="/images/Dairy.png" alt="Dairy" />
+        <div class="desktop-apps w-0 gap-5 flex flex-col flex-wrap p-5"></div>
+        <div class="clock flex flex-col items-center" id="clock"></div>
+        <div class="sidebar w-16 h-max p-1 rounded-3xl">
+          <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
           <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
           <img class="mb-1" src="/images/Appstore.png" alt="Appstore" />
-          <img class="mb-1" src="/images/EmptyBin.png" alt="EmptyBin" />
+          <img class="mb-4" src="/images/EmptyBin.png" alt="EmptyBin" />
         </div>
         <div id="notification" class="Notification w-56 h-48 rounded-lg hidden">
           <div class="border-b-2 p-5 text-center">
@@ -63,15 +81,15 @@
             <div class="features-list p-5">
               <ul>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-folder-line"></i>
+                  <i class="fa-solid fa-folder" style="color: #454040"></i>
                   <a href="#">File manage</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-bar-chart-fill"></i>
+                  <i class="fa-solid fa-chart-simple"></i>
                   <a href="#">Backend</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-user-line"></i>
+                  <i class="fa-solid fa-user"></i>
                   <a href="#">User manage</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
@@ -79,23 +97,23 @@
                   <a href="#">Plugin</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-global-line"></i>
+                  <i class="fa-solid fa-globe"></i>
                   <a href="#">Language</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-fullscreen-line"></i>
+                  <i class="fa-solid fa-expand"></i>
                   <a href="#">Full screen</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-information-fill"></i>
+                  <i class="fa-solid fa-circle-info"></i>
                   <a href="#">About</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-download-line"></i>
+                  <i class="fa-solid fa-download"></i>
                   <a href="#">Downloads</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-mail-line"></i>
+                  <i class="fa-regular fa-envelope"></i>
                   <a href="#">Free edition</a>
                 </li>
               </ul>
@@ -130,6 +148,44 @@
     </div>
 
     <script>
+     document.addEventListener("DOMContentLoaded", function () {
+      const contextMenu = document.getElementById("context-menu");
+      const dashboard = document.querySelector(".dashboard");
+
+      dashboard.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+
+        const dashboardRect = dashboard.getBoundingClientRect();
+        const menuWidth = contextMenu.offsetWidth;
+        const menuHeight = contextMenu.offsetHeight;
+        let top = e.clientY;
+        let left = e.clientX;
+
+        if (e.clientY + menuHeight > dashboardRect.bottom) {
+          top = dashboardRect.bottom - menuHeight - 10;
+        }
+        if (e.clientX + menuWidth > dashboardRect.right) {
+          left = dashboardRect.right - menuWidth - 10;
+        }
+
+        if (top < dashboardRect.top) {
+          top = dashboardRect.top + 10;
+        }
+        if (left < dashboardRect.left) {
+          left = dashboardRect.left + 10;
+        }
+
+        contextMenu.style.top = `${top}px`;
+        contextMenu.style.left = `${left}px`;
+        contextMenu.classList.remove("hidden");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!contextMenu.contains(e.target)) {
+          contextMenu.classList.add("hidden");
+        }
+      });
+    });
       function updateClock() {
         const clock = document.getElementById("clock");
         const now = new Date();
@@ -200,74 +256,84 @@
 
       const container = document.querySelector(".desktop-apps");
       const Desktopapps = [
-    {
-        "id":1,
-        "name":"Operation log",
-        "image":"/images/operationotes.png",
-        "url":""
-      },{
-        "id":2,
-        "name":"Light App",
-        "image":"/images/lightapp.png",
-        "url":""
-      },{
-        "id":3,
-        "name":"My Albums",
-        "image":"/images/album.png",
-        "url":""
-      },{
-        "id":4,
-        "name":"Excel",
-        "image":"/images/xlsx.png",
-        "url":"https://snappy.sizaf.com/example/editor?fileName=new.xlsx&userid=uid-1&lang=en&directUrl=false"
-      },{
-        "id":5,
-        "name":"PPT",
-        "image":"/images/pptx.png",
-        "url":"https://snappy.sizaf.com/example/editor?fileName=new.pptx&userid=uid-1&lang=en&directUrl=false"
-      },{
-        "id":6,
-        "name":"Help",
-        "image":"/images/about.png",
-        "url":""
-      },{
-        "id":7,
-        "name":"iCloud",
-        "image":"/images/icloud.png",
-        "url":"https://www.icloud.com"
-      },{
-        "id":8,
-        "name":"Dots ERP",
-        "image":"/images/ERPNext.png",
-        "url":"http://erp.sizaf.com/app"
-      },{
-        "id":9,
-        "name":"Dots Chat",
-        "image":"/images/logo-dots-chat.png",
-        "url":"https://zulip.sizaf.com/"
-      },{
-        "id":10,
-        "name":"Word",
-        "image":"/images/docx.png",
-        "url":"https://snappy.sizaf.com/example/editor?fileName=new.docx&userid=uid-1&lang=en&directUrl=false"
-      },{
-         "id":11,
-        "name":"Open Social App",
-        "image":"/images/opensociallogo.png",
-        "url":"https://social.sizaf.com/html/user/login"
-      }
-    ]
+        {
+          id: 1,
+          name: "Operation log",
+          image: "/images/operationotes.png",
+          url: "",
+        },
+        {
+          id: 2,
+          name: "Light App",
+          image: "/images/lightapp.png",
+          url: "",
+        },
+        {
+          id: 3,
+          name: "My Albums",
+          image: "/images/album.png",
+          url: "",
+        },
+        {
+          id: 4,
+          name: "Excel",
+          image: "/images/xlsx.png",
+          url: "https://snappy.sizaf.com/example/editor?fileName=new.xlsx&userid=uid-1&lang=en&directUrl=false",
+        },
+        {
+          id: 5,
+          name: "PPT",
+          image: "/images/pptx.png",
+          url: "https://snappy.sizaf.com/example/editor?fileName=new.pptx&userid=uid-1&lang=en&directUrl=false",
+        },
+        {
+          id: 6,
+          name: "Help",
+          image: "/images/about.png",
+          url: "",
+        },
+        {
+          id: 7,
+          name: "iCloud",
+          image: "/images/icloud.png",
+          url: "https://www.icloud.com",
+        },
+        {
+          id: 8,
+          name: "Dots ERP",
+          image: "/images/ERPNext.png",
+          url: "http://erp.sizaf.com/app",
+        },
+        {
+          id: 9,
+          name: "Dots Chat",
+          image: "/images/logo-dots-chat.png",
+          url: "https://zulip.sizaf.com/",
+        },
+        {
+          id: 10,
+          name: "Word",
+          image: "/images/docx.png",
+          url: "https://snappy.sizaf.com/example/editor?fileName=new.docx&userid=uid-1&lang=en&directUrl=false",
+        },
+        {
+          id: 11,
+          name: "Open Social App",
+          image: "/images/opensociallogo.png",
+          url: "https://social.sizaf.com/html/user/login",
+        },
+      ];
 
-  Desktopapps.forEach(app => {
-      const appDiv = document.createElement('div');
-      appDiv.className = 'w-20 h-24 flex flex-col items-center cursor-pointer text-center';
-      appDiv.innerHTML = `
+      Desktopapps.forEach((app) => {
+        const appDiv = document.createElement("div");
+        appDiv.className =
+          "w-20 h-24 flex flex-col items-center cursor-pointer text-center";
+        appDiv.innerHTML = `
         <img class="w-16 h-16" src="${app.image}" alt="${app.name}" />
         <h2 class="text-white text-md">${app.name}</h2>
       `;
-      container.appendChild(appDiv);
-    });
-      
+        container.appendChild(appDiv);
+      });
     </script>
   </body>
 </html>
