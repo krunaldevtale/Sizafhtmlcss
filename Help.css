@@ -1,3 +1,20 @@
 .help-page{
     height: calc(100vh - 56px);
 }
+
+.username{
+    text-decoration-color: #FDCF01;
+}
+
+.submit-btn{
+    border-radius: 30px;
+    background-color:  #282828;;
+}
+
+footer{
+    background-image: url(/images/Wallpaper.png), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+      background-blend-mode: lighten;
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

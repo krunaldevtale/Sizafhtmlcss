@@ -24,7 +24,7 @@
           <ul>
             <li><a href="#">Refresh</a></li>
             <li><a href="#">Upload File</a></li>
-            <hr>
+            <hr />
             <li><a href="#">New Folder</a></li>
             <li><a href="#">New File</a></li>
             <li><a href="#">Sort by</a></li>
@@ -39,7 +39,11 @@
         <div
           class="navbar h-12 md:h-16 lg:h-12 pr-5 flex items-center justify-end gap-8"
         >
-          <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
+          <i
+            id="search-icon"
+            class="fa-solid fa-magnifying-glass"
+            style="color: #ffffff"
+          ></i>
           <i
             id="notification-icon"
             class="fa-regular fa-bell"
@@ -49,8 +53,34 @@
           <i class="fa-solid fa-volume-high" style="color: #ffffff"></i>
           <i class="fa-solid fa-battery-half" style="color: #ffffff"></i>
         </div>
-        <div class="desktop-apps w-0 gap-5 flex flex-col flex-wrap p-5"></div>
+        <div
+          class="desktop-apps w-0 gap-5 flex flex-col flex-wrap p-5"
+        ></div>
         <div class="clock flex flex-col items-center" id="clock"></div>
+        <div id="search" class="Search hidden relative overflow-hidden">
+          <i class="fa-solid fa-magnifying-glass search-icon absolute"></i>
+          <input
+            type="search"
+            class="search-input py-3 px-10 outline-none border-b-2"
+            placeholder="Search"
+          />
+          <div
+            class="search-data w-full min-h-12 flex flex-col gap-2 px-6 py-4 hidden"
+          >
+            <div class="flex items-center gap-5">
+              <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+              <h1>Test File</h1>
+            </div>
+            <div class="flex items-center gap-5">
+              <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+              <h1>Test File</h1>
+            </div>
+            <div class="flex items-center gap-5">
+              <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+              <h1>Test File</h1>
+            </div>
+          </div>
+        </div>
         <div class="sidebar w-16 h-max p-1 rounded-3xl">
           <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
           <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
@@ -93,7 +123,7 @@
                   <a href="#">User manage</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
-                  <i class="ri-apps-fill"></i>
+                  <i class="fa-brands fa-microsoft fa-flip-horizontal"></i>
                   <a href="#">Plugin</a>
                 </li>
                 <li class="flex items-center gap-5 mb-4">
@@ -148,44 +178,47 @@
     </div>
 
     <script>
-     document.addEventListener("DOMContentLoaded", function () {
-      const contextMenu = document.getElementById("context-menu");
-      const dashboard = document.querySelector(".dashboard");
+      //Right Click Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const contextMenu = document.getElementById("context-menu");
+        const dashboard = document.querySelector(".dashboard");
 
-      dashboard.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
+        dashboard.addEventListener("contextmenu", function (e) {
+          e.preventDefault();
 
-        const dashboardRect = dashboard.getBoundingClientRect();
-        const menuWidth = contextMenu.offsetWidth;
-        const menuHeight = contextMenu.offsetHeight;
-        let top = e.clientY;
-        let left = e.clientX;
+          const dashboardRect = dashboard.getBoundingClientRect();
+          const menuWidth = contextMenu.offsetWidth;
+          const menuHeight = contextMenu.offsetHeight;
+          let top = e.clientY;
+          let left = e.clientX;
 
-        if (e.clientY + menuHeight > dashboardRect.bottom) {
-          top = dashboardRect.bottom - menuHeight - 10;
-        }
-        if (e.clientX + menuWidth > dashboardRect.right) {
-          left = dashboardRect.right - menuWidth - 10;
-        }
+          if (e.clientY + menuHeight > dashboardRect.bottom) {
+            top = dashboardRect.bottom - menuHeight - 10;
+          }
+          if (e.clientX + menuWidth > dashboardRect.right) {
+            left = dashboardRect.right - menuWidth - 10;
+          }
 
-        if (top < dashboardRect.top) {
-          top = dashboardRect.top + 10;
-        }
-        if (left < dashboardRect.left) {
-          left = dashboardRect.left + 10;
-        }
+          if (top < dashboardRect.top) {
+            top = dashboardRect.top + 10;
+          }
+          if (left < dashboardRect.left) {
+            left = dashboardRect.left + 10;
+          }
 
-        contextMenu.style.top = `${top}px`;
-        contextMenu.style.left = `${left}px`;
-        contextMenu.classList.remove("hidden");
+          contextMenu.style.top = `${top}px`;
+          contextMenu.style.left = `${left}px`;
+          contextMenu.classList.remove("hidden");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!contextMenu.contains(e.target)) {
+            contextMenu.classList.add("hidden");
+          }
+        });
       });
 
-      document.addEventListener("click", function (e) {
-        if (!contextMenu.contains(e.target)) {
-          contextMenu.classList.add("hidden");
-        }
-      });
-    });
+      //Clock Functionality
       function updateClock() {
         const clock = document.getElementById("clock");
         const now = new Date();
@@ -229,6 +262,7 @@
       updateClock();
       setInterval(updateClock, 60000);
 
+      //Notification container Functionality
       document
         .getElementById("notification-icon")
         .addEventListener("click", function () {
@@ -236,6 +270,15 @@
           notificationDiv.classList.toggle("hidden");
         });
 
+      //Search Contiainer Functionality
+      document
+        .getElementById("search-icon")
+        .addEventListener("click", function () {
+          const searchDiv = document.getElementById("search");
+          searchDiv.classList.toggle("hidden");
+        });
+
+      //Administrator Container Functionality
       document
         .getElementById("footer-logo")
         .addEventListener("click", function () {
@@ -254,6 +297,7 @@
         tooltip.style.display = "none";
       });
 
+      //Desktop apps Showing Functionality
       const container = document.querySelector(".desktop-apps");
       const Desktopapps = [
         {
