@@ -19,45 +19,45 @@
           </div>
           <nav>
             <ul class="grid gap-2">
-              <li>
-                <a class="flex items-center gap-3 rounded-r-md py-3 bg-black text-sm hover:bg-black" href="#">
+              <li class="all-tab">
+                <a class="flex items-center gap-3 rounded-r-md py-3 text-sm" href="#">
                   <span id="All" class="text-base font-normal px-10">All</span>
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-3 rounded-r-md py-3 text-sm hover:bg-black" href="#">
+                <a class="flex items-center gap-3 py-3 text-sm" href="#">
                   <span class="text-base font-normal px-10"> Tool </span>
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-3 rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#" >
+                <a class="flex items-center gap-3 py-3 text-sm transition-colors" href="#" >
                   <span class="text-base font-normal px-10"> Game </span>
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-3 rounded-r-md py-3 text-sm ransition-colors hover:bg-black" href="#">
+                <a class="flex items-center gap-3 py-3 text-sm ransition-colors" href="#">
                   <span class="text-base font-normal px-10"> Movie </span>
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-3 rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                <a class="flex items-center gap-3 py-3 text-sm transition-colors" href="#">
                   <span class="text-base font-normal px-10"> Music </span>
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-3 rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                <a class="flex items-center gap-3 py-3 text-sm transition-colors" href="#">
                   <span class="text-base font-normal px-10"> Life </span>
                 </a>
               </li>
               <li>
-                <a class="flex items-center gap-3 rounded-r-md py-3 text-sm transition-colors hover:bg-black" href="#">
+                <a class="flex items-center gap-3 py-3 text-sm transition-colors" href="#">
                   <span class="text-base font-normal px-10"> Others </span>
                 </a>
               </li>
             </ul>
           </nav>
         </div>
-        <div class="right-container h-full w-3/4 md:3/4 lg:w-5/6 bg-no-repeat bg-cover" >
+        <div class="right-container h-full w-3/4 md:3/4 lg:w-5/6" >
           <div class="lightapp-header w-full h-28">
             <div class="flex items-center gap-2 py-3 px-6">
               <img class="w-10 h-10" src="/images/lightimg.png" alt="Light Image"/>
@@ -66,7 +66,7 @@
             <div class="lightapp-yellowbar w-full h-12 bg-no-repeat bg-cover bg-center flex items-center justify-between px-7" >
               <span class="text-base font-medium">All</span>
               <span>
-                <button data-modal-target="Create-modal" data-modal-toggle="Create-modal" class="lightapp-btn py-2 px-6 bg-black text-sm rounded-sm" >
+                <button data-modal-target="Create-modal" data-modal-toggle="Create-modal" class="lightapp-btn py-2 px-6 bg-black text-sm rounded-md" >
                   Create a light application
                 </button>
               </span>
@@ -349,12 +349,16 @@
         >
           File
         </button>
-        <img
-          id="footer-logo"
-          class="w-10 h-10"
-          src="/images/logo.png"
-          alt="Logo"
-        />
+         <div class="flex items-center gap-4">
+              <img
+            id="footer-logo"
+            class="w-10 h-10"
+            src="/images/logo.png"
+            alt="Logo"
+          />
+          <div class="refresh">
+          </div>
+          </div>
       </footer>
     </div>
 
@@ -404,11 +408,11 @@
 
         smallContainer.innerHTML = `
                 <div class="img-container w-16 h-16 rounded-lg bg-white shadow-black flex items-center justify-center">
-                    <img class="w-10 h-10" src="${item.image}" alt="${item.name} Image">
+                    <img class="w-14 h-14" src="${item.image}" alt="${item.name} Image">
                 </div>
                 <h1 class="font-medium">${item.name}</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="flex items-center justify-between gap-5 text-yellow-300 rounded-md text-lg py-2 px-8" type="button"><a href="https://www.google.com/">Add</a> <i class="fa-solid fa-chevron-down text-white"></i>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="add-btn flex items-center justify-between gap-5 text-lg py-2 px-10" type="button"><a href="#">Add</a> <div><i class="fa-solid fa-chevron-down text-white"></i></div> 
                     </button>
 
                     <div id="dropdown${item.id}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
