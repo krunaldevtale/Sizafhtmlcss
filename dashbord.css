@@ -19,11 +19,13 @@
 }
 
 .dashboard .Administrator {
-  width: 400px;
+  width: 500px;
   position: absolute;
+  border-radius: 20px;
   right: 90px;
   bottom: 70px;
-  background-color: rgba(255, 255, 255, 0.901);
+ background: linear-gradient(204deg, #FFF 15.46%, rgba(217, 217, 217, 0.56) 118.36%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .dashboard .Notification {
@@ -40,6 +42,15 @@
   transform: translate(-50% , -50%);
     border-radius: 20px;
 
+}
+
+.user-info h1{
+  text-decoration-color: #ffc400;
+}
+
+.features-list ul li:hover{
+  text-decoration: underline;
+   text-decoration-color: #ffc400;
 }
 
 .search-input{
@@ -152,3 +163,4 @@ footer {
 .hidden {
   display: none;
 }
+
