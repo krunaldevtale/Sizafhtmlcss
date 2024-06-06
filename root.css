@@ -10,5 +10,8 @@ body {
 }
 
 :root{
-  --color-gray:rgba(0,0,0,0.38) 
+  --custom-gray-bg:rgb(0,0,0,0.38);
+  --custom-gray-font:#282828;
+  --custom-yellow:#FDCF01;
+
 }
