@@ -44,10 +44,12 @@
   }
 
   .graycustombg{
-     background-color: var(--color-gray-bg) ;
+     background-color: var(--custom-gray-bg) ;
     }
 
    .custombtn{
-      border-color: var(--color-gray-bg);
+      border-color: var(--custom-gray-bg);
       color:var(--custom-gray-font);
     }
+     
+    
