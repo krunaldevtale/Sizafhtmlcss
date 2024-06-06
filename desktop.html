@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desktop</title>
     <link rel="stylesheet" href="dashbord.css" />
+    <link rel="stylesheet" href="filemanager.css">
     <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
@@ -128,11 +129,11 @@
             <div class="px-10 pt-8">
               <h1 class="text-base">Favourites</h1>
             </div>
-            <nav class="mt-2">
+            <nav class="mt-2 sidebar-list">
               <ul class="grid gap-2">
                 <li>
                   <a id="link-desktop"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="desktop.html"
                   >
                     <span class="text-base font-normal px-10">Desktop</span>
@@ -140,7 +141,7 @@
                 </li>
                 <li>
                   <a id="link-recent"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="Recent.html"
                   >
                     <span class="text-base font-normal px-10"> Recent </span>
@@ -148,7 +149,7 @@
                 </li>
                 <li>
                   <a id="link-downloads"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="downloads.html"
                   >
                     <span class="text-base font-normal px-10"> Downloads </span>
@@ -156,7 +157,7 @@
                 </li>
                 <li>
                   <a id="link-filemanager"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm "
                     href="filemanager.html"
                   >
                     <span class="text-base font-normal px-10"> File </span>
@@ -164,7 +165,7 @@
                 </li>
                 <li>
                   <a id="link-documents"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="documents.html"
                   >
                     <span class="text-base font-normal px-10"> Documents </span>
@@ -172,7 +173,7 @@
                 </li>
                 <li>
                   <a  id="link-applications"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="applications.html"
                   >
                     <span class="text-base font-normal px-10">
@@ -273,7 +274,7 @@
         if (activeLinkId) {
           const activeLink = document.getElementById(activeLinkId);
           if (activeLink) {
-            activeLink.classList.add('bg-black', 'text-orange-500', 'font-semibold');
+            activeLink.classList.add("active");
           }
         }
       });

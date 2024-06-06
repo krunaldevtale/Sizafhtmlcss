@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>File Manager</title>
@@ -20,14 +17,14 @@
         </nav>
         <div class="content-container w-full flex">
           <div class="sidebar w-1/4 md:1/4 lg:w-1/6 h-full bg-no-repeat bg-cover bg-center flex flex-col">
-            <div class="px-10 py-7 mt-10">
+            <div class="px-10 py-4 mt-5">
               <h1 class="text-base">Favourites</h1>
             </div>
-            <nav class="mt-2">
+            <nav class="sidebar-list">
               <ul class="grid gap-2">
                 <li>
                   <a id="link-desktop"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm "
                     href="desktop.html"
                   >
                     <span class="text-base font-normal px-10">Desktop</span>
@@ -35,7 +32,7 @@
                 </li>
                 <li>
                   <a id="link-recent"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm "
                     href="Recent.html"
                   >
                     <span
@@ -47,7 +44,7 @@
                 </li>
                 <li>
                   <a id="link-downloads"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="downloads.html"
                   >
                     <span
@@ -59,7 +56,7 @@
                 </li>
                 <li>
                   <a  id="link-filemanager"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="filemanager.html"
                   >
                     <span
@@ -71,7 +68,7 @@
                 </li>
                 <li>
                   <a id="link-documents"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="documents.html"
                   >
                     <span
@@ -83,7 +80,7 @@
                 </li>
                 <li>
                   <a id="link-applications"
-                    class="flex items-center gap-3 rounded-r-md  py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md  py-2 text-sm"
                     href="applications.html"
                   >
                     <span
@@ -126,9 +123,25 @@
               </div>
             </div>
             <div class="content w-full">
+             <div id="context-menu" class="context-menu hidden">
+          <ul>
+            <li class="flex items-center justify-between pr-4"><a href="#">Refresh</a><p class="font-light text-xs">F5</p></li>
+            <li class="border-b-2"><a href="#">Upload file</a></li>
+            <li><a href="#">New folder</a></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">New file</a><i class="fa-solid fa-angle-right"></i></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Sort by</a><i class="fa-solid fa-angle-right"></i></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Icon size</a><i class="fa-solid fa-angle-right"></i></li>
+            <li><a href="#">Attribute</a></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">More</a><i class="fa-solid fa-angle-right"></i></li>
+            <li><a href="#">Light app</a></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Wallpaper</a><p class="font-light text-xs">Alt+I</p></li>
+            <li><a href="#">Personal</a></li>
+          </ul>
+        </div>
               <div
                 class="w-full h-full flex flex-col items-center justify-center"
               >
+               
                 <img src="/images/Folder.png" alt="Folder" />
                 <p>Folder is empty</p>
               </div>
@@ -176,10 +189,58 @@
         if (activeLinkId) {
           const activeLink = document.getElementById(activeLinkId);
           if (activeLink) {
-            activeLink.classList.add('bg-black', 'text-orange-500', 'font-semibold');
+            activeLink.classList.add('active');
           }
         }
       });
+
+      //Right Click Functionality
+   document.addEventListener("DOMContentLoaded", function () {
+    const contextMenu = document.getElementById("context-menu");
+    const content = document.querySelector(".content");
+
+    content.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+
+        contextMenu.style.visibility = 'hidden';
+        contextMenu.style.display = 'block';
+        const menuWidth = contextMenu.offsetWidth;
+        const menuHeight = contextMenu.offsetHeight;
+        contextMenu.style.display = 'none';
+        contextMenu.style.visibility = 'visible';
+
+        const contentRect = content.getBoundingClientRect();
+        let top = e.clientY;
+        let left = e.clientX;
+
+        if (e.clientY + menuHeight > contentRect.bottom) {
+            top = contentRect.bottom - menuHeight;
+        }
+        if (e.clientX + menuWidth > contentRect.right) {
+            left = contentRect.right - menuWidth;
+        }
+
+        if (top < contentRect.top) {
+            top = contentRect.top;
+        }
+        if (left < contentRect.left) {
+            left = contentRect.left;
+        }
+
+
+        contextMenu.style.top = `${top}px`;
+        contextMenu.style.left = `${left}px`;
+        contextMenu.classList.remove("hidden");
+        contextMenu.style.display = 'block';
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!contextMenu.contains(e.target)) {
+            contextMenu.classList.add("hidden");
+            contextMenu.style.display = 'none';
+        }
+    });
+});
     </script>
   </body>
 </html>

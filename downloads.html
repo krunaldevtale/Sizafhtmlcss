@@ -20,15 +20,15 @@
           <img class="w-12 h-12" src="/images/logo.png" alt="logo" />
         </nav>
         <div class="content-container w-full flex">
-         <div class="sidebar w-1/4 lg:w-1/6 h-full bg-no-repeat bg-cover bg-center flex flex-col">
-            <div class="px-10 py-7 mt-10">
+         <div class="sidebar w-1/4 md:1/4 lg:w-1/6 h-full bg-no-repeat bg-cover bg-center flex flex-col">
+            <div class="px-10 py-4 mt-5">
               <h1 class="text-base">Favourites</h1>
             </div>
-            <nav class="mt-2">
+            <nav class="sidebar-list">
               <ul class="grid gap-2">
                 <li>
                   <a id="link-desktop"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm "
                     href="desktop.html"
                   >
                     <span class="text-base font-normal px-10">Desktop</span>
@@ -36,7 +36,7 @@
                 </li>
                 <li>
                   <a id="link-recent"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm "
                     href="Recent.html"
                   >
                     <span
@@ -48,7 +48,7 @@
                 </li>
                 <li>
                   <a id="link-downloads"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="downloads.html"
                   >
                     <span
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a  id="link-filemanager"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="filemanager.html"
                   >
                     <span
@@ -72,7 +72,7 @@
                 </li>
                 <li>
                   <a id="link-documents"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="documents.html"
                   >
                     <span
@@ -84,7 +84,7 @@
                 </li>
                 <li>
                   <a id="link-applications"
-                    class="flex items-center gap-3 rounded-r-md  py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md  py-2 text-sm"
                     href="applications.html"
                   >
                     <span
@@ -127,6 +127,21 @@
               </div>
             </div>
             <div class="content w-full">
+                <div id="context-menu" class="context-menu hidden">
+          <ul>
+            <li class="flex items-center justify-between pr-4"><a href="#">Open</a><p class="font-light text-xs">Enter</p></li>
+            <li class="border-b-2 flex items-center justify-between pr-4"><a href="#">Open with</a><i class="fa-solid fa-angle-right"></i></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Download</a><p class="font-light text-xs">Shift+Enter</p></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Link sharing</a></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Copy</a><p class="font-light text-xs">Ctrl+C</p></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Cut</a><p class="font-light text-xs">Ctrl+X</p></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Rename</a><p class="font-light text-xs">F2</p></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Delete</a><p class="font-light text-xs">Del</p></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">File tag</a><i class="fa-solid fa-angle-right"></i></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">Attribute</a><p class="font-light text-xs">Alt+I</p></li>
+            <li class="flex items-center justify-between pr-4"><a href="#">More</a><i class="fa-solid fa-angle-right"></i></li>
+          </ul>
+        </div>
               <div class="docs-content gap-12 flex flex-wrap p-12">
                 
            </div>   
@@ -199,7 +214,7 @@
 
       Docs.forEach(app => {
       const appDiv = document.createElement('div');
-      appDiv.className = 'w-20 h-24 flex flex-col items-center cursor-pointer text-center';
+      appDiv.className = 'docs w-20 h-24 flex flex-col items-center cursor-pointer text-center';
       appDiv.innerHTML = `
         <img class="w-16 h-16" src="${app.image}" alt="${app.name}" />
         <h2 class="text-black text-md">${app.name}</h2>
@@ -223,10 +238,59 @@
         if (activeLinkId) {
           const activeLink = document.getElementById(activeLinkId);
           if (activeLink) {
-            activeLink.classList.add('bg-black', 'text-orange-500', 'font-semibold');
+            activeLink.classList.add("active");
           }
         }
       });
+
+      //Right Click Functionality
+
+       document.addEventListener("DOMContentLoaded", function () {
+    const contextMenu = document.getElementById("context-menu");
+    const content = document.querySelector(".docs");
+
+    content.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+
+        contextMenu.style.visibility = 'hidden';
+        contextMenu.style.display = 'block';
+        const menuWidth = contextMenu.offsetWidth;
+        const menuHeight = contextMenu.offsetHeight;
+        contextMenu.style.display = 'none';
+        contextMenu.style.visibility = 'visible';
+
+        const contentRect = content.getBoundingClientRect();
+        let top = e.clientY;
+        let left = e.clientX;
+
+        if (e.clientY + menuHeight > contentRect.bottom) {
+            top = contentRect.bottom - menuHeight;
+        }
+        if (e.clientX + menuWidth > contentRect.right) {
+            left = contentRect.right - menuWidth;
+        }
+
+        if (top < contentRect.top) {
+            top = contentRect.top;
+        }
+        if (left < contentRect.left) {
+            left = contentRect.left;
+        }
+
+
+        contextMenu.style.top = `${top}px`;
+        contextMenu.style.left = `${left}px`;
+        contextMenu.classList.remove("hidden");
+        contextMenu.style.display = 'block';
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!contextMenu.contains(e.target)) {
+            contextMenu.classList.add("hidden");
+            contextMenu.style.display = 'none';
+        }
+    });
+});
     </script>
   </body>
 </html>

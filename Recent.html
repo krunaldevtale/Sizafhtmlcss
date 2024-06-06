@@ -19,15 +19,15 @@
           <img class="w-12 h-12" src="/images/logo.png" alt="logo" />
         </nav>
         <div class="content-container w-full flex">
-        <div class="sidebar w-1/4 lg:w-1/6 h-full bg-no-repeat bg-cover bg-center flex flex-col">
-            <div class="px-10 py-7 mt-10">
+        <div class="sidebar w-1/4 md:1/4 lg:w-1/6 h-full bg-no-repeat bg-cover bg-center flex flex-col">
+            <div class="px-10 py-4 mt-5">
               <h1 class="text-base">Favourites</h1>
             </div>
-            <nav class="mt-2">
+            <nav class="sidebar-list">
               <ul class="grid gap-2">
                 <li>
                   <a id="link-desktop"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm "
                     href="desktop.html"
                   >
                     <span class="text-base font-normal px-10">Desktop</span>
@@ -35,7 +35,7 @@
                 </li>
                 <li>
                   <a id="link-recent"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm "
                     href="Recent.html"
                   >
                     <span
@@ -47,7 +47,7 @@
                 </li>
                 <li>
                   <a id="link-downloads"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="downloads.html"
                   >
                     <span
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a  id="link-filemanager"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="filemanager.html"
                   >
                     <span
@@ -71,7 +71,7 @@
                 </li>
                 <li>
                   <a id="link-documents"
-                    class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md py-2 text-sm"
                     href="documents.html"
                   >
                     <span
@@ -83,7 +83,7 @@
                 </li>
                 <li>
                   <a id="link-applications"
-                    class="flex items-center gap-3 rounded-r-md  py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                    class="flex items-center gap-3 rounded-r-md  py-2 text-sm"
                     href="applications.html"
                   >
                     <span
@@ -223,7 +223,7 @@
         if (activeLinkId) {
           const activeLink = document.getElementById(activeLinkId);
           if (activeLink) {
-            activeLink.classList.add('bg-black', 'text-orange-500', 'font-semibold');
+            activeLink.classList.add("active");
           }
         }
       });
