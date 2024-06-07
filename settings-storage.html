@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="root.css">
+  <link rel="stylesheet" href="/root.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,11 +15,11 @@
 </head>
 
 <body>
-  <div class="settings-storage w-full h-screen">
+  <div class="settings-storage lg:w-full h-screen w-auto h-auto">
     <div class="file-container w-full h-full bg-no-repeat bg-center bg-cover">
 
 
-      <div class="content-container w-full h-full flex">
+      <div class="content-container lg:w-full lg:h-full flex">
         <div class="sidebar w-1/4 lg:w-1/6 h-full bg-no-repeat bg-cover bg-center flex flex-col">
           <nav class="logo-container h-20 px-10 py-3">
             <img class="w-12 h-12" src="/images/logo.png" alt="logo" />
@@ -28,14 +28,14 @@
             <ul class="grid gap-2">
               <li>
                 <a id="link-settings"
-                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-yellow-700 data-[active=true]:text-yellow-700 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
                   href="settings.html">
                   <span class="text-base font-normal px-10">Overview</span>
                 </a>
               </li>
               <li>
                 <a id="link-settings-system"
-                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-yellow-700 data-[active=true]:text-yellow-700 hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
                   href="settings-system.html">
                   <span class="text-base font-normal px-10">
                     System Settings
@@ -44,7 +44,7 @@
               </li>
               <li>
                 <a id="link-settings-user-group"
-                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-yellow-700 data-[active=true]:text-yellow-700 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
                   href="settings-user-group.html">
                   <span class="text-base font-normal px-10">
                     User and Groups
@@ -53,7 +53,7 @@
               </li>
               <li>
                 <a id="link-settings-storage"
-                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-yellow-700 data-[active=true]:text-yellow-700transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
                   href="settings-storage.html">
                   <span class="text-base font-normal px-10">
                     Storage / File
@@ -71,7 +71,7 @@
               </li>
               <li>
                 <a id="link-setting-pluggins"
-                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                  class="flex items-center gap-3 rounded-r-md py-2 text-sm hover:text-yellow-700 data-[active=true]:text-yellow-700 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
                   href="setting-pluggins.html">
                   <span class="text-base font-normal px-10">
                     Pluggins
@@ -80,7 +80,7 @@
               </li>
               <li>
                 <a id="link-setting-safety-control"
-                  class="flex items-center gap-3 rounded-r-md  py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                  class="flex items-center gap-3 rounded-r-md  py-2 text-sm hover:text-yellow-700 data-[active=true]:text-yellow-700 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
                   href="settings-safety-control.html">
                   <span class="text-base font-normal px-10">
                     Safety controls
@@ -89,7 +89,7 @@
               </li>
               <li>
                 <a id="link-setting-safety-control"
-                  class="flex items-center gap-3 rounded-r-md  py-2 text-sm hover:text-orange-500 data-[active=true]:text-orange-500 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
+                  class="flex items-center gap-3 rounded-r-md  py-2 text-sm hover:text-yellow-700 data-[active=true]:text-yellow-700 transition-colors hover:bg-black data-[active=true]:bg-black data-[active=true]:font-semibold"
                   href="settings-server.html">
                   <span class="text-base font-normal px-10">
                     Server
@@ -100,36 +100,39 @@
           </nav>
         </div>
         <!-- setting-logo part top -->
-        <div class="content-showing w-3/4 lg:w-5/6 h-full">
+        <div class="content-showing w-3/4 lg:w-5/6 h-full flex flex-col">
           <div class="w-full bg-slate-300">
             <h2 class="text-lg p-2 m-2"><span class="mr-4"> <i class="fa-solid fa-gear"></i> </span>System settings</h2>
           </div>
           <!-- top bar -->
           <div class="yellowbar w-full h-16 bg-no-repeat bg-cover">
             <div class="w-full h-full flex justify-between items-center">
-              <div class="mx-4 px-2">Storage/File <i class="fa-solid fa-arrow-right"></i><span class="text-bold">
-                  Share</span>
-                </div>
+              <div class="mx-4 px-2">Storage/File <i class="fa-solid fa-arrow-right px-2"></i><span class="font-bold">
+                Share</span>
+              </div>
               <div class="flex items-center gap-2">
-                <div class="bg-white rounded-sm overflow-hidden flex items-center">
-                  <input type="text" placeholder="Please enter the string" class="text-sm outline-none px-2">
-                  <button class="bg-white mr-1"><i class="fa-solid fa-magnifying-glass pr-2"></i></button>
+                <div class="bg-white rounded-md overflow-hidden flex items-center mr-2">
+                  <input type="text" placeholder="Please enter the string" class="text-sm outline-none py-2 px-4">
+                  <button class="bg-white mr-1"><i class="fa-solid fa-magnifying-glass pr-2 text-sm"></i></button>
                 </div>
-                <button class="bg-white m-2 rounded-sm px-2"><i class="fa-solid fa-circle-xmark"></i> Cancel
+                
+                <button class="bg-transparent border-2 border-black  text-sm rounded-md py-2 px-4 mr-2 "><i class="fa-solid fa-circle-xmark text-lg pr-4"></i> Cancel
                   sharing</button>
-                <button class="bg-white m-2 roundec-sm px-2 "><i class="fa-solid fa-circle-arrow-down text-sm pr-2"></i>
+                
+                <button class="bg-transparent border-2 border-black  text-sm rounded-md py-2 px-4 mr-6 "><i class="fa-solid fa-circle-arrow-down text-lg pr-4"></i>
                   Export</button>
+                
               </div>
             </div>
           </div>
           <!-- setting links -->
-          <div class="w-full min-h-8 mt-2 flex gap-2 ml-4 list-none">
-            <li class="p-2  mx-2 h-14">
-              <a href="#" class="text-slate-400 hover:underline hover:underline-offset-2 hover:decoration-8 hover:decoration-orange-900 ">Sharing</a>
+          <div class="w-full min-h-8 mt-2 flex gap-2  list-none">
+            <li class="p-2  mx-4 h-14">
+              <a href="/settings-storage.html" class="text-slate-400  hover:underline hover:underline-offset-2 hover:decoration-8 hover:decoration-orange-900 ">Sharing</a>
 
             </li>
             <li class="p-2 mx-2 h-14">
-              <a href="#" class="text-slate-400 hover:underline hover:underline-offset-2 hover:decoration-8 hover:decoration-orange-900">Sharing
+              <a href="/settings-storage-sharing.html" class="text-slate-400  hover:underline hover:underline-offset-2 hover:decoration-8 hover:decoration-orange-900">Sharing
                 report</a>
             </li>
           </div>
@@ -137,15 +140,15 @@
           <div class="w-full h-1/3 mt-4">
             <!-- button container for filter -->
             <div class="w-full h-8 flex justify-start ">
-              <button class="mx-6 border-2 px-2 h-8 text-sm">Today</button>
-              <button class="mx-4 border-2 px-2 h-8 text-sm">Last 30 days</button>
-              <button class="mx-4 border-2 px-3 h-8 text-sm">All</button>
-              <button class="mx-4 border-2 px-2 h-8 text-sm">Customize</button>
+              <button class="mx-4 rounded text-nowrap min-w-40 border-2 px-4 custom-btn h-8 text-sm focus:outline-none focus:border-yellow-400 hover:border-yellow-400">Today</button>
+              <button class="mx-2 rounded text-nowrap min-w-40 border-2 px-4 custom-btn h-8 text-sm focus:outline-none focus:border-yellow-400 hover:border-yellow-400">Last 30 days</button>
+              <button class="mx-2 rounded text-nowrap min-w-40 border-2 px-6 custom-btn h-8 text-sm focus:outline-none focus:border-yellow-400 hover:border-yellow-400">All</button>
+              <button class="mx-2 rounded text-nowrap min-w-40 border-2 px-4 custom-btn h-8 text-sm focus:outline-none focus:border-yellow-400 hover:border-yellow-400">Customize</button>
 
 
               <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500"
                 data-dropdown-trigger="hover"
-                class="text-black hover:bg-slate-300 focus:ring-4 focus:outline-none   border-2 font-normal rounded-sm text-sm px-5  text-center inline-flex items-center mx-4 "
+                class="text-black hover:bg-slate-300 focus:ring-4 focus:outline-none custom-btn focus:border-yellow-400 hover:border-yellow-400 border-2 font-normal rounded-sm text-sm min-w-40 px-5 h-8 text-center inline-flex items-center mx-2 rounded"
                 type="button">
                 Select user
                 <svg class="ml-2" width="13" height="7" viewBox="0 0 13 7" fill="none"
@@ -167,7 +170,7 @@
               </div>
               <button id="dropdownDelayButton1" data-dropdown-toggle="dropdownDelay1" data-dropdown-delay="500"
                 data-dropdown-trigger="hover"
-                class="text-black hover:bg-slate-300 focus:ring-4 focus:outline-none   border-2 font-normal rounded-sm text-sm px-5  text-center inline-flex items-center mx-4  "
+                class="text-black hover:bg-slate-300 focus:ring-4 focus:outline-none focus:border-yellow-400  custom-btn hover:border-yellow-400 border-2 font-normal rounded-sm text-sm min-w-40 px-5 h-8 text-center inline-flex items-center mx-2 rounded"
                 type="button">Type
                 <svg class="ml-2" width="13" height="7" viewBox="0 0 13 7" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +184,7 @@
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
                   <li>
                     <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></a>
+                      class="block px-4 py-2 hover:bg-yellow-300 dark:hover:bg-gray-600 dark:hover:text-white"></a>
                   </li>
 
                 </ul>
@@ -193,8 +196,8 @@
             </div>
           </div>
           <!-- table container for shared data -->
-          <div class="w-[80%] m-4 ">
-            <table class="w-full text-white graycustom table-fixed ">
+          <div class="w-[80%] m-4 flex flex-col flex-grow">
+            <table class="w-full text-white graycustombg table-fixed ">
               <thead class="h-16 text-center ">
                 <tr>
                   <th>Sharer</th>
@@ -202,18 +205,18 @@
                   <th>Type</th>
                   <th>Detail</th>
                   <th>View</th>
-                  <th class="flex items-center pt-5">
-                    Downloads
-                    <!-- <span> -->
+                  <th class="flex items-center pt-5 h-full justify-center">Download
+                    
                     <svg class="ml-2 text-white" width="13" height="7" viewBox="0 0 13 7" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.5 7L0.870836 0.25L12.1292 0.249999L6.5 7Z" fill="white" />
                     </svg>
 
 
+
                   </th>
                   <th>Expiration</th>
-                  <th class="flex items-center ">Time
+                  <th class="flex items-center pt-5 h-full justify-center">Time
                     <!-- <span> -->
                     <svg class="ml-2 text-white" width="13" height="7" viewBox="0 0 13 7" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -233,7 +236,7 @@
               </tbody>
             </table>
             <!-- if data not found  -->
-            <div class="flex justify-center items-center h-64 w-full"> 
+            <div class="flex justify-center items-center h-64 w-full flex-grow"> 
               <div class="flex flex-col items-center">
                 <img src="/images/no-data-found.png" alt="">
                 <span>No data found</span>
@@ -285,7 +288,7 @@
       if (activeLinkId) {
         const activeLink = document.getElementById(activeLinkId);
         if (activeLink) {
-          activeLink.classList.add('bg-black', 'text-orange-500', 'font-semibold');
+          activeLink.classList.add('bg-black', 'text-yellow-700', 'font-semibold');
         }
       }
     });
