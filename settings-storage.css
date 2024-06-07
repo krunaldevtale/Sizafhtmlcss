@@ -47,8 +47,8 @@
      background-color: var(--custom-gray-bg) ;
     }
 
-   .custombtn{
-      border-color: var(--custom-gray-bg);
+   .custom-btn{
+      border-color: rgba(0,0,0,0.28);
       color:var(--custom-gray-font);
     }
      
