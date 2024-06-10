@@ -58,9 +58,7 @@ nav .hover-effect:hover {
 }
 
 .right-container {
-  background-image: url("/images/Rectanglebg.png");
-  background-position: center;
-  background-repeat: no-repeat;
+background-color: var(--color-white);
 }
 
 footer {

@@ -18,8 +18,13 @@ nav ul li:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: #fdcf01;
 }
+
 .plugin-content {
   height: calc(100% - 112px);
+}
+
+#default-sidebar {
+  height: calc(100% - 56px);
 }
 
 .plugin-yellowbar {
@@ -27,9 +32,7 @@ nav ul li:hover {
 }
 
 .right-container {
-  background-image: url("/images/Rectanglebg.png");
-  background-position: center;
-  background-repeat: no-repeat;
+background-color: #ffffff;
 }
 
 .small-container {
@@ -70,4 +73,12 @@ footer {
   background: rgba(198, 198, 198, 0.764);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+@media(max-width:640px){
+
+#default-sidebar {
+  height: 100%
+}
+
 }

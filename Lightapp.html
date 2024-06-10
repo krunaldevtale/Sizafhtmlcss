@@ -12,8 +12,35 @@
   </head>
   <body>
     <div class="lightapp w-full h-screen">
-      <div class="lightapp-container w-full flex">
-        <div class="lightapp-sidebar h-full w-1/4 md:1/4 lg:w-1/6 bg-no-repeat bg-cover bg-center">
+      <div class="lightapp-container w-full">
+         <button
+          data-drawer-target="default-sidebar"
+          data-drawer-toggle="default-sidebar"
+          aria-controls="default-sidebar"
+          type="button"
+          class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        >
+          <span class="sr-only">Open sidebar</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+            ></path>
+          </svg>
+        </button>
+           <aside
+          id="default-sidebar"
+          class="fixed top-0 left-0 z-40 w-64 lg:w-1/6 h-full transition-transform -translate-x-full sm:translate-x-0"
+          aria-label="Sidebar"
+        >
+         <div class="lightapp-sidebar h-full bg-no-repeat bg-cover bg-center">
           <div class="lightapp-logo px-9 py-7">
             <img class="w-16 h-16" src="/images/logo.png" alt="logo" />
           </div>
@@ -57,7 +84,9 @@
             </ul>
           </nav>
         </div>
-        <div class="right-container h-full w-3/4 md:3/4 lg:w-5/6" >
+        </aside>
+        
+        <div class="right-container h-full sm:ml-64" >
           <div class="lightapp-header w-full h-28">
             <div class="flex items-center gap-2 py-3 px-6">
               <img class="w-10 h-10" src="/images/lightimg.png" alt="Light Image"/>
@@ -72,7 +101,7 @@
               </span>
             </div>
           </div>
-          <div class="lightapp-content flex gap-10 flex-wrap p-5">
+          <div class="lightapp-content flex gap-10 flex-wrap p-5 overflow-y-scroll">
             <div id="Create-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full" >
               <div class="relative p-4 w-full max-w-2xl max-h-full">
                 <div class="relative bg-white rounded-xl shadow dark:bg-gray-700" >
@@ -342,7 +371,7 @@
           </div>
         </div>
       </div>
-      <footer class="w-full h-14 flex items-center justify-between px-9">
+      <footer class="w-full fixed bottom-0 h-14 flex items-center justify-between px-9">
         <button
           id="footerButton"
           class="text-black px-4 py-3 rounded-md hover:bg-black hover:text-white"
