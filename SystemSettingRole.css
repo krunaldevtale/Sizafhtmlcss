@@ -9,7 +9,7 @@
   --color-dark-gray: rgba(0, 0, 0, 0.38);
   --color-dark-yellow: #fdcf01;
   --color-light-pink: #ffd9d9;
-  --color-medium-gray:#F9F9F9;
+  --color-medium-gray: #f9f9f9;
   --bg-linear-gradient: linear-gradient(
     204deg,
     #fff 15.46%,
@@ -25,8 +25,11 @@
   --font-size-14: 14px;
 }
 
-
 .Role-container {
+  height: calc(100% - 56px);
+}
+
+#default-sidebar {
   height: calc(100% - 56px);
 }
 
@@ -62,7 +65,7 @@ nav .hover-effect:hover {
 
 footer {
   background-image: url(/images/Wallpaper.png),
-  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
   background-blend-mode: lighten;
   background-position: bottom right;
   background-size: cover;
@@ -78,17 +81,17 @@ footer {
     0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
-.add-btn{
-    background: var(--color-light-gray);
-  color:var(--color-dark-yellow);
+.add-btn {
+  background: var(--color-light-gray);
+  color: var(--color-dark-yellow);
 }
 
- .dropdown-option {
-    display: none;
+.dropdown-option {
+  display: none;
 }
- .dropdown-btn:focus ~ .dropdown-option,
+.dropdown-btn:focus ~ .dropdown-option,
 .dropdown-option:hover {
-    display: block;
+  display: block;
 }
 
 input {
@@ -110,13 +113,25 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-  background-color: black; 
+  background-color: black;
 }
 
 hr {
   border: 1px solid var(--color-light-white);
 }
 
-.checkbox-container{
-    background-color: var(--color-medium-gray);
+.checkbox-container {
+  background-color: var(--color-medium-gray);
+}
+
+#modal{
+  z-index: 999;
+}
+
+@media(max-width:640px){
+
+#default-sidebar {
+  height: 100%
+}
+
 }
