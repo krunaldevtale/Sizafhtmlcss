@@ -3,52 +3,386 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-      <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="dashbord.css" />
     <link rel="stylesheet" href="root.css" />
-    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="login-screen w-full h-screen flex items-center justify-center gap-2 relative">
-      <div class="left-background w-1/2 h-full bg-no-repeat bg-cover bg-center">
-        <div class="blur-container">
+    <div class="w-full h-screen">
+      <div class="dashboard w-full h-full bg-no-repeat">
+        <div id="context-menu" class="context-menu hidden">
+          <ul>
+            <li><a href="#">Refresh</a></li>
+            <li><a href="#">Upload File</a></li>
+            <hr />
+            <li><a href="#">New Folder</a></li>
+            <li><a href="#">New File</a></li>
+            <li><a href="#">Sort by</a></li>
+            <li><a href="#">Icon size</a></li>
+            <li><a href="#">Attribute</a></li>
+            <li><a href="#">More</a></li>
+            <li><a href="#">Light app</a></li>
+            <li><a href="#">Wallpaper</a></li>
+            <li><a href="#">Personal</a></li>
+          </ul>
         </div>
-      </div>
-      <div
-        class="right-background w-1/2 h-full bg-no-repeat bg-cover bg-center"
-      >
-        <div class="login-container">
-          <div class="logo flex items-center justify-center mt-10">
-            <img class="w-20 h-20" src="/images/logo.png" alt="Logo" />
-          </div>
-          <div class="login flex items-center justify-center mt-16 pl-10">
-            <div class="left-container w-2/5 flex items-center justify-center">
-              <img
-                class="vector-img w-60 h-60"
-                src="/images/profileloginvector.png"
-                alt="background"
-              />
-              <img
-                class="profile-img w-24 h-24"
-                src="/images/profile.png"
-                alt="profile"
-              />
+        <div
+          class="navbar h-12 md:h-16 lg:h-12 pr-5 flex items-center justify-end gap-8"
+        >
+          <i
+            id="search-icon"
+            class="fa-solid fa-magnifying-glass"
+            style="color: #ffffff"
+          ></i>
+          <i
+            id="notification-icon"
+            class="fa-regular fa-bell"
+            style="color: #ffffff"
+          ></i>
+          <i class="fa-solid fa-wifi" style="color: #ffffff"></i>
+          <i class="fa-solid fa-volume-high" style="color: #ffffff"></i>
+          <i class="fa-solid fa-battery-half" style="color: #ffffff"></i>
+        </div>
+        <div
+          class="desktop-apps w-0 gap-5 flex flex-col flex-wrap p-5"
+        ></div>
+        <div class="clock flex flex-col items-center" id="clock"></div>
+        <div id="search" class="Search hidden relative overflow-hidden">
+          <i class="fa-solid fa-magnifying-glass search-icon absolute"></i>
+          <input
+            type="search"
+            class="search-input py-3 px-10 outline-none border-b-2"
+            placeholder="Search"
+          />
+          <div
+            class="search-data w-full min-h-12 flex flex-col gap-2 px-6 py-4"
+          >
+            <div class="flex items-center gap-5">
+              <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+              <h1>Test File</h1>
             </div>
-            <div class="right-container w-3/5 px-5 py-0">
-              <h1 class="mb-8 text-2xl font-normal">Welcome back...</h1>
-              <form>
-                <input class="userinput" type="text" placeholder="Username" required/>
-                <input class="userinput" type="password" placeholder="Password" required />
-                <div class="flex items-center w-5 gap-1">
-                  <input type="checkbox" />
-                  <p class="text-xs font-normal">Remember</p>
-                  <p class="text-xs font-normal">me</p>
-                </div>
-                <button class="userinput" id="login-btn"><a href="dashboard.html">Login</a></button>
-              </form>
+            <div class="flex items-center gap-5">
+              <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+              <h1>Test File</h1>
+            </div>
+            <div class="flex items-center gap-5">
+              <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+              <h1>Test File</h1>
             </div>
           </div>
         </div>
+        <div class="sidebar w-16 h-max p-1 rounded-3xl">
+          <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
+          <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
+          <img class="mb-1" src="/images/Appstore.png" alt="Appstore" />
+          <img class="mb-4" src="/images/EmptyBin.png" alt="EmptyBin" />
+        </div>
+        <div id="notification" class="Notification h-56 rounded-lg hidden">
+          <div class="border-b-2 border-gray-500 p-5 text-center">
+            <h1 class="text-normal font-medium">Notification Center</h1>
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <p>Empty</p>
+          </div>
+        </div>
+        <div id="administrator" class="Administrator h-max rounded-md hidden">
+          <div class="flex items-center gap-5 pl-10 py-5">
+            <div class="logo">
+              <img class="w-16" src="/images/profile.png" alt="user image" />
+            </div>
+            <div class="user-info">
+              <h1 class="text-lg font-normal underline underline-offset-8 decoration-1">
+                Administrator
+              </h1>
+              <h4 class="text-sm">Username</h4>
+            </div>
+          </div>
+          <div class="bottom border-t-2 border-gray-500">
+            <div class="features-list py-5 px-16">
+              <ul>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-solid fa-folder"></i>
+                  <a href="#">File manage</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-solid fa-chart-simple"></i>
+                  <a href="#">Backend</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-solid fa-user"></i>
+                  <a href="#">User manage</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-brands fa-microsoft fa-flip-horizontal"></i>
+                  <a href="#">Plugin</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-solid fa-globe"></i>
+                  <a href="#">Language</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-solid fa-expand"></i>
+                  <a href="#">Full screen</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <a href="#">About</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-solid fa-download"></i>
+                  <a href="#">Downloads</a>
+                </li>
+                <li class="flex items-center gap-8 mb-4">
+                  <i class="fa-regular fa-envelope"></i>
+                  <a href="#">Free edition</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="tooltip" class="tooltip bubble-bottom-left">
+          <div class="bubble">
+            <div class="bubble-content">
+              <h1>Hello!</h1>
+              <p>What are you looking for? &#128522;</p>
+            </div>
+          </div>
+        </div>
+        <footer
+          class="fixed bottom-0 flex items-center justify-between w-full px-5"
+        >
+          <button
+            id="footerButton"
+            class="text-black px-4 py-3 rounded-md hover:bg-black hover:text-white"
+          >
+            File
+          </button>
+          <div class="flex items-center gap-4">
+              <img
+            id="footer-logo"
+            class="w-10 h-10"
+            src="/images/logo.png"
+            alt="Logo"
+          />
+          <div class="refresh">
+          </div>
+          </div>
+        
+        </footer>
       </div>
     </div>
+
+    <script>
+      //Right Click Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const contextMenu = document.getElementById("context-menu");
+        const dashboard = document.querySelector(".dashboard");
+
+        dashboard.addEventListener("contextmenu", function (e) {
+          e.preventDefault();
+
+          const dashboardRect = dashboard.getBoundingClientRect();
+          const menuWidth = contextMenu.offsetWidth;
+          const menuHeight = contextMenu.offsetHeight;
+          let top = e.clientY;
+          let left = e.clientX;
+
+          if (e.clientY + menuHeight > dashboardRect.bottom) {
+            top = dashboardRect.bottom - menuHeight - 10;
+          }
+          if (e.clientX + menuWidth > dashboardRect.right) {
+            left = dashboardRect.right - menuWidth - 10;
+          }
+
+          if (top < dashboardRect.top) {
+            top = dashboardRect.top + 10;
+          }
+          if (left < dashboardRect.left) {
+            left = dashboardRect.left + 10;
+          }
+
+          contextMenu.style.top = `${top}px`;
+          contextMenu.style.left = `${left}px`;
+          contextMenu.classList.remove("hidden");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!contextMenu.contains(e.target)) {
+            contextMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      //Clock Functionality
+      function updateClock() {
+        const clock = document.getElementById("clock");
+        const now = new Date();
+
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+
+        const days = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        const day = days[now.getDay()];
+        const month = months[now.getMonth()];
+        const date = now.getDate();
+
+        const timeString = `${hours}:${minutes}`;
+        const dateString = `${day}, ${month} ${date}`;
+
+        clock.innerHTML = `<div class="time text-white text-5xl font-medium">${timeString}</div><div class="date flex font-medium">${dateString}</div>`;
+      }
+
+      updateClock();
+      setInterval(updateClock, 60000);
+
+      //Notification container Functionality
+      document
+        .getElementById("notification-icon")
+        .addEventListener("click", function () {
+          const notificationDiv = document.getElementById("notification");
+          notificationDiv.classList.toggle("hidden");
+        });
+
+      //Search Contiainer Functionality
+      document
+        .getElementById("search-icon")
+        .addEventListener("click", function () {
+          const searchDiv = document.getElementById("search");
+          searchDiv.classList.toggle("hidden");
+        });
+
+      //Administrator Container Functionality
+      document
+        .getElementById("footer-logo")
+        .addEventListener("click", function () {
+          const administratorDiv = document.getElementById("administrator");
+          administratorDiv.classList.toggle("hidden");
+        });
+
+      const footerButton = document.getElementById("footerButton");
+      const tooltip = document.getElementById("tooltip");
+
+      footerButton.addEventListener("mouseenter", function () {
+        tooltip.style.display = "block";
+      });
+
+      footerButton.addEventListener("mouseleave", function () {
+        tooltip.style.display = "none";
+      });
+
+      //Desktop apps Showing Functionality
+      const container = document.querySelector(".desktop-apps");
+      const Desktopapps = [
+        {
+          id: 1,
+          name: "Operation log",
+          image: "/images/operationotes.png",
+          url: "",
+        },
+        {
+          id: 2,
+          name: "Light App",
+          image: "/images/lightapp.png",
+          url: "",
+        },
+        {
+          id: 3,
+          name: "My Albums",
+          image: "/images/album.png",
+          url: "",
+        },
+        {
+          id: 4,
+          name: "Excel",
+          image: "/images/xlsx.png",
+          url: "https://snappy.sizaf.com/example/editor?fileName=new.xlsx&userid=uid-1&lang=en&directUrl=false",
+        },
+        {
+          id: 5,
+          name: "PPT",
+          image: "/images/pptx.png",
+          url: "https://snappy.sizaf.com/example/editor?fileName=new.pptx&userid=uid-1&lang=en&directUrl=false",
+        },
+        {
+          id: 6,
+          name: "Help",
+          image: "/images/about.png",
+          url: "",
+        },
+        {
+          id: 7,
+          name: "iCloud",
+          image: "/images/icloud.png",
+          url: "https://www.icloud.com",
+        },
+        {
+          id: 8,
+          name: "Dots ERP",
+          image: "/images/ERPNext.png",
+          url: "http://erp.sizaf.com/app",
+        },
+        {
+          id: 9,
+          name: "Dots Chat",
+          image: "/images/logo-dots-chat.png",
+          url: "https://zulip.sizaf.com/",
+        },
+        {
+          id: 10,
+          name: "Word",
+          image: "/images/docx.png",
+          url: "https://snappy.sizaf.com/example/editor?fileName=new.docx&userid=uid-1&lang=en&directUrl=false",
+        },
+        {
+          id: 11,
+          name: "Open Social App",
+          image: "/images/opensociallogo.png",
+          url: "https://social.sizaf.com/html/user/login",
+        },
+      ];
+
+      Desktopapps.forEach((app) => {
+        const appDiv = document.createElement("div");
+        appDiv.className =
+          "w-20 h-24 flex flex-col items-center cursor-pointer text-center";
+        appDiv.innerHTML = `
+        <img class="w-16 h-16" src="${app.image}" alt="${app.name}" />
+        <h2 class="text-white text-md">${app.name}</h2>
+      `;
+        container.appendChild(appDiv);
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,122 @@
+:root {
+  --color-white: #ffffff;
+  --color-light-white: #ddd;
+  --color-pure-black: #000000;
+  --color-light-gray: #282828;
+  --color-light-black: #4d4d4d;
+  --color-dark-white: #fdfdfd;
+  --color-gray-2: #646464;
+  --color-dark-gray: rgba(0, 0, 0, 0.38);
+  --color-dark-yellow: #fdcf01;
+  --color-light-pink: #ffd9d9;
+  --color-medium-gray:#F9F9F9;
+  --bg-linear-gradient: linear-gradient(
+    204deg,
+    #fff 15.46%,
+    rgba(217, 217, 217, 0.56) 118.36%
+  );
+  /*Font Family and Font Size */
+  --font-family-roboto: "Roboto", sans-serif;
+  --font-size-50: 50px;
+  --font-size-24: 24px;
+  --font-size-20: 20px;
+  --font-size-18: 18px;
+  --font-size-16: 16px;
+  --font-size-14: 14px;
+}
+
+
+.Role-container {
+  height: calc(100% - 56px);
+}
+
+.Role-sidebar {
+  background-image: url("/images/sidebarimg.png");
+}
+
+.all-tab {
+  background: var(--color-light-gray);
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+nav .hover-effect:hover {
+  border-radius: 0px 10px 10px 0px;
+  background: var(--color-light-gray);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: var(--color-dark-yellow);
+}
+.Role-content {
+  height: calc(100% - 112px);
+}
+
+.Role-yellowbar {
+  background-image: url("/images/Yellowbar.png");
+}
+
+.right-container {
+  background-image: url("/images/Rectanglebg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-image: url(/images/Wallpaper.png),
+  linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background-blend-mode: lighten;
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.refresh {
+  width: 4px;
+  height: 27px;
+  border-radius: 3px;
+  background: rgba(198, 198, 198, 0.764);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.add-btn{
+    background: var(--color-light-gray);
+  color:var(--color-dark-yellow);
+}
+
+ .dropdown-option {
+    display: none;
+}
+ .dropdown-btn:focus ~ .dropdown-option,
+.dropdown-option:hover {
+    display: block;
+}
+
+input {
+  background-color: var(--color-light-gray);
+}
+
+.title-btn {
+  background-color: var(--color-dark-yellow);
+}
+
+input[type="checkbox"] {
+  border: 2px solid var(--color-dark-yellow);
+  outline: none;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: black; 
+}
+
+hr {
+  border: 1px solid var(--color-light-white);
+}
+
+.checkbox-container{
+    background-color: var(--color-medium-gray);
+}
