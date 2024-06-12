@@ -117,13 +117,13 @@
                     <form class="space-y-4" action="#">
                       <div class="flex items-center">
                         <div class="w-1/3">
-                          <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name:<span class="text-red-500">*</span></label >
+                          <label for="create-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name:<span class="text-red-500">*</span></label >
                         </div>
                         <div class="w-2/3">
                           <input
                             type="text"
-                            name="name"
-                            id="name"
+                            name="create-name"
+                            id="create-name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Please enter an application name"
                             required
@@ -133,7 +133,7 @@
                       <div class="flex items-center">
                         <div class="w-1/3">
                           <label
-                            for="website-link"
+                            for="create-websitelink"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                             >Website link:<span class="text-red-500"
                               >*</span
@@ -143,8 +143,8 @@
                         <div class="w-2/3">
                           <input
                             type="text"
-                            name="website-link"
-                            id="website-link"
+                            name="create-websitelink"
+                            id="create-websitelink"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Please enter http / https link"
                             required
@@ -154,7 +154,7 @@
                       <div class="flex items-center">
                         <div class="w-1/3">
                           <label
-                            for="website-link"
+                            for="create-applicationgrouping"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                             >Application grouping:<span class="text-red-500"
                               >*</span
@@ -164,8 +164,8 @@
                         <div class="w-2/3">
                           <select
                             class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg"
-                            name=""
-                            id=""
+                            name="create-applicationgrouping"
+                            id="create-applicationgrouping"
                           >
                             <option value="Tool">Tool</option>
                           </select>
@@ -188,7 +188,7 @@
                         <div class="flex items-center">
                           <div class="w-1/3">
                             <label
-                              for="app-description"
+                              for="create-appdescription"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                               >Application description:<span
                                 class="text-red-500"
@@ -198,6 +198,8 @@
                           </div>
                           <div class="w-2/3">
                             <input
+                              id="create-appdescription"
+                              name="create-appdescription"
                               type="text"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2"
                               placeholder="Please enter an application description"
@@ -208,7 +210,7 @@
                         <div class="flex items-center">
                           <div class="w-1/3">
                             <label
-                              for="app-description"
+                              for="create-pictureicon"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                               >Picture icon:<span class="text-red-500"
                                 >*</span
@@ -217,6 +219,8 @@
                           </div>
                           <div class="w-2/3">
                             <input
+                            id="create-pictureicon"
+                            name="create-pictureicon"
                               type="text"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2"
                               placeholder="Select the picture or paste the web picture link"
@@ -227,7 +231,7 @@
                         <div class="flex items-center">
                           <div class="w-1/3">
                             <label
-                              for="app-description"
+                              for="create-opentype"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                               >Open type:<span class="text-red-500"
                                 >*</span
@@ -236,6 +240,7 @@
                           </div>
                           <div class="w-2/3">
                             <button
+                            id="create-opentype"
                               type="button"
                               class="create-newbtn px-8 py-2 bg-gray-400 rounded-sm"
                             >
@@ -253,7 +258,7 @@
                           <div class="flex items-center">
                             <div class="w-1/3">
                               <label
-                                for="app-description"
+                                for="create-dialogsize"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 >Dialog size:<span class="text-red-500"
                                   >*</span
@@ -265,6 +270,7 @@
                                 class="flex items-center border-2 rounded-lg w-1/2 overflow-hidden bg-gray-200"
                               >
                                 <input
+                                  id="create-dialogsize"
                                   type="number"
                                   name="width"
                                   class="w-4/5 text-gray-900 text-sm outline-none border-none"
@@ -286,7 +292,7 @@
                           <div class="flex items-center">
                             <div class="w-1/3">
                               <label
-                                for="app-description"
+                                for="create-moresetting"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 >More settings:<span class="text-red-500"
                                   >*</span
@@ -296,6 +302,7 @@
                             <div class="w-2/3 flex items-center gap-3">
                               <div class="flex items-center w-1/2 gap-2">
                                 <input
+                                  id="create-moresetting"
                                   type="checkbox"
                                   name="option"
                                   value="option1"
@@ -467,113 +474,113 @@
                                     </h3>
                                 </div>
                                 <div class="p-4 md:p-5 space-y-4">
-                                    <form class="space-y-4" action="#">
+                                      <form class="space-y-4" action="#" autocomplete="on">
+                                          <div class="flex items-center">
+                                            <div class="w-1/3">
+                                              <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name:<span class="text-red-500">*</span></label>
+                                            </div>
+                                            <div class="w-2/3">
+                                                <input type="text" name="name" id="name" autocomplete="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter an application name" required />
+                                            </div>
+                                          </div>
+                                          <div class="flex items-center">
+                                            <div class="w-1/3">
+                                              <label for="website-link" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website link:<span class="text-red-500">*</span></label>
+                                            </div>
+                                            <div class="w-2/3">
+                                                <input type="text" name="website-link" id="website-link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter http / https link" required />
+                                            </div>
+                                          </div>
                                         <div class="flex items-center">
                                           <div class="w-1/3">
-                                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name:<span class="text-red-500">*</span></label>
+                                            <label for="application-grouping" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Application grouping:<span class="text-red-500">*</span></label>
                                           </div>
                                           <div class="w-2/3">
-                                              <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter an application name" required />
+                                              <select class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl " name="application-grouping" id="application-grouping">
+                                                <option value="Tool">Tool</option>
+                                              </select>
                                           </div>
+                                            
+                                            
                                         </div>
                                         <div class="flex items-center">
                                           <div class="w-1/3">
-                                             <label for="website-link" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website link:<span class="text-red-500">*</span></label>
-                                          </div>
-                                          <div class="w-2/3">
-                                              <input type="text" name="website-link" id="website-link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full p-2 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter http / https link" required />
-                                          </div>
-                                        </div>
-                                      <div class="flex items-center">
-                                        <div class="w-1/3">
-                                           <label for="application-grouping" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Application grouping:<span class="text-red-500">*</span></label>
-                                        </div>
-                                        <div class="w-2/3">
-                                            <select class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl " name="" id="">
-                                              <option value="Tool">Tool</option>
-                                            </select>
-                                        </div>
-                                           
-                                          
-                                      </div>
-                                      <div class="flex items-center">
-                                        <div class="w-1/3">
 
+                                          </div>
+                                          <div class="w-2/3">
+                                            <button type="button" class="more-settings-button bg-gray-50 py-2 px-10 flex gap-5 border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings<i class="ri-arrow-down-s-line"></i></button>
+                                          </div>
+                                            
                                         </div>
-                                        <div class="w-2/3">
-                                           <button type="button" class="more-settings-button bg-gray-50 py-2 px-10 flex gap-5 border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings<i class="ri-arrow-down-s-line"></i></button>
+                                        <div class="more-setting mt-4 flex flex-col gap-4 hidden">
+                                                <div class="flex items-center">
+                                                  <div class="w-1/3">
+                                                    <label for="app-description"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Application description:<span class="text-red-500">*</span></label>
+                                                  </div>
+                                                  <div class="w-2/3">
+                                                    <input type="text" id="app-description" name="app-description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full p-2" placeholder="Please enter an application description" required>
+                                                  </div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                  <div class="w-1/3">
+                                                      <label for="pictureicon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Picture icon:<span class="text-red-500">*</span></label>
+                                                  </div>
+                                                  <div class="w-2/3 bg-gray-50 border border-gray-300 rounded-xl flex items-center overflow-hidden">
+                                                      <input type="text" id="pictureicon" name="pictureicon" class="w-5/6 text-gray-900 text-sm p-2 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
+                                                      <div class="w-1/6 ml-4">
+                                                        <img class="w-8 h-8" src="/images/Folder.png" alt="Folder Image">
+                                                        </div>
+                                                      
+                                                  </div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                  <div class="w-1/3">
+                                                      <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Open type:<span class="text-red-500">*</span></h3>
+                                                  </div>
+                                                  <div class="w-2/3">
+                                                    <button type="button" class="new-window-btn px-8 py-2 bg-gray-400 rounded-sm">New window</button>
+                                                      <button type="button" class="Dialog-btn px-12 py-2 bg-gray-400 rounded-sm">Dialog</button>
+                                                  </div>
+                                                </div>
+                                                <div class="Dialog-content flex flex-col gap-3 hidden">
+                                                    <div class="flex items-center">
+                                                  <div class="w-1/3">
+                                                    <label for="dialogsize"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dialog size:<span class="text-red-500">*</span></label>
+                                                  </div>
+                                                  <div class="w-2/3 flex items-center gap-3">
+                                                    <div class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200">
+                                                      <input id="dialogsize" type="number" name="width" class="w-4/5 text-gray-900 text-sm outline-none border-none ">
+                                                      <h4 class="1/5 px-2">Width</h4>
+                                                    </div>
+                                                    <div class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200">
+                                                      <input type="number" name="width" class="w-4/5 text-gray-900 text-sm outline-none border-none ">
+                                                      <h4 class="1/5 px-2">Height</h4>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                  <div class="w-1/3">
+                                                    <label for="more-settings" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">More settings:<span class="text-red-500">*</span></label>
+                                                  </div>
+                                                  <div class="w-2/3 flex items-center gap-3">
+                                                    <div class="flex items-center w-1/2 gap-2">
+                                                      <input id="more-settings" type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
+                                                      <h4>Allow width adjusment</h4>
+                                                    </div>
+                                                    <div class="flex items-center w-1/2 gap-2">
+                                                      <input type="checkbox" name="option" value="option2" class="outline-none focus:outline-none">
+                                                      <h4>Minimalist title bar</h4>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                </div>
+                                              
                                         </div>
-                                           
-                                      </div>
-                                       <div class="more-setting mt-4 flex flex-col gap-4 hidden">
-                                              <div class="flex items-center">
-                                                <div class="w-1/3">
-                                                   <label for="app-description"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Application description:<span class="text-red-500">*</span></label>
-                                                </div>
-                                                <div class="w-2/3">
-                                                   <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full p-2" placeholder="Please enter an application description" required>
-                                                </div>
-                                              </div>
-                                               <div class="flex items-center">
-                                                <div class="w-1/3">
-                                                     <label for="pictureicon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Picture icon:<span class="text-red-500">*</span></label>
-                                                </div>
-                                                <div class="w-2/3 bg-gray-50 border border-gray-300 rounded-xl flex items-center overflow-hidden">
-                                                     <input type="text" class="w-5/6 text-gray-900 text-sm p-2 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
-                                                     <div class="w-1/6 ml-4">
-                                                       <img class="w-8 h-8" src="/images/Folder.png" alt="Folder Image">
-                                                      </div>
-                                                    
-                                                </div>
-                                              </div>
-                                              <div class="flex items-center">
-                                                <div class="w-1/3">
-                                                     <label for="opentype"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Open type:<span class="text-red-500">*</span></label>
-                                                </div>
-                                                <div class="w-2/3">
-                                                  <button type="button" class="new-window-btn px-8 py-2 bg-gray-400 rounded-sm">New window</button>
-                                                    <button type="button" class="Dialog-btn px-12 py-2 bg-gray-400 rounded-sm">Dialog</button>
-                                                </div>
-                                              </div>
-                                              <div class="Dialog-content flex flex-col gap-3 hidden">
-                                                  <div class="flex items-center">
-                                                <div class="w-1/3">
-                                                   <label for="dialogsize"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dialog size:<span class="text-red-500">*</span></label>
-                                                </div>
-                                                <div class="w-2/3 flex items-center gap-3">
-                                                  <div class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200">
-                                                    <input type="number" name="width" class="w-4/5 text-gray-900 text-sm outline-none border-none ">
-                                                    <h4 class="1/5 px-2">Width</h4>
-                                                  </div>
-                                                   <div class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200">
-                                                    <input type="number" name="width" class="w-4/5 text-gray-900 text-sm outline-none border-none ">
-                                                    <h4 class="1/5 px-2">Height</h4>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                               <div class="flex items-center">
-                                                <div class="w-1/3">
-                                                   <label for="more-settings"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">More settings:<span class="text-red-500">*</span></label>
-                                                </div>
-                                                <div class="w-2/3 flex items-center gap-3">
-                                                  <div class="flex items-center w-1/2 gap-2">
-                                                    <input type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
-                                                    <h4>Allow width adjusment</h4>
-                                                  </div>
-                                                   <div class="flex items-center w-1/2 gap-2">
-                                                    <input type="checkbox" name="option" value="option2" class="outline-none focus:outline-none">
-                                                    <h4>Minimalist title bar</h4>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              </div>
-                                             
-                                       </div>
-                                      <div class="flex items-center justify-end gap-4 pt-16">
-                                        <button class="text-blue-500 bg-white border border-blue-500 font-medium rounded-full text-sm px-10 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Preview</button>
-                                          <button class="bg-black text-white px-12 py-2 rounded-full">Save</button>
-                                      </div>
-                                    </form>
+                                        <div class="flex items-center justify-end gap-4 pt-16">
+                                          <button class="text-blue-500 bg-white border border-blue-500 font-medium rounded-full text-sm px-10 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Preview</button>
+                                            <button class="bg-black text-white px-12 py-2 rounded-full">Save</button>
+                                        </div>
+                                      </form>
                                 </div>
                             </div>
                         </div>

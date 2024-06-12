@@ -410,7 +410,7 @@
         role="dialog"
         class="fixed hidden inset-0 flex items-center justify-center bg-black bg-opacity-50"
       >
-        <div class="bg-white rounded-lg shadow-lg w-full max-w-4xl">
+        <div class="bg-white mt-46 rounded-lg shadow-lg w-full max-w-2xl">
           <div class="flex justify-between items-center p-4 border-b">
             <h1 class="text-lg font-semibold" id="staticBackdropLabel">Role</h1>
             <i
@@ -419,11 +419,11 @@
               aria-label="Close"
             ></i>
           </div>
+          <form autocomplete="on">
           <div
             class="p-4 overflow-y-auto"
             style="max-height: calc(100vh - 8rem)"
           >
-            <form>
               <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-2">
                   <label for="name" class="block font-bold"
@@ -432,9 +432,11 @@
                 </div>
                 <div class="col-span-10 pr-28">
                   <input
+                    id="name"
                     class="w-full p-2 border rounded-xl outline-none pl-5"
                     type="text"
                     placeholder="Please enter an username"
+                    autocomplete="name"
                   />
                 </div>
               </div>
@@ -443,8 +445,8 @@
                   <label for="display" class="block font-bold">Display:</label>
                 </div>
                 <div class="col-span-10 flex items-center">
-                  <label class="inline-flex items-center me-5 cursor-pointer">
-                    <input type="checkbox" class="sr-only peer" />
+                  <label for="display" class="inline-flex items-center me-5 cursor-pointer">
+                    <input id="display" type="checkbox" class="sr-only peer" />
                     <div
                       class="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-yellow-400 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-400"
                     ></div>
@@ -456,14 +458,14 @@
               </div>
               <div class="grid grid-cols-12 gap-4 mt-4">
                 <div class="col-span-2">
-                  <label for="fileSize" class="block font-bold"
+                  <label for="filesize" class="block font-bold"
                     >File size:<span class="text-red-500">*</span></label
                   >
                 </div>
                 <div class="col-span-10 flex items-center space-x-2">
                   <div class="relative w-full">
                     <input
-                      id="file-size"
+                      id="filesize"
                       class="w-full p-2 border rounded-xl outline-none pl-5"
                       type="text"
                       placeholder="Please upload file size"
@@ -485,6 +487,7 @@
                 </div>
                 <div class="col-span-10 pr-28">
                   <textarea
+                    id="roleDescription"
                     class="w-full p-2 border rounded"
                     rows="4"
                   ></textarea>
@@ -502,90 +505,88 @@
                 </div>
                 <div class="grid grid-cols-12 gap-4 mt-10">
                   <div class="col-span-2 flex items-start">
-                    <label for="fileManage" class="block font-bold"
-                      >File manage:</label
-                    >
+                    <h3 class="block font-bold">Fle manage:</h3>
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-10 md:col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview"/>
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center  border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox3" class="mr-2" />
-                      <label for="checkbox3">Download</label>
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox4" class="mr-2" />
-                      <label for="checkbox4">New file/folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox5" class="mr-2" />
-                      <label for="checkbox5">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox6" class="mr-2" />
-                      <label for="checkbox6">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                     <span>Search</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox7" class="mr-2" />
-                      <label for="checkbox7">Download</label>
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox8" class="mr-2" />
-                      <label for="checkbox8">New file/ folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox9" class="mr-2" />
-                      <label for="checkbox9">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox10" class="mr-2" />
-                      <label for="checkbox10">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox11" class="mr-2" />
-                      <label for="checkbox11">Download</label>
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox12" class="mr-2" />
-                      <label for="checkbox12">New file/ folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox13" class="mr-2" />
-                      <label for="checkbox13">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                   </div>
                 </div>
@@ -594,34 +595,34 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="user" class="block font-bold">User:</label>
+                    <h3 class="block font-bold">User:</label>
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
+                    </div>
+                 <div
+                      class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
+                    >
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox3" class="mr-2" />
-                      <label for="checkbox3">Download</label>
-                    </div>
-                    <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
-                    >
-                      <input type="checkbox" id="checkbox4" class="mr-2" />
-                      <label for="checkbox4">New file/ folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                   </div>
                 </div>
@@ -638,60 +639,60 @@
                 </div>
                 <div class="grid grid-cols-12 gap-4 mt-10">
                   <div class="col-span-2">
-                    <label for="folder" class="block font-bold"
-                      >Backstage:</label
+                    <h3 class="block font-bold"
+                      >Backstage:</h3
                     >
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox3" class="mr-2" />
-                      <label for="checkbox3">Download</label>
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox4" class="mr-2" />
-                      <label for="checkbox4">New file/ folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox3" class="mr-2" />
-                      <label for="checkbox3">Download</label>
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox4" class="mr-2" />
-                      <label for="checkbox4">New file/ folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                   </div>
                 </div>
@@ -700,22 +701,22 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="link" class="block font-bold">Role:</label>
+                    <h3 class="block font-bold">Role:</h3>
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center  border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center  border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                   </div>
                 </div>
@@ -724,22 +725,22 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="link" class="block font-bold">Job:</label>
+                    <h3 class="block font-bold">Job:</h3>
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                   </div>
                 </div>
@@ -748,60 +749,60 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="link" class="block font-bold"
-                      >User & Groups:</label
+                    <h3 class="block font-bold"
+                      >User & Groups:</h3
                     >
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox3" class="mr-2" />
-                      <label for="checkbox3">Download</label>
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox4" class="mr-2" />
-                      <label for="checkbox4">New file/ folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox3" class="mr-2" />
-                      <label for="checkbox3">Download</label>
+                      <input type="checkbox" class="mr-1" name="download" />
+                      <span>Download</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox4" class="mr-2" />
-                      <label for="checkbox4">New file/ folder</label>
+                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <span>New file/folder</span>
                     </div>
                   </div>
                 </div>
@@ -810,24 +811,24 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="link" class="block font-bold"
-                      >Document Permission:</label
+                    <h3 class="block font-bold"
+                      >Document Permission:</h3
                     >
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                   </div>
                 </div>
@@ -836,24 +837,24 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="link" class="block font-bold"
-                      >Plugin Center:</label
+                    <h3 class="block font-bold"
+                      >Plugin Center:</h3
                     >
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                   </div>
                 </div>
@@ -862,24 +863,24 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="link" class="block font-bold"
-                      >Storage/file:</label
+                    <h3 class="block font-bold"
+                      >Storage/file:</h3
                     >
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview" />
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                   </div>
                 </div>
@@ -888,24 +889,24 @@
               <div>
                 <div class="grid grid-cols-12 gap-4 mt-4">
                   <div class="col-span-2">
-                    <label for="link" class="block font-bold"
-                      >Scheduled Tasks:</label
+                    <h3 class="block font-bold"
+                      >Scheduled Tasks:</h3
                     >
                   </div>
                   <div
-                    class="col-span-10 grid grid-cols-1 md:grid-cols-4 gap-3"
+                    class="col-span-9 grid grid-cols-1 md:grid-cols-4 gap-3"
                   >
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Preview</label>
+                      <input type="checkbox" class="mr-1" name="preview"/>
+                      <span>Preview</span>
                     </div>
                     <div
-                      class="checkbox-container flex items-center space-x-2 border w-min px-4 py-2 rounded"
+                      class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox2" class="mr-2" />
-                      <label for="checkbox2">Search</label>
+                      <input type="checkbox" class="mr-1" name="search" />
+                      <span>Search</span>
                     </div>
                   </div>
                 </div>
@@ -920,19 +921,19 @@
                     <div
                       class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
                     >
-                      <input type="checkbox" id="checkbox1" class="mr-2" />
-                      <label for="checkbox1">Select All / Cancel</label>
+                      <input type="checkbox" class="mr-2" name="selectall" />
+                      <span>Select All / Cancel</span>
                     </div>
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
-          <div class="flex justify-end p-4">
+              <div class="flex justify-end p-4">
             <button class="bg-black text-white px-12 py-2 rounded-full">
               Save
             </button>
           </div>
+          </div>       
+          </form>
         </div>
       </div>
     </div>
