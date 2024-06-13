@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Light App</title>
     <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="Lightapp.css" />
-     <link rel="stylesheet" href="root.css">
+     <link rel="stylesheet" href="global-root.css">
   </head>
   <body>
     <div class="lightapp w-full h-screen">
@@ -90,12 +93,12 @@
           <div class="lightapp-header w-full h-28">
             <div class="flex items-center gap-2 py-3 px-6">
               <img class="w-10 h-10" src="/images/lightimg.png" alt="Light Image"/>
-              <h1 class="text-base font-normal mb-2">Light App</h1>
+              <h1 class="lightapp-heading mb-2">Light App</h1>
             </div>
             <div class="lightapp-yellowbar w-full h-12 bg-no-repeat bg-cover bg-center flex items-center justify-between px-7" >
               <span class="text-base font-medium">All</span>
               <span>
-                <button data-modal-target="Create-modal" data-modal-toggle="Create-modal" class="lightapp-btn py-2 px-6 bg-black text-sm rounded-md" >
+                <button data-modal-target="Create-modal" data-modal-toggle="Create-modal" class="lightapp-btn py-2 px-6 text-sm rounded-md" >
                   Create a light application
                 </button>
               </span>
@@ -109,7 +112,7 @@
                     <div class="img-container w-18 h-18 rounded-lg bg-white shadow-black flex items-center justify-center" >
                       <img class="w-16 h-16" src="/images/lightimg.png" alt="Light image" />
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+                    <h3 class="modal-heading">
                       Create a light application
                     </h3>
                   </div>
@@ -350,7 +353,7 @@
                     <div
                       class="delete-header flex items-center gap-2 border-b-2"
                     >
-                     <i class="fa-regular fa-trash-can" style="color: #FFD43B;"></i>
+                    <i class="ri-delete-bin-6-line" style="color: #FDCF01;"></i>
                       <h1 class="font-medium">Delete File</h1>
                     </div>
                     <div class="mt-4 flex items-center justify-center">
@@ -448,16 +451,16 @@
                 </div>
                 <h1 class="font-medium">${item.name}</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="add-btn flex items-center justify-between gap-5 text-lg py-2 px-10" type="button"><a href="#">Add</a> <div><i class="fa-solid fa-chevron-down text-white"></i></div> 
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="add-btn flex items-center justify-between gap-5 text-lg py-2 px-10" type="button"><a href="#">Add</a> <div><i class="ri-arrow-down-s-line text-white"></i></div> 
                     </button>
 
                     <div id="dropdown${item.id}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button data-modal-target="Edit-modal${item.id}" data-modal-toggle="Edit-modal${item.id}" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Edit</button>
+                            <button data-modal-target="Edit-modal${item.id}" data-modal-toggle="Edit-modal${item.id}" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Edit</button>
                           </li>
                           <li>
-                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-trash-can"></i>Delete</a>
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button" class="block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Delete</a>
                           </li>
                         </ul>
                     </div>
@@ -469,7 +472,7 @@
                                 <div class="img-container w-14 h-14 rounded-lg bg-white shadow-black flex items-center justify-center">
                                         <img class="w-10 h-10" src="${item.image}" alt="${item.name} Image">
                                     </div>
-                                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+                                    <h3 class="modal-heading">
                                         ${item.name}
                                     </h3>
                                 </div>

@@ -8,12 +8,9 @@
       href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link
+     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
@@ -158,10 +155,7 @@
                   type="search"
                   placeholder="Search"
                 />
-                <i
-                  id="searchicon"
-                  class="fa-solid fa-magnifying-glass absolute right-3 top-2"
-                ></i>
+                <i id="searchicon" class="ri-search-line absolute right-3 top-1"></i>
               </span>
             </div>
           </div>
@@ -218,28 +212,28 @@
                 </div>
                 <h1 class="font-medium">${item.name}</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="dropdown-button flex items-center justify-between gap-2 text-yellow-300 rounded-md text-lg py-2 px-8 w-min" type="button">Enable<i class="fa-solid fa-chevron-down fa-sm" style="color: #ffffff;"></i>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown${item.id}" class="dropdown-button flex items-center justify-between gap-2 text-yellow-300 rounded-md text-lg py-2 px-8 w-min" type="button">Enable<i class="ri-arrow-down-s-line text-white"></i>
                     </button>
 
                     <div id="dropdown${item.id}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Update</button>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Update</button>
                           </li>
                           <li>
-                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-trash-can"></i>Manual update</a>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Manual update</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Configure</a>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Configure</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-trash-can"></i>Disable</a>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Disable</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Uninstall</a>
+                            <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Uninstall</a>
                           </li>
                             <li>
-                          <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="fa-regular fa-pen-to-square"></i>Enable</button>
+                          <button type="button" class="dropdown-item block w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Enable</button>
                       </li>
                         </ul>
                     </div>

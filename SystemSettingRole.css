@@ -1,30 +1,3 @@
-:root {
-  --color-white: #ffffff;
-  --color-light-white: #ddd;
-  --color-pure-black: #000000;
-  --color-light-gray: #282828;
-  --color-light-black: #4d4d4d;
-  --color-dark-white: #fdfdfd;
-  --color-gray-2: #646464;
-  --color-dark-gray: rgba(0, 0, 0, 0.38);
-  --color-dark-yellow: #fdcf01;
-  --color-light-pink: #ffd9d9;
-  --color-medium-gray: #f9f9f9;
-  --bg-linear-gradient: linear-gradient(
-    204deg,
-    #fff 15.46%,
-    rgba(217, 217, 217, 0.56) 118.36%
-  );
-  /*Font Family and Font Size */
-  --font-family-roboto: "Roboto", sans-serif;
-  --font-size-50: 50px;
-  --font-size-24: 24px;
-  --font-size-20: 20px;
-  --font-size-18: 18px;
-  --font-size-16: 16px;
-  --font-size-14: 14px;
-}
-
 .Role-container {
   height: calc(100% - 56px);
 }
@@ -113,7 +86,7 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-  background-color: black;
+  background-color: var(--color-pure-black);
 }
 
 hr {
@@ -121,7 +94,7 @@ hr {
 }
 
 .checkbox-container {
-  background-color: var(--color-medium-gray);
+  background-color: var(--color-lighten-gray);
 }
 
 #modal{

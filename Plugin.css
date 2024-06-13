@@ -7,16 +7,16 @@
 }
 
 .all-tab {
-  background: #282828;
-  border-radius: 0px 10px 10px 0px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: var(--color-light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 nav ul li:hover {
-  border-radius: 0px 10px 10px 0px;
-  background: #282828;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #fdcf01;
+  background: var(--color-light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-dark-yellow);
 }
 
 .plugin-content {
@@ -32,7 +32,7 @@ nav ul li:hover {
 }
 
 .right-container {
-background-color: #ffffff;
+background-color: var(--color-white);
 }
 
 .small-container {
@@ -45,21 +45,20 @@ background-color: #ffffff;
 }
 
 .add-btn {
-  color: #fdcf01;
+  color: var(--color-dark-yellow);
 }
 
 #All {
-  color: #fdcf01;
+  color: var(--color-dark-yellow);
 }
 
 #dropdownDefaultButton {
   border-radius: 5px;
-  background: #282828;
+  background: var(--color-light-gray);
 }
 
 footer {
-  background-image: url(/images/Wallpaper.png),
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background-image: url(/images/Wallpaper.png),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
   background-blend-mode: lighten;
   background-position: bottom right;
   background-size: cover;
