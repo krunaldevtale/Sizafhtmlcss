@@ -3,302 +3,392 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="dashbord.css" />
-    <link rel="stylesheet" href="global-root.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="root.css" />
   </head>
   <body>
     <div class="w-full h-screen">
-      <div class="dashboard w-full h-full bg-no-repeat">
-        <!-- Right click Menu -->
-        <div id="context-menu" class="context-menu hidden">
-          <ul>
-            <li class="flex items-center justify-between pr-4"><a href="#">Refresh</a><p class="menu-sidename">F5</p></li>
-            <li class="border-b-2"><a href="#">Upload file</a></li>
-            <li><a href="#">New folder</a></li>
-            <li class="flex items-center justify-between">
-              <a href="#">New file</a>
-              <i class="ri-arrow-right-s-line"></i>
-              <ul class="submenu newfile-submenu absolute shadow-md rounded-md hidden">
-                 <li class="flex items-center px-5">
-                  <img src="/images/txt-file.png" alt="text-file">
-                  <a href="#">txt file</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <img src="/images/md-file.png" alt="md-file">
-                  <a href="#">md file</a>
-                </li>
-                 <li class="flex items-center px-5 border-b-2">
-                  <img src="/images/html-file.png" alt="html file">
-                  <a href="#">html file</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <img class="w-5 h-5" src="/images/docx.png" alt="word-file">
-                  <a href="#">Word docx file</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <img class="w-5 h-5" src="/images/xlsx.png" alt="excel-file">
-                  <a href="#">Excel xlsx file</a>
-                </li>
-                 <li class="flex items-center px-5 border-b-2">
-                  <img class="w-5 h-5" src="/images/pptx.png" alt="powerpoint-file">
-                  <a href="#">PowerPoint pptx</a>
-                </li>
-                 <li class="flex items-center px-5 border-b-2">
-                  <img class="w-5 h-5" src="/images/MinderImg.png" alt="minder-img">
-                  <a href="#">Minder diagram</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <img class="w-5 h-5" src="/images/lightapp.png" alt="lightapp">
-                  <a href="#">Light app</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <img src="/images/chrome-img.png" alt="Chrome">
-                  <a href="#">New URL</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <img src="/images/sharedfolder-img.png" alt="file-shortcut">
-                  <a href="#">File shortcut</a>
-                </li>
-              </ul>
-            </li>
-            <li class="flex items-center justify-between">
-              <a href="#">Sort by</a>
-              <i class="ri-arrow-right-s-line"></i>
-               <ul class="submenu sortby-submenu absolute shadow-md rounded-md hidden ">
-                 <li class="pl-7"><a href="#">Name</a></li>
-                 <li class="pl-7"><a href="#">Type</a></li>
-                 <li class="pl-7"><a href="#">Size</a></li>
-                 <li class="pl-7 border-b-2"><a href="#">Modification</a></li>
-                 <li class="pl-7"><a href="#">Increasing</a></li>
-                 <li class="pl-7"><a href="#">Decrement</a></li>
-              </ul>
-            </li>
-            <li class="flex items-center justify-between">
-              <a href="#">Icon size</a>
-              <i class="ri-arrow-right-s-line"></i>
-               <ul class="submenu iconsize-submenu absolute shadow-md rounded-md hidden">
-                 <li class="flex items-center px-5">
-                  <i class="ri-function-add-line ri-xs"></i>
-                  <a href="#">Tiny</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <i class="ri-function-add-line ri-sm"></i>
-                  <a href="#">Small icon</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <i class="ri-function-add-line ri-1x"></i>
-                  <a href="#">Medium icon</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <i class="ri-function-add-line ri-lg"></i>
-                  <a href="#">Big icon</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <i class="ri-function-add-line ri-xl"></i>
-                  <a href="#">Oversized icon</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">Attribute</a></li>
-            <li class="flex items-center justify-between">
-              <a href="#">More</a>
-              <i class="ri-arrow-right-s-line"></i>
-               <ul class="submenu more-submenu absolute shadow-md rounded-md hidden">
-                 <li class="flex items-center border-b-2 px-5">
-                  <i class="ri-equalizer-line"></i>
-                  <a href="#">Show options</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <i class="ri-arrow-go-back-line"></i>
-                  <a href="#">Revoke</a>
-                </li>
-                 <li class="flex items-center px-5">
-                  <i class="ri-arrow-go-forward-line"></i>
-                  <a href="#">Anti-revocation</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">Light app</a></li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Wallpaper</a><p class="menu-sidename">Alt+I</p></li>
-            <li><a href="#">Personal</a></li>
-          </ul>
-        </div>
-
-        <!-- Apps context-menu -->
-        <div id="app-contextmenu" class="context-menu hidden">
-          <ul>
-            <li class="flex items-center justify-between pr-4"><a href="#">Open</a><p class="menu-sidename">Enter</p></li>
-            <li class="border-b-2 flex items-center justify-between">
-              <a href="#">Open with</a>
-              <i class="ri-arrow-right-s-line"></i>
-              <ul class="submenu open-submenu absolute shadow-md rounded-md hidden ">
-                <li class="pl-5 flex items-center">
-                  <i class="ri-settings-3-line"></i>
-                  <a href="#">Open with default</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <img src="/images/online-editior.png" alt="online-editior">
-                  <a href="#">Only office online editior</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <img src="/images/google-docs.png" alt="google-docs">
-                  <a href="#">Google docs</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <img src="/images/chrome-img.png" alt="chrome">
-                  <a href="#">Open with browser</a>
-                </li>
-              </ul>
-            </li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Download</a><p class="menu-sidename">Shift+Enter</p></li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Link sharing</a></li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Copy</a><p class="menu-sidename">Ctrl+C</p></li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Cut</a><p class="menu-sidename">Ctrl+X</p></li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Rename</a><p class="menu-sidename">F2</p></li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Delete</a><p class="menu-sidename">Del</p></li>
-            <li class="flex items-center justify-between">
-              <a href="#">File tag</a>
-              <i class="ri-arrow-right-s-line"></i>
-              <ul class="submenu filetag-submenu absolute shadow-md rounded-md hidden ">
-                <li class="pl-5 flex items-center">
-                  <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <a href="#">Study</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
-                  <a href="#">Test data</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                   <div class="w-3 h-3 bg-blue-700 rounded-full"></div>
-                  <a href="#">Contract</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-               <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <a href="#">2020</a>
-                </li>
-                 <li class="pl-5 flex items-center border-b-2">
+      <!-- Right click Menu -->
+      <div id="context-menu" class="context-menu hidden">
+        <ul>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Refresh</a>
+            <p class="menu-sidename">F5</p>
+          </li>
+          <li class="border-b-2"><a href="#">Upload file</a></li>
+          <li><a href="#">New folder</a></li>
+          <li class="flex items-center justify-between">
+            <a href="#">New file</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <ul
+              class="submenu newfile-submenu absolute shadow-md rounded-md hidden"
+            >
+              <li class="flex items-center px-5">
+                <img src="/images/txt-file.png" alt="text-file" />
+                <a href="#">txt file</a>
+              </li>
+              <li class="flex items-center px-5">
+                <img src="/images/md-file.png" alt="md-file" />
+                <a href="#">md file</a>
+              </li>
+              <li class="flex items-center px-5 border-b-2">
+                <img src="/images/html-file.png" alt="html file" />
+                <a href="#">html file</a>
+              </li>
+              <li class="flex items-center px-5">
+                <img class="w-5 h-5" src="/images/docx.png" alt="word-file" />
+                <a href="#">Word docx file</a>
+              </li>
+              <li class="flex items-center px-5">
+                <img class="w-5 h-5" src="/images/xlsx.png" alt="excel-file" />
+                <a href="#">Excel xlsx file</a>
+              </li>
+              <li class="flex items-center px-5 border-b-2">
+                <img
+                  class="w-5 h-5"
+                  src="/images/pptx.png"
+                  alt="powerpoint-file"
+                />
+                <a href="#">PowerPoint pptx</a>
+              </li>
+              <li class="flex items-center px-5 border-b-2">
+                <img
+                  class="w-5 h-5"
+                  src="/images/MinderImg.png"
+                  alt="minder-img"
+                />
+                <a href="#">Minder diagram</a>
+              </li>
+              <li class="flex items-center px-5">
+                <img
+                  class="w-5 h-5"
+                  src="/images/lightapp.png"
+                  alt="lightapp"
+                />
+                <a href="#">Light app</a>
+              </li>
+              <li class="flex items-center px-5">
+                <img src="/images/chrome-img.png" alt="Chrome" />
+                <a href="#">New URL</a>
+              </li>
+              <li class="flex items-center px-5">
+                <img src="/images/sharedfolder-img.png" alt="file-shortcut" />
+                <a href="#">File shortcut</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#">Sort by</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <ul
+              class="submenu sortby-submenu absolute shadow-md rounded-md hidden"
+            >
+              <li class="pl-7"><a href="#">Name</a></li>
+              <li class="pl-7"><a href="#">Type</a></li>
+              <li class="pl-7"><a href="#">Size</a></li>
+              <li class="pl-7 border-b-2"><a href="#">Modification</a></li>
+              <li class="pl-7"><a href="#">Increasing</a></li>
+              <li class="pl-7"><a href="#">Decrement</a></li>
+            </ul>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#">Icon size</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <ul
+              class="submenu iconsize-submenu absolute shadow-md rounded-md hidden"
+            >
+              <li class="flex items-center px-5">
+                <i class="ri-function-add-line ri-xs"></i>
+                <a href="#">Tiny</a>
+              </li>
+              <li class="flex items-center px-5">
+                <i class="ri-function-add-line ri-sm"></i>
+                <a href="#">Small icon</a>
+              </li>
+              <li class="flex items-center px-5">
+                <i class="ri-function-add-line ri-1x"></i>
+                <a href="#">Medium icon</a>
+              </li>
+              <li class="flex items-center px-5">
+                <i class="ri-function-add-line ri-lg"></i>
+                <a href="#">Big icon</a>
+              </li>
+              <li class="flex items-center px-5">
+                <i class="ri-function-add-line ri-xl"></i>
+                <a href="#">Oversized icon</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Attribute</a></li>
+          <li class="flex items-center justify-between">
+            <a href="#">More</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <ul
+              class="submenu more-submenu absolute shadow-md rounded-md hidden"
+            >
+              <li class="flex items-center border-b-2 px-5">
+                <i class="ri-equalizer-line"></i>
+                <a href="#">Show options</a>
+              </li>
+              <li class="flex items-center px-5">
+                <i class="ri-arrow-go-back-line"></i>
+                <a href="#">Revoke</a>
+              </li>
+              <li class="flex items-center px-5">
+                <i class="ri-arrow-go-forward-line"></i>
+                <a href="#">Anti-revocation</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Light app</a></li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Wallpaper</a>
+            <p class="menu-sidename">Alt+I</p>
+          </li>
+          <li><a href="#">Personal</a></li>
+        </ul>
+      </div>
+      <!-- Apps context-menu -->
+      <div id="app-contextmenu" class="context-menu hidden">
+        <ul>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Open</a>
+            <p class="menu-sidename">Enter</p>
+          </li>
+          <li class="border-b-2 flex items-center justify-between">
+            <a href="#">Open with</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <ul
+              class="submenu open-submenu absolute shadow-md rounded-md hidden"
+            >
+              <li class="pl-5 flex items-center">
+                <i class="ri-settings-3-line"></i>
+                <a href="#">Open with default</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <img src="/images/online-editior.png" alt="online-editior" />
+                <a href="#">Only office online editior</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <img src="/images/google-docs.png" alt="google-docs" />
+                <a href="#">Google docs</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <img src="/images/chrome-img.png" alt="chrome" />
+                <a href="#">Open with browser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Download</a>
+            <p class="menu-sidename">Shift+Enter</p>
+          </li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Link sharing</a>
+          </li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Copy</a>
+            <p class="menu-sidename">Ctrl+C</p>
+          </li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Cut</a>
+            <p class="menu-sidename">Ctrl+X</p>
+          </li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Rename</a>
+            <p class="menu-sidename">F2</p>
+          </li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Delete</a>
+            <p class="menu-sidename">Del</p>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#">File tag</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <ul
+              class="submenu filetag-submenu absolute shadow-md rounded-md hidden"
+            >
+              <li class="pl-5 flex items-center">
+                <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+                <a href="#">Study</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+                <a href="#">Test data</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <div class="w-3 h-3 bg-blue-700 rounded-full"></div>
+                <a href="#">Contract</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <a href="#">2020</a>
+              </li>
+              <li class="pl-5 flex items-center border-b-2">
                 <div class="w-3 h-3 bg-purple-300 rounded-full"></div>
-                  <a href="#">Test</a>
-                </li>
-                 <li class="pl-5 flex items-center border-b-2">
-                 <i class="ri-add-circle-line"></i>
-                  <a href="#">Add</a>
-                </li>
-                 <li class="pl-5 flex items-center">
+                <a href="#">Test</a>
+              </li>
+              <li class="pl-5 flex items-center border-b-2">
+                <i class="ri-add-circle-line"></i>
+                <a href="#">Add</a>
+              </li>
+              <li class="pl-5 flex items-center">
                 <i class="ri-edit-box-line"></i>
-                  <a href="#">Tag edit</a>
-                </li>
-              </ul>
-            </li>
-            <li class="flex items-center justify-between pr-4"><a href="#">Attribute</a><p class="menu-sidename">Alt+I</p></li>
-            <li class="flex items-center justify-between">
-              <a href="#">More</a>
-              <i class="ri-arrow-right-s-line"></i>
-               <ul class="submenu appmore-submenu absolute shadow-md rounded-md hidden ">
-                <li class="pl-5 flex items-center">
-                  <i class="ri-star-line"></i>
-                  <a href="#">Star</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <i class="ri-lock-2-line"></i>
-                  <a href="#">Edit lock</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <i class="ri-pushpin-2-line"></i>
-                  <a href="#">Move top</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <i class="ri-file-copy-2-line"></i>
-                  <a href="#">Create a copy</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <i class="ri-code-s-slash-line"></i>
-                  <a href="#">Embedded file</a>
-                </li>
-                 <li class="pl-5 flex items-center">
+                <a href="#">Tag edit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="flex items-center justify-between pr-4">
+            <a href="#">Attribute</a>
+            <p class="menu-sidename">Alt+I</p>
+          </li>
+          <li class="flex items-center justify-between">
+            <a href="#">More</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <ul
+              class="submenu appmore-submenu absolute shadow-md rounded-md hidden"
+            >
+              <li class="pl-5 flex items-center">
+                <i class="ri-star-line"></i>
+                <a href="#">Star</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <i class="ri-lock-2-line"></i>
+                <a href="#">Edit lock</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <i class="ri-pushpin-2-line"></i>
+                <a href="#">Move top</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <i class="ri-file-copy-2-line"></i>
+                <a href="#">Create a copy</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <i class="ri-code-s-slash-line"></i>
+                <a href="#">Embedded file</a>
+              </li>
+              <li class="pl-5 flex items-center">
                 <i class="ri-file-shred-line"></i>
-                  <a href="#">Create shortcut</a>
-                </li>
-                 <li class="pl-5 flex items-center">
-                  <i class="ri-file-zip-line"></i>
-                  <a href="#">Compress</a>
-                  <i class="ri-arrow-right-s-line ml-10"></i>
-                  <ul class="submenu compress-submenu absolute shadow-md rounded-md hidden ">
-                    <li class="pl-5 flex items-center">
-                      <i class="ri-file-zip-line"></i>
-                      <a href="#">ZIP file</a>
-                    </li>
-                    <li class="pl-5 flex items-center">
-                      <i class="ri-file-zip-line"></i>
-                      <a href="#">TAR file</a>
-                    </li>
-                    <li class="pl-5 flex items-center">
-                      <i class="ri-file-zip-line"></i>
-                      <a href="#">GZIP file</a>
-                    </li>
-                 </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
+                <a href="#">Create shortcut</a>
+              </li>
+              <li class="pl-5 flex items-center">
+                <i class="ri-file-zip-line"></i>
+                <a href="#">Compress</a>
+                <i class="ri-arrow-right-s-line ml-10"></i>
+                <ul
+                  class="submenu compress-submenu absolute shadow-md rounded-md hidden"
+                >
+                  <li class="pl-5 flex items-center">
+                    <i class="ri-file-zip-line"></i>
+                    <a href="#">ZIP file</a>
+                  </li>
+                  <li class="pl-5 flex items-center">
+                    <i class="ri-file-zip-line"></i>
+                    <a href="#">TAR file</a>
+                  </li>
+                  <li class="pl-5 flex items-center">
+                    <i class="ri-file-zip-line"></i>
+                    <a href="#">GZIP file</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="dashboard w-full h-full bg-no-repeat">
         <!-- Dashboard Navbar -->
         <div
           class="navbar h-12 md:h-16 lg:h-12 pr-5 flex items-center justify-end gap-8"
         >
           <i id="search-icon" class="ri-search-line icon-color"></i>
-          <i id="notification-icon" class="ri-notification-3-line icon-color"></i>
+          <i
+            id="notification-icon"
+            class="ri-notification-3-line icon-color"
+          ></i>
           <i class="ri-wifi-line icon-color"></i>
           <i class="ri-volume-up-fill icon-color"></i>
           <i class="ri-battery-low-line icon-color"></i>
         </div>
 
         <!-- Desktop apps -->
-        <div class="desktop-apps w-0 gap-4 flex flex-col flex-wrap p-5">
-      </div>
+        <div class="desktop-apps w-0 gap-4 flex flex-col flex-wrap p-5"></div>
 
         <!-- Clock -->
         <div class="clock flex flex-col items-center" id="clock"></div>
 
         <!-- Search Input -->
-        <div id="search" class="Search relative overflow-hidden hidden">
-          <div class="search-icon absolute">
-            <i class="ri-search-line"></i>
-          </div>
-          <input
-            type="search"
-             id="searchInput"
-            class="search-input py-3 px-10 outline-none border-b-2"
-            placeholder="Search"
-          />
-          <div class="cross-icon absolute">
-             <i class="ri-close-line"></i>
-          </div>
-         
-           <div id="suggestions" class="searchdata px-3 py-3 overflow-y-scroll max-h-64">
-            <div class="test-file p-3">
-                <ul>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/Docs.png" alt=""><p>Test File</p></li>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/Docs.png" alt=""><p>Test File</p></li>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/Docs.png" alt=""><p>Test File</p></li>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/Docs.png" alt=""><p>Test File</p></li>
-                </ul>
+        <div id="search" class="Search overflow-hidden hidden">
+          <div class="relative">
+            <div class="search-icon absolute">
+              <i class="ri-search-line"></i>
             </div>
-            <div class="image-file border-t-2 border-black mt-1 p-3">
+            <input
+              type="search"
+              id="searchInput"
+              class="search-input py-3 px-10 outline-none border-b-2 w-full"
+              placeholder="Search"
+            />
+            <div class="cross-icon absolute">
+              <i class="ri-close-line"></i>
+            </div>
+            <div
+              id="suggestions"
+              class="searchdata px-3 py-3 overflow-y-scroll max-h-64"
+            >
+              <div class="test-file p-3">
+                <ul>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+                    <p>Test File</p>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+                    <p>Test File</p>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+                    <p>Test File</p>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/Docs.png" alt="" />
+                    <p>Test File</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="image-file border-t-2 border-black mt-1 p-3">
                 <h1 class="text-xl font-medium mb-2">Images</h1>
                 <ul>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/imagefile.png" alt=""><p>Image File</p></li>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/imagefile.png" alt=""><p>Image File</p></li>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/imagefile.png" alt=""><p>Image File</p></li>
-                    <li class="flex items-center gap-4"><img class="w-8 h-8" src="/images/imagefile.png" alt=""><p>Image File</p></li>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <p>Image File</p>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <p>Image File</p>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <p>Image File</p>
+                  </li>
+                  <li class="flex items-center gap-4">
+                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <p>Image File</p>
+                  </li>
                 </ul>
-            </div>             
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-
         <!-- Right Sidebar -->
         <div class="sidebar w-16 h-max p-1 rounded-3xl">
           <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
@@ -324,7 +414,9 @@
               <img class="w-16" src="/images/profile.png" alt="user image" />
             </div>
             <div class="user-info">
-              <h1 class="text-lg font-normal underline underline-offset-8 decoration-1">
+              <h1
+                class="text-lg font-normal underline underline-offset-8 decoration-1"
+              >
                 Administrator
               </h1>
               <h4 class="text-sm">Username</h4>
@@ -334,7 +426,7 @@
             <div class="features-list py-5 px-16">
               <ul>
                 <li class="flex items-center gap-8 mb-4">
-                 <i class="ri-folder-3-fill ri-1x Ad-iconcolor"></i>
+                  <i class="ri-folder-3-fill ri-1x Ad-iconcolor"></i>
                   <a href="#">File manage</a>
                 </li>
                 <li class="flex items-center gap-8 mb-4">
@@ -354,7 +446,7 @@
                   <a href="#">Language</a>
                 </li>
                 <li class="flex items-center gap-8 mb-4">
-                 <i class="ri-fullscreen-fill ri-1x Ad-iconcolor"></i>
+                  <i class="ri-fullscreen-fill ri-1x Ad-iconcolor"></i>
                   <a href="#">Full screen</a>
                 </li>
                 <li class="flex items-center gap-8 mb-4">
@@ -387,32 +479,25 @@
         <footer
           class="fixed bottom-0 flex items-center justify-between w-full px-5"
         >
-          <button
-            id="footerButton"
-            class="px-4 py-3 rounded-md"
-          >
-            File
-          </button>
+          <button id="footerButton" class="px-4 py-3 rounded-md">File</button>
           <div class="flex items-center gap-4">
-              <img
-            id="footer-logo"
-            class="w-10 h-10"
-            src="/images/logo.png"
-            alt="Logo"
-          />
-          <div class="refresh">
+            <img
+              id="footer-logo"
+              class="w-10 h-10"
+              src="/images/logo.png"
+              alt="Logo"
+            />
+            <div class="refresh"></div>
           </div>
-          </div>
-        
         </footer>
       </div>
     </div>
 
     <script>
-
       //Desktop apps Showing Functionality
       const container = document.querySelector(".desktop-apps");
-      const Desktopapps = [{
+      const Desktopapps = [
+        {
           id: 1,
           name: "Operation log",
           image: "/images/operationotes.png",
@@ -482,8 +567,7 @@
 
       Desktopapps.forEach((app) => {
         const appDiv = document.createElement("div");
-        appDiv.className =
-          "app w-20 h-28 cursor-pointer relative";
+        appDiv.className = "app w-20 h-28 cursor-pointer relative";
         appDiv.innerHTML = `
         <div class="app-tools absolute flex item-center gap-8 px-2 invisible">
           <input type="checkbox" name="option"/>
@@ -526,109 +610,210 @@
       `;
         container.appendChild(appDiv);
 
+        appDiv.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const checkbox = appDiv.querySelector('input[type="checkbox"]');
+          if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+          }
+        });
 
-    appDiv.addEventListener('click', (event) => {
-    event.stopPropagation();
-    const checkbox = appDiv.querySelector('input[type="checkbox"]');
-    if (checkbox) {
-        checkbox.checked = !checkbox.checked; 
-    }
-  });
-
-  // Add a click event listener directly to the checkbox as well
-  const checkbox = appDiv.querySelector('input[type="checkbox"]');
-  if (checkbox) {
-      checkbox.addEventListener('click', (event) => {
-          // Prevent the click from also triggering the parent appDiv's event
-          event.stopPropagation(); 
+        // Add a click event listener directly to the checkbox as well
+        const checkbox = appDiv.querySelector('input[type="checkbox"]');
+        if (checkbox) {
+          checkbox.addEventListener("click", (event) => {
+            // Prevent the click from also triggering the parent appDiv's event
+            event.stopPropagation();
+          });
+        }
       });
-  }
-});
-
-
 
       //Right Click Functionality
-        document.addEventListener("DOMContentLoaded", function () {
-          const appContextMenu = document.getElementById("app-contextmenu");
-          const dashboardContextMenu = document.getElementById("context-menu");
-          const dashboard = document.querySelector(".dashboard");
-          const appDivs = document.querySelectorAll(".app");
-          const arrowIcons = document.querySelectorAll(".app-tools i");
+      document.addEventListener("DOMContentLoaded", function () {
+        const appContextMenu = document.getElementById("app-contextmenu");
+        const dashboardContextMenu = document.getElementById("context-menu");
+        const dashboard = document.querySelector(".dashboard");
+        const appDivs = document.querySelectorAll(".app");
+        const arrowIcons = document.querySelectorAll(".app-tools i");
 
-          // Function to position a menu and make it visible
-          function positionAndShowMenu(menu, event, container) {
-            const menuWidth = menu.offsetWidth;
-            const menuHeight = menu.offsetHeight;
-            const containerRect = container.getBoundingClientRect();
-            let top = event.clientY;
-            let left = event.clientX;
+        // Function to position and show a menu
+        function positionAndShowMenu(menu, event) {
+          menu.style.display = "block";
+          menu.style.visibility = "hidden";
 
-            if (top + menuHeight > containerRect.bottom) {
-                top = containerRect.bottom - menuHeight;
-            }
-            if (left + menuWidth > containerRect.right) {
-                left = containerRect.right - menuWidth;
-            }
+          // Calculate positions and available space
+          const menuRect = menu.getBoundingClientRect();
+          const viewportWidth = window.innerWidth;
+          const viewportHeight = window.innerHeight;
 
-            menu.style.top = `${top}px`;
-            menu.style.left = `${left}px`;
-            menu.classList.remove("hidden");
+          // Initial positioning: Prioritize placing the menu to the right
+          let top = event.clientY;
+          let left = event.clientX;
+
+          // Check if there's enough space on the right, accounting for a small margin
+          if (left + menuRect.width + 10 < viewportWidth) {
+            // If so, place it on the right
+          } else {
+            // If not enough space on the right, place it on the left
+            left -= menuRect.width;
           }
 
-          // Right-click on App Div to show App Context Menu
-          appDivs.forEach(appDiv => {
-            let timeoutId;
+          // Adjust if overflowing at the top
+          if (top + menuRect.height > viewportHeight) {
+            // Try placing above first
+            top = event.clientY - menuRect.height;
+            if (top < 0) {
+              // If still overflowing, adjust to fit below
+              top = Math.max(0, viewportHeight - menuRect.height);
+            }
+          }
 
-            appDiv.addEventListener('mouseenter', () => {
-                timeoutId = setTimeout(() => {
-                    const appPropertiesDiv = appDiv.querySelector('.app-properties');
-                    appPropertiesDiv.classList.remove('invisible');
-                }, 1500); // 3000 milliseconds = 3 seconds
+          // Ensure the menu is within the screen
+          top = Math.max(0, top);
+          left = Math.max(0, left);
 
-                appDiv.addEventListener('mouseleave', () => {
-                clearTimeout(timeoutId); 
-                const appPropertiesDiv = appDiv.querySelector('.app-properties');
-                appPropertiesDiv.classList.add('invisible');
-            });
-              })
+          menu.style.top = `${top}px`;
+          menu.style.left = `${left}px`;
 
+          // Recursive positioning for submenus (using the updated logic)
+          menu.style.visibility = "visible"; // Make the menu visible
+          menu.classList.remove("hidden");
+          menu.style.display = "block";
+        }
+        function positionSubmenu(submenu, parentItem) {
+          const submenuRect = submenu.getBoundingClientRect();
+          const parentRect = parentItem.getBoundingClientRect();
+          const viewportWidth = window.innerWidth;
+          const viewportHeight = window.innerHeight;
 
+          // 1. Prioritize right-side placement, but be flexible:
+          let left = parentRect.right; // Default to right side of parent
+          let top = parentRect.top; // Align top edges
 
-            appDiv.addEventListener("contextmenu", (event) => {
-              event.preventDefault();
-              dashboardContextMenu.classList.add("hidden"); // Ensure dashboard menu is hidden
-              positionAndShowMenu(appContextMenu, event, dashboard);
-            });
-          });
+          // If going off the right edge, try left side of parent
+          if (left + submenuRect.width > viewportWidth) {
+            left = parentRect.left - submenuRect.width;
 
-          // Left-click on Arrow Icon to show App Context Menu
-          arrowIcons.forEach(icon => {
-            icon.addEventListener("click", (event) => {
-              event.stopPropagation();
-              dashboardContextMenu.classList.add("hidden"); // Ensure dashboard menu is hidden
-              positionAndShowMenu(appContextMenu, event, dashboard);
-            });
-          });
+            // If still not enough space, adjust to fit on screen
+            if (left < 0) {
+              left = Math.max(0, viewportWidth - submenuRect.width);
+            }
+          }
 
-          // Right-click on Dashboard (not on App Div) to show Dashboard Context Menu
-          dashboard.addEventListener("contextmenu", (event) => {
-            const target = event.target;
-            if (!target.classList.contains('app') && !target.closest('.app')) {
-              event.preventDefault();
-              appContextMenu.classList.add("hidden"); // Ensure app menu is hidden
-              positionAndShowMenu(dashboardContextMenu, event, dashboard);
+          // 2. Vertical Placement: Avoid going off the bottom
+          if (top + submenuRect.height > viewportHeight) {
+            // If going off the bottom, try placing above the parent
+            top = parentRect.top - submenuRect.height;
+            // If still not enough space above, align with bottom of viewport
+            if (top < 0) {
+              top = Math.max(0, viewportHeight - submenuRect.height);
+            }
+          }
+
+          // 3. Apply positioning
+          submenu.style.left = `${left}px`;
+          submenu.style.top = `${top}px`;
+        }
+
+        // Show submenu on hover
+        document.querySelectorAll(".context-menu li").forEach((item) => {
+          item.addEventListener("mouseenter", function () {
+            const submenu = this.querySelector(".submenu");
+            if (submenu) {
+              submenu.classList.remove("hidden");
+              submenu.style.display = "block";
+
+              // Adjust submenu position
+              const submenuRect = submenu.getBoundingClientRect();
+              const screenWidth = window.innerWidth;
+              const screenHeight = window.innerHeight;
+
+              if (submenuRect.right > screenWidth) {
+                submenu.style.left = `-${submenuRect.width}px`;
+              }
+              if (submenuRect.bottom > screenHeight) {
+                submenu.style.top = `-${
+                  submenuRect.height - this.offsetHeight
+                }px`;
+              }
             }
           });
 
-          // Click anywhere to hide menus
-          document.addEventListener("click", () => {
-            appContextMenu.classList.add("hidden");
-            dashboardContextMenu.classList.add("hidden");
+          item.addEventListener("mouseleave", function () {
+            const submenu = this.querySelector(".submenu");
+            if (submenu) {
+              submenu.classList.add("hidden");
+              submenu.style.display = "none";
+            }
           });
         });
 
+        // Right-click on App Div to show App Context Menu
+        appDivs.forEach((appDiv) => {
+          let timeoutId;
 
+          appDiv.addEventListener("mouseenter", () => {
+            timeoutId = setTimeout(() => {
+              const appPropertiesDiv = appDiv.querySelector(".app-properties");
+              appPropertiesDiv.classList.remove("invisible");
+            }, 1500); // 1500 milliseconds = 1.5 seconds
+          });
 
+          appDiv.addEventListener("mouseleave", () => {
+            clearTimeout(timeoutId);
+            const appPropertiesDiv = appDiv.querySelector(".app-properties");
+            appPropertiesDiv.classList.add("invisible");
+          });
+
+          appDiv.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+            dashboardContextMenu.classList.add("hidden"); // Ensure dashboard menu is hidden
+            dashboardContextMenu.style.display = "none";
+            positionAndShowMenu(appContextMenu, event);
+          });
+        });
+
+        // Left-click on Arrow Icon to show App Context Menu
+        arrowIcons.forEach((icon) => {
+          icon.addEventListener("click", (event) => {
+            event.stopPropagation();
+            dashboardContextMenu.classList.add("hidden"); // Ensure dashboard menu is hidden
+            dashboardContextMenu.style.display = "none";
+            positionAndShowMenu(appContextMenu, event);
+          });
+        });
+
+        // Right-click on Dashboard (not on App Div) to show Dashboard Context Menu
+        dashboard.addEventListener("contextmenu", (event) => {
+          const target = event.target;
+          if (!target.classList.contains("app") && !target.closest(".app")) {
+            event.preventDefault();
+            appContextMenu.classList.add("hidden"); // Ensure app menu is hidden
+            appContextMenu.style.display = "none";
+            positionAndShowMenu(dashboardContextMenu, event);
+          }
+        });
+
+        // Click anywhere to hide menus
+        document.addEventListener("click", (event) => {
+          if (
+            !event.target.closest("#app-contextmenu") &&
+            !event.target.closest("#context-menu")
+          ) {
+            appContextMenu.classList.add("hidden");
+            dashboardContextMenu.classList.add("hidden");
+            appContextMenu.style.display = "none";
+            dashboardContextMenu.style.display = "none";
+          }
+        });
+
+        // Prevent the context menu from closing when clicking inside the context menu
+        [appContextMenu, dashboardContextMenu].forEach((menu) => {
+          menu.addEventListener("click", (event) => {
+            event.stopPropagation();
+          });
+        });
+      });
       //Clock Functionality
       function updateClock() {
         const clock = document.getElementById("clock");
@@ -673,43 +858,46 @@
       updateClock();
       setInterval(updateClock, 60000);
 
-      
-
-      //Notification container Functionality\
-      document.getElementById("notification-icon").addEventListener("click", function () {
+      //Notification container Functionalit
+      document
+        .getElementById("notification-icon")
+        .addEventListener("click", function () {
           const notificationDiv = document.getElementById("notification");
           notificationDiv.classList.toggle("hidden");
         });
 
-        
       //Search Contiainer Functionality
-      document.getElementById("search-icon").addEventListener("click", function () {
+      document
+        .getElementById("search-icon")
+        .addEventListener("click", function () {
           const searchDiv = document.getElementById("search");
           searchDiv.classList.toggle("hidden");
+          adjustSearchPosition();
         });
-        const searchInput = document.getElementById('searchInput');
-        const suggestions = document.getElementById('suggestions');
+      const searchInput = document.getElementById("searchInput");
+      const suggestions = document.getElementById("suggestions");
 
-     document.querySelector('.cross-icon').addEventListener('click', function() {
-        searchInput.value = '';
-        suggestions.classList.add('hidden');
-        document.getElementById('search').classList.add('hidden');
-    });
+      document
+        .querySelector(".cross-icon")
+        .addEventListener("click", function () {
+          searchInput.value = "";
+          suggestions.classList.add("hidden");
+          document.getElementById("search").classList.add("hidden");
+        });
 
-    searchInput.addEventListener('input', () => {
-    if (suggestions.children.length === 0) {
-        suggestions.classList.add('empty'); 
-    } else {
-        suggestions.classList.remove('empty');
+      function adjustSearchPosition() {
+        const searchDiv = document.getElementById("search");
+        if (suggestions.classList.contains("hidden")) {
+          searchDiv.style.top = "30%"; // If suggestions are hidden
+        } else {
+          searchDiv.style.top = "45%"; // If suggestions are visible
+        }
+      }
 
-        // Calculate and set the appropriate max-height
-        const maxHeight = Math.min(suggestions.scrollHeight, 256); 
-        suggestions.style.maxHeight = `${maxHeight}px`;
-    }
-});
-    
       //Administrator Container Functionality
-      document.getElementById("footer-logo").addEventListener("click", function () {
+      document
+        .getElementById("footer-logo")
+        .addEventListener("click", function () {
           const administratorDiv = document.getElementById("administrator");
           administratorDiv.classList.toggle("hidden");
         });
@@ -724,7 +912,6 @@
       footerButton.addEventListener("mouseleave", function () {
         tooltip.style.display = "none";
       });
-
     </script>
   </body>
 </html>
