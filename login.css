@@ -80,14 +80,14 @@ input[type="checkbox"] {
     border-radius: 2px;
 }
 input[type="checkbox"]:checked{
-    background-color: var(--color-dark-yellow);
+    background-color: rgba(217, 217, 217, 0.41);
 }
 input[type="checkbox"]:checked::after {
     content: "✔";
     font-size: 10px;
     position: absolute;
     height: 12px;
-    top: -1.5px;
+    top: -2px;
     left: 1px;
 }
 
