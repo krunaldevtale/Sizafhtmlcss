@@ -14,7 +14,7 @@
   border-radius: 50px;
   background: rgba(217, 217, 217, 0.41);
   box-shadow: var(--box-shadow) inset;
-  filter: blur(10px);
+  filter: blur(7px);
   backdrop-filter: blur(2px);
   position: absolute;
   top: 50%;
@@ -59,6 +59,37 @@ input::placeholder {
   color: var(--color-pure-black);
 }
 
+ input[type="checkbox"] {
+    accent-color: var(--color-dark-yellow);
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    width: 12px;
+    cursor: pointer;
+    position: relative;
+    height: 12px;
+    border: 1px solid var(--color-pure-black);
+    border-radius: 2px;
+}
+input[type="checkbox"]:checked{
+    background-color: var(--color-light-white);
+}
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    font-size: 10px;
+    position: absolute;
+    height: 12px;
+    top: -1px;
+    left: 1px;
+}
 
 @media (max-width:480px){
   .blur-container {
