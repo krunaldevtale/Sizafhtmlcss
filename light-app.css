@@ -44,6 +44,10 @@ nav ul li:hover {
   box-shadow: 0 4px rgba(0, 0, 0, 0.2);
 }
 
+.small-container #dropdown{
+  z-index: 99999;
+}
+
 #Edit-modal .img-container {
   width: 60px;
   height: 60px;

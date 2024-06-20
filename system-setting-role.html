@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="system-setting-role.css" />
     <link rel="stylesheet" href="root.css" />
+    <link rel="stylesheet" href="style/nx.css">
   </head>
   <body class="h-screen w-full nx">
       <main class="flex w-full h-full">
@@ -303,7 +304,7 @@
                               </button>
                             </div>
                           </div>
-                          <button class="text-blue-500 openModalButton">
+                          <button class="text-blue-400 openModalButton">
                             Edit
                           </button>
                         </div>
@@ -342,7 +343,7 @@
                               </button>
                             </div>
                           </div>
-                          <button class="text-blue-500 openModalButton">
+                          <button class="text-blue-400 openModalButton">
                             Edit
                           </button>
                         </div>
@@ -381,7 +382,7 @@
                               </button>
                             </div>
                           </div>
-                          <button class="text-blue-500 openModalButton">
+                          <button class="text-blue-400 openModalButton">
                             Edit
                           </button>
                         </div>
@@ -420,7 +421,7 @@
                               </button>
                             </div>
                           </div>
-                          <button class="text-blue-500 openModalButton">
+                          <button class="text-blue-400 openModalButton">
                             Edit
                           </button>
                         </div>
@@ -459,7 +460,7 @@
                               </button>
                             </div>
                           </div>
-                          <button class="text-blue-500 openModalButton">
+                          <button class="text-blue-400 openModalButton">
                             Edit
                           </button>
                         </div>
@@ -482,7 +483,7 @@
         role="dialog"
         class="fixed hidden inset-0 flex items-center justify-center bg-black bg-opacity-50"
       >
-        <div class="bg-white mt-46 rounded-lg shadow-lg w-full max-w-2xl">
+        <div class="bg-white mt-46 rounded-xl shadow-lg w-full max-w-2xl">
           <div class="flex justify-between items-center p-4 border-b">
             <h1 class="text-lg font-semibold" id="staticBackdropLabel">Role</h1>
             <i
@@ -520,7 +521,7 @@
                   <label for="toggle-debug" class="toggle-switch flex items-center cursor-pointer">
                                 <div class="relative">
                                     <input type="checkbox" id="toggle-debug" class="sr-only">
-                                    <div class="block toggle-bg w-14 h-7 rounded-full"></div>
+                                    <div class="block roletoggle-bg w-14 h-7 rounded-full"></div>
                                     <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition">
                                     </div>
                                 </div>
@@ -587,79 +588,79 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview"/>
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview"/>
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center  border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                      <span>Search</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                   </div>
@@ -677,25 +678,25 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                  <div
                       class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                   </div>
@@ -723,49 +724,49 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                   </div>
@@ -783,13 +784,13 @@
                     <div
                       class="checkbox-container flex items-center  border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center  border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                   </div>
@@ -807,13 +808,13 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                   </div>
@@ -833,49 +834,49 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:w-min px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="download" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="download" />
                       <span>Download</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border md:ml-3 md:w-max px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="newfile" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="newfile" />
                       <span>New file/folder</span>
                     </div>
                   </div>
@@ -895,13 +896,13 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                   </div>
@@ -921,13 +922,13 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                   </div>
@@ -947,13 +948,13 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview" />
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                   </div>
@@ -973,13 +974,13 @@
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="preview"/>
+                      <input type="checkbox" class="mr-1 d-checkbox" name="preview"/>
                       <span>Preview</span>
                     </div>
                     <div
                       class="checkbox-container flex items-center border px-3 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-1" name="search" />
+                      <input type="checkbox" class="mr-1 d-checkbox" name="search" />
                       <span>Search</span>
                     </div>
                   </div>
@@ -995,7 +996,7 @@
                     <div
                       class="checkbox-container flex items-center space-x-2 border w-max px-4 py-2 rounded"
                     >
-                      <input type="checkbox" class="mr-2" name="selectall" />
+                      <input type="checkbox" class="mr-2 d-checkbox" name="selectall" />
                       <span>Select All / Cancel</span>
                     </div>
                   </div>
@@ -1046,85 +1047,6 @@
           button.addEventListener("click", () => {
             button.closest(".fixed").classList.add("hidden");
           });
-        });
-
-      function toggleDropdown(dropdownId) {
-        var dropdown = document.getElementById(dropdownId);
-        dropdown.classList.toggle("hidden");
-      }
-
-         const methodDiv = document.getElementById('method-div');
-        const urlDiv = document.getElementById('url-div');
-        const methodRadio = document.querySelector('input#method');
-        const urlRadio = document.querySelector('input#url');
-
-        methodRadio.addEventListener('click', () => {
-            methodDiv.style.display = 'flex';
-            urlDiv.style.display = 'none';
-        });
-        urlRadio.addEventListener('click', () => {
-            methodDiv.style.display = 'none';
-            urlDiv.style.display = 'flex';
-        });
-
-
-        // for handling run task modal
-        const runTaskModalButtons = document.querySelectorAll('.runTaskModalButton');
-        const closeRunTaskModalButton = document.getElementById('closeRunTaskModalButton');
-        const runTaskModal = document.getElementById('run-task-modal');
-
-        runTaskModalButtons.forEach(e => {
-            e.addEventListener('click', () => {
-                runTaskModal.classList.remove('hidden');
-            });
-        });
-
-        closeRunTaskModalButton.addEventListener('click', () => {
-            runTaskModal.classList.add('hidden');
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target == runTaskModal) {
-                runTaskModal.classList.add('hidden');
-            }
-        });
-
-        // for handling 'yes' on run task modal
-        const runTaskButton = document.getElementById('runTaskButton');
-        const runSuccessModal = document.getElementById('run-success');
-        const runSuccessMessage = document.getElementById('run-success-message');
-        runTaskButton.addEventListener('click', () => {
-            closeRunTaskModalButton.click();
-            showSuccessMessage('The scheduled task has restarted');
-        });
-
-        function showSuccessMessage(message) {
-            runSuccessMessage.innerText = message;
-            runSuccessModal.style.top = '20px';
-            setTimeout(() => {
-                runSuccessModal.style.top = '-120px';
-            }, 3000);
-        }
-
-        // for handling task manager modal
-        const openTaskManagerModalButtons = document.querySelectorAll('.openTaskManagerModalButton');
-        const closeTaskManagerModalButton = document.getElementById('closeTaskManagerModalButton');
-        const taskManagerModal = document.getElementById('task-manager-modal');
-
-        openTaskManagerModalButtons.forEach(e => {
-            e.addEventListener('click', () => {
-                taskManagerModal.classList.remove('hidden');
-            });
-        });
-
-        closeTaskManagerModalButton.addEventListener('click', () => {
-            taskManagerModal.classList.add('hidden');
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target == taskManagerModal) {
-                taskManagerModal.classList.add('hidden');
-            }
         });
     </script>
   </body>

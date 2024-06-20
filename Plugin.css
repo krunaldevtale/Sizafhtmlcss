@@ -64,13 +64,19 @@ nav ul li:hover {
 }
 
 .small-container {
-  border: 1px solid gray;
-  background-color: rgb(229, 228, 228);
+  width: 187px;
+  height: 227px;
+  border: 1px solid var(--border-light-gray);
+  background-color: var(--bg-light-gray);
+  border-radius: 11px;
 }
 
 .small-container .img-container {
+  width: 70px;
+  height: 70px;
   box-shadow: 0 4px rgba(0, 0, 0, 0.2);
 }
+
 
 .add-btn {
   color: var(--color-dark-yellow);
@@ -85,3 +91,6 @@ nav ul li:hover {
   background: var(--color-light-gray);
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
