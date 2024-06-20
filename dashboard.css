@@ -78,12 +78,10 @@
   left: 50%;
   top: 30%;
   transform: translate(-50%, -50%);
-  border-radius: 20px;
   z-index: 999;
   width: 600px;
   background: var(--bg-linear-gradient);
   box-shadow: var(--box-shadow);
-  border-radius: 5px;
 }
 
 .search-input {
