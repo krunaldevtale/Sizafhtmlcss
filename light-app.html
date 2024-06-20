@@ -267,9 +267,10 @@
       <div class="relative p-4 w-full max-w-2xl max-h-full">
         <div class="relative bg-white rounded-xl shadow dark:bg-gray-700">
           <div
-            class="flex items-center gap-4 p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+            class="flex items-start justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
           >
-            <div
+          <div class="flex items-center gap-4">
+             <div
               class="img-container w-18 h-18 rounded-lg bg-white shadow-black flex items-center justify-center"
             >
               <img
@@ -279,6 +280,16 @@
               />
             </div>
             <h3 class="modal-heading font-medium">Create a light application</h3>
+          </div>
+            <div>
+               <i
+                  class="ri-close-circle-fill ri-lg cursor-pointer"
+                   data-bs-dismiss="modal"
+                   aria-label="Close"
+                ></i>
+          </div>
+          
+           
           </div>
           <div class="p-4 md:p-5 space-y-4">
             <form class="space-y-4" action="#">
@@ -544,13 +555,22 @@
      <div id="Edit-modal" role="dialog" tabindex="-1" aria-hidden="true" class="fixed hidden inset-0 flex items-center justify-center bg-black bg-opacity-50 overflow-y-scroll">
                         <div class="relative p-4 w-full max-w-2xl max-h-full">
                             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                <div class="flex items-center gap-4 p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                <div class="img-container shadow-black flex items-center justify-center">
-                                        <img class="w-10 h-10" src="images/pptx.png" alt="${item.name} Image">
-                                    </div>
+                                <div class="flex items-start justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                  <div class="flex items-center gap-4">
+                                      <div class="img-container shadow-black flex items-center justify-center">
+                                        <img class="w-10 h-10" src="images/pptx.png" alt="pptx Image">
+                                      </div>
                                     <h3 class="modal-heading font-medium">
                                         PPT
                                     </h3>
+                                  </div>
+                                    <div>
+                                      <i
+                                        class="ri-close-circle-fill ri-lg cursor-pointer"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                      ></i>
+                                    </div>
                                 </div>
                                 <div class="p-4 md:p-5 space-y-4">
                                       <form class="space-y-4" action="#" autocomplete="on">
@@ -774,7 +794,27 @@
         }
       });
 
-       // EditModal Open Functionality
+      // Script to toggle modal visibility
+      document
+        .querySelectorAll('[data-bs-toggle="modal"]')
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            document
+              .querySelector(button.getAttribute("data-bs-target"))
+              .classList.remove("hidden");
+          });
+        });
+
+      document
+        .querySelectorAll('[data-bs-dismiss="modal"]')
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            button.closest(".fixed").classList.add("hidden");
+          });
+        });
+      
+
+       // DeletetModal Open Functionality
       const openDeleteModalButton = document.querySelectorAll(
         ".openDeleteModalButton"
       );
@@ -791,6 +831,8 @@
           deleteModal.classList.add("hidden");
         }
       });
+
+        //dropdown functionality
 
      const dropdownButton = document.querySelector(".dropdown-button");
      const dropdownMenu = document.querySelector("#dropdown");
