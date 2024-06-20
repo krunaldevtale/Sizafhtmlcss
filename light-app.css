@@ -96,3 +96,31 @@ nav ul li:hover {
     top: -2px;
     left: 5px;
 }
+
+@media (max-width:640px) {
+  
+  .ms input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+    height: 29px;
+    border: 1px solid var(--color-pure-black);
+    border-radius: 2px;
+}
+
+  .ms input[type="checkbox"]:checked::after {
+    content: "✔";
+    font-size: 20px;
+    position: absolute;
+    height: 12px;
+    top: -2px;
+    left: 2px;
+}
+}
