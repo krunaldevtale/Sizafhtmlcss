@@ -93,3 +93,8 @@ nav ul li:hover {
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+
+.modal-container{
+  width: 220px;
+  height: 500px;
+}

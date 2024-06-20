@@ -14,6 +14,10 @@
     background: var(--color-gray-2);
 }
 
+.bg-c-lightest-gray{
+    background: var(--color-lightest-gray);
+}
+
 .bg-c-dark-gray {
     background: var(--color-dark-gray);
 }
@@ -63,6 +67,10 @@
 
 .bg-light-pink {
     background: var(--color-light-pink);
+}
+
+.bg-c-gray-3{
+    background: var(--bg-light-gray);
 }
 
 body.nx {
