@@ -1,73 +1,103 @@
-.Role-container {
-  height: calc(100% - 56px);
+
+.bg-c-black {
+    background: var(--color-light-gray);
+}
+.bg-c-yellow {
+    background: var(--color-dark-yellow);
+}
+.bg-c-light-black {
+    background: var(--color-light-black);
+}
+.bg-c-gray-2 {
+    background: var(--color-gray-2);
+}
+.bg-c-dark-gray {
+    background: var(--color-dark-gray);
+}
+.text-c-black {
+    color: var(--color-light-gray);
+}
+.text-c-yellow {
+    color: var(--color-dark-yellow);
+}
+.hover-text-c-yellow:hover {
+    color: var(--color-dark-yellow);
+}
+.hover-bg-c-black:hover {
+    background: var(--color-light-gray);
+}
+.hover-bg-c-yellow:hover {
+    background: var(--color-dark-yellow);
 }
 
-#default-sidebar {
-  height: calc(100% - 56px);
+body.nx {
+    overflow-x: hidden;
 }
 
-.Role-sidebar {
-  background-image: url("/images/sidebarimg.png");
+.nx .main {
+    background: url('/images/main-bg.png');
+    background-size: cover;
+    background-position: center;
+    overflow: scroll;
 }
 
-.all-tab {
-  background: var(--color-light-gray);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+.nx .taskbar {
+    background: url('/images/taskbar-bg.png');
+    background-size: cover;
+    background-position: center;
 }
 
-nav .hover-effect:hover {
-  background: var(--color-light-gray);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--color-dark-yellow);
+
+.nx div[role="dialog"] {
+    padding: 20px 10px;
+}
+.nx div[role="dialog"] .modal-content {
+    max-height: 90vh;
+    overflow: scroll;
 }
 
-.Role-content {
-  height: calc(100% - 112px);
+.nx div[role="dialog"] .modal-content::-webkit-scrollbar,
+.nx .main::-webkit-scrollbar,
+.nx-table-container::-webkit-scrollbar {
+    display: none;
 }
 
-.Role-yellowbar {
-  background-image: url("/images/Yellowbar.png");
+.nx-table-container {
+    overflow-y: scroll;
+}
+.nx-table-container table {
+    min-width: 1000px;
+}
+.nx .main .content {
+    min-width: 420px;
 }
 
-.right-container {
-background-color: var(--color-white);
+.nx .toggle-bg {
+    background: var(--color-dark-gray);
 }
-
-footer {
-  background-image: url(/images/Wallpaper.png),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-blend-mode: lighten;
-  background-position: bottom right;
-  background-size: cover;
-  background-repeat: no-repeat;
+.nx .toggle-switch input:checked~.dot {
+    transform: translateX(130%);
 }
-
-.refresh {
-  width: 4px;
-  height: 27px;
-  border-radius: 3px;
-  background: rgba(198, 198, 198, 0.764);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+.nx .toggle-switch input:checked~ .toggle-bg{
+    background: var(--color-dark-yellow);
 }
-
-.add-btn {
-  background: var(--color-light-gray);
-  color: var(--color-dark-yellow);
+.nx .dropdown-option {
+    display: none;
 }
-
-.dropdown-option {
-  display: none;
-}
-
-.dropdown-btn:focus ~ .dropdown-option,
+.nx .dropdown-btn:focus ~ .dropdown-option,
 .dropdown-option:hover {
-  display: block;
+    display: block;
 }
 
-input {
-  background-color: var(--color-light-gray);
+.nx .radio-button input {
+    display: none;
+}
+.nx .radio-button span {
+    width: 80px;
+}
+.nx .radio-button input:checked ~ span {
+    background: var(--color-dark-yellow);
+    color: var(--color-pure-black);
 }
 
 .title-btn {
@@ -98,12 +128,4 @@ hr {
 
 #modal{
   z-index: 999;
-}
-
-@media(max-width:640px){
-
-#default-sidebar {
-  height: 100%
-}
-
 }

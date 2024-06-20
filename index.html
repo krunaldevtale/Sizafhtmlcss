@@ -321,14 +321,13 @@
         </div>
 
         <!-- Desktop apps -->
-        <div class="desktop-apps w-0 gap-4 flex flex-col flex-wrap p-5"></div>
+        <div class="desktop-apps w-0 gap-4 flex flex-col flex-wrap p-5 "></div>
 
         <!-- Clock -->
         <div class="clock flex flex-col items-center" id="clock"></div>
 
         <!-- Search Input -->
-        <div id="search" class="Search overflow-hidden hidden">
-          <div class="relative">
+        <div id="search" class="Search hidden">
             <div class="search-icon absolute">
               <i class="ri-search-line"></i>
             </div>
@@ -343,7 +342,7 @@
             </div>
             <div
               id="suggestions"
-              class="searchdata px-3 py-3 overflow-y-scroll max-h-64"
+              class="searchdata px-3 py-3 overflow-y-scroll max-h-96"
             >
               <div class="test-file p-3">
                 <ul>
@@ -387,10 +386,10 @@
                 </ul>
               </div>
             </div>
-          </div>
         </div>
+
         <!-- Right Sidebar -->
-        <div class="sidebar w-16 h-max p-1 rounded-3xl">
+        <div class="dashboard-sidebar w-16 p-1 rounded-3xl">
           <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
           <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
           <img class="mb-1" src="/images/Appstore.png" alt="Appstore" />
@@ -466,20 +465,10 @@
           </div>
         </div>
 
-        <!-- File hover -->
-        <div id="tooltip" class="tooltip bubble-bottom-left">
-          <div class="bubble">
-            <div class="bubble-content">
-              <h1>Hello!</h1>
-              <p>What are you looking for? &#128522;</p>
-            </div>
-          </div>
-        </div>
         <!-- Footer -->
         <footer
-          class="fixed bottom-0 flex items-center justify-between w-full px-5"
+          class="fixed bottom-0 flex items-center justify-end w-full px-5"
         >
-          <button id="footerButton" class="px-4 py-3 rounded-md">File</button>
           <div class="flex items-center gap-4">
             <img
               id="footer-logo"
@@ -487,8 +476,7 @@
               src="/images/logo.png"
               alt="Logo"
             />
-            <div class="refresh"></div>
-          </div>
+        </div>
         </footer>
       </div>
     </div>
@@ -657,6 +645,7 @@
             // If not enough space on the right, place it on the left
             left -= menuRect.width;
           }
+          
 
           // Adjust if overflowing at the top
           if (top + menuRect.height > viewportHeight) {
@@ -813,7 +802,10 @@
             event.stopPropagation();
           });
         });
+
       });
+
+
       //Clock Functionality
       function updateClock() {
         const clock = document.getElementById("clock");
@@ -872,7 +864,6 @@
         .addEventListener("click", function () {
           const searchDiv = document.getElementById("search");
           searchDiv.classList.toggle("hidden");
-          adjustSearchPosition();
         });
       const searchInput = document.getElementById("searchInput");
       const suggestions = document.getElementById("suggestions");
@@ -884,15 +875,6 @@
           suggestions.classList.add("hidden");
           document.getElementById("search").classList.add("hidden");
         });
-
-      function adjustSearchPosition() {
-        const searchDiv = document.getElementById("search");
-        if (suggestions.classList.contains("hidden")) {
-          searchDiv.style.top = "28.5%"; // If suggestions are hidden
-        } else {
-          searchDiv.style.top = "45%"; // If suggestions are visible
-        }
-      }
 
       //Administrator Container Functionality
       document

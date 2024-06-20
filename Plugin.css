@@ -1,5 +1,49 @@
-.plugin-container {
-  height: calc(100% - 56px);
+.bg-c-black {
+    background: var(--color-light-gray);
+}
+.bg-c-yellow {
+    background: var(--color-dark-yellow);
+}
+.bg-c-light-black {
+    background: var(--color-light-black);
+}
+.bg-c-gray-2 {
+    background: var(--color-gray-2);
+}
+.bg-c-dark-gray {
+    background: var(--color-dark-gray);
+}
+.text-c-black {
+    color: var(--color-light-gray);
+}
+.text-c-yellow {
+    color: var(--color-dark-yellow);
+}
+.hover-text-c-yellow:hover {
+    color: var(--color-dark-yellow);
+}
+.hover-bg-c-black:hover {
+    background: var(--color-light-gray);
+}
+.hover-bg-c-yellow:hover {
+    background: var(--color-dark-yellow);
+}
+
+body.nx {
+    overflow-x: hidden;
+}
+
+.nx .main {
+    background: url('/images/main-bg.png');
+    background-size: cover;
+    background-position: center;
+    overflow: scroll;
+}
+
+.nx .taskbar {
+    background: url('/images/taskbar-bg.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .plugin-sidebar {
@@ -17,22 +61,6 @@ nav ul li:hover {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--color-dark-yellow);
-}
-
-.plugin-content {
-  height: calc(100% - 112px);
-}
-
-#default-sidebar {
-  height: calc(100% - 56px);
-}
-
-.plugin-yellowbar {
-  background-image: url("/images/Yellowbar.png");
-}
-
-.right-container {
-background-color: var(--color-white);
 }
 
 .small-container {
@@ -57,27 +85,3 @@ background-color: var(--color-white);
   background: var(--color-light-gray);
 }
 
-footer {
-  background-image: url(/images/Wallpaper.png),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-blend-mode: lighten;
-  background-position: bottom right;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.refresh {
-  width: 4px;
-  height: 27px;
-  border-radius: 3px;
-  background: rgba(198, 198, 198, 0.764);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-@media(max-width:640px){
-
-#default-sidebar {
-  height: 100%
-}
-
-}
