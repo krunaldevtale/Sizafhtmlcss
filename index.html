@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="dashboard.css" />
     <link rel="stylesheet" href="root.css" />
   </head>
-  <body>
-    <div class="w-full h-screen">
+  <body class="w-full h-screen">
+    <div class="w-full h-full">
       <!-- Right click Menu -->
       <div id="context-menu" class="context-menu hidden">
         <ul>
@@ -328,22 +328,12 @@
 
         <!-- Search Input -->
         <div id="search" class="Search hidden">
-            <div class="search-icon absolute">
-              <i class="ri-search-line"></i>
-            </div>
-            <input
-              type="search"
-              id="searchInput"
-              class="search-input py-3 px-10 outline-none border-b-2 w-full"
-              placeholder="Search"
-            />
-            <div class="cross-icon absolute">
-              <i class="ri-close-line"></i>
-            </div>
-            <div
-              id="suggestions"
-              class="searchdata px-3 py-3 overflow-y-scroll max-h-96"
-            >
+          <div class="row">
+              <i class="ri-search-line search-icon absolute"></i>
+               <input type="search" id="searchInput" placeholder="Search">
+            <i class="ri-close-line cross-icon absolute"></i>
+          </div>
+            <div id="suggestions" class="searchdata px-3 py-3 max-h-96">
               <div class="test-file p-3">
                 <ul>
                   <li class="flex items-center gap-4">
@@ -466,18 +456,16 @@
         </div>
 
         <!-- Footer -->
-        <footer
-          class="fixed bottom-0 flex items-center justify-end w-full px-5"
+        <div
+          class="absolute bottom-2 right-0 px-5"
         >
-          <div class="flex items-center gap-4">
             <img
               id="footer-logo"
               class="w-10 h-10"
               src="/images/logo.png"
               alt="Logo"
             />
-        </div>
-        </footer>
+      </div>
       </div>
     </div>
 
@@ -883,17 +871,6 @@
           const administratorDiv = document.getElementById("administrator");
           administratorDiv.classList.toggle("hidden");
         });
-
-      const footerButton = document.getElementById("footerButton");
-      const tooltip = document.getElementById("tooltip");
-
-      footerButton.addEventListener("mouseenter", function () {
-        tooltip.style.display = "block";
-      });
-
-      footerButton.addEventListener("mouseleave", function () {
-        tooltip.style.display = "none";
-      });
     </script>
   </body>
 </html>
