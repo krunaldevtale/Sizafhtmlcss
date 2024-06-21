@@ -1,12 +1,4 @@
-.nx .roletoggle-bg {
-    background: var(--color-dark-gray);
-}
-.nx .toggle-switch input:checked~.dot {
-    transform: translateX(130%);
-}
-.nx .toggle-switch input:checked~ .roletoggle-bg{
-    background: var(--color-dark-yellow);
-}
+
 
 .title-btn {
   background-color: var(--color-dark-yellow);
@@ -54,7 +46,7 @@ hr {
     border-radius: 2px;
 }
 .nx input[type="checkbox"].d-checkbox:checked{
-    background-color: rgba(217, 217, 217, 0.41);
+    background-color: var(--color-white);
 }
 .nx input[type="checkbox"].d-checkbox:checked::after {
     content: "✔";

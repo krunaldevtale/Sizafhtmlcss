@@ -220,7 +220,7 @@
         <!-- Main content -->
         <div class="flex-grow border h-100 main">
           <div class="flex w-full h-full flex-col content">
-            <div class="p-6">
+            <div class="px-5 py-5">
                <div class="flex items-center gap-4">
                 <i class="ri-settings-3-fill ri-2x"></i>
                 <span class="text-lg">System Settings</span>
@@ -252,7 +252,7 @@
                 <div class="bg-white nx-table-container overflow-y-auto">
                    <table class="table-auto w-full">
                   <thead>
-                    <tr class="bg-gray-400">
+                    <tr class="bg-c-dark-gray">
                       <th class="py-2 rounded-tl-md text-white text-left pl-3">
                         Name
                       </th>
@@ -518,14 +518,15 @@
                   <label for="display" class="block font-bold">Display:</label>
                 </div>
                 <div class="md:col-span-10 flex items-center gap-2">
-                  <label for="toggle-debug" class="toggle-switch flex items-center cursor-pointer">
-                                <div class="relative">
-                                    <input type="checkbox" id="toggle-debug" class="sr-only">
-                                    <div class="block roletoggle-bg w-14 h-7 rounded-full"></div>
-                                    <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition">
-                                    </div>
-                                </div>
-                  </label>
+                  <label for="toggle" class="toggle-switch flex items-center cursor-pointer">
+                      <div class="relative">
+                                                <input type="checkbox" id="toggle" class="sr-only">
+                                                <div class="block toggle-bg w-14 h-7 rounded-full border"></div>
+                                                <div
+                                                    class="dot absolute left-0.5 top-0.5 bg-white w-6 h-6 rounded-full transition shadow-lg">
+                                                </div>
+                                            </div>
+                                        </label>
                   <p class="text-sm text-gray-500">
                     Whether to display when setting user role
                   </p>
@@ -961,14 +962,15 @@
                   <label for="display" class="block font-bold">Display:</label>
                 </div>
                 <div class="md:col-span-10 flex items-center gap-2">
-                  <label for="toggle-debug" class="edit-toggle-switch flex items-center cursor-pointer">
-                                <div class="relative">
-                                    <input type="checkbox" id="edit-toggle-debug" class="sr-only">
-                                    <div class="block roletoggle-bg w-14 h-7 rounded-full"></div>
-                                    <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition">
-                                    </div>
-                                </div>
-                  </label>
+                     <label for="toggle-2" class="toggle-switch flex items-center cursor-pointer">
+                                            <div class="relative">
+                                                <input type="checkbox" id="toggle-2" class="sr-only">
+                                                <div class="block toggle-bg w-14 h-7 rounded-full border"></div>
+                                                <div
+                                                    class="dot absolute left-0.5 top-0.5 bg-white w-6 h-6 rounded-full transition shadow-lg">
+                                                </div>
+                                            </div>
+                                        </label>
                   <p class="text-sm text-gray-500">
                     Whether to display when setting user role
                   </p>
