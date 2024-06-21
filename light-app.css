@@ -87,7 +87,8 @@ border: 1px solid #686868;
     cursor: pointer;
     position: relative;
     height: 29px;
-    border: 1px solid var(--color-pure-black);
+    border:none;
+    background: var(--bg-light-gray);
     border-radius: 2px;
 }
 .ms input[type="checkbox"]:checked{
@@ -99,7 +100,7 @@ border: 1px solid #686868;
     position: absolute;
     height: 12px;
     top: -2px;
-    left: 5px;
+    left: 6px;
 }
 
 @media (max-width:640px) {
