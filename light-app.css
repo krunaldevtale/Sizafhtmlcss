@@ -61,6 +61,10 @@ nav ul li:hover {
   color: var(--color-dark-yellow);
 }
 
+#dropdown{
+border: 1px solid #686868;
+}
+
 #dropdownDefaultButton {
   border-radius: 5px;
   background: var(--color-light-gray);

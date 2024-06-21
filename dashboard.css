@@ -129,7 +129,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /* desktop apps */
 
 .desktop-apps {
-  height: calc(100% - 48px);
+  height: calc(100% - 108px);
 }
 
 /* Right click Menu css */
@@ -200,3 +200,4 @@ input[type="search"]::-webkit-search-cancel-button {
 .app:hover .app-tools {
   visibility: visible;
 }
+

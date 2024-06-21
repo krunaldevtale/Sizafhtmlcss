@@ -142,13 +142,13 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown" class="absolute left-1 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <div id="dropdown" class="absolute left-1 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 overflow-hidden ">
+                        <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button type="button" class="openEditModalButton block w-full px-4 py-1 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-4 "><i class="ri-edit-box-line"></i>Edit</button>
+                            <button type="button" class="openEditModalButton block w-full px-4 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-4 "><i class="ri-edit-box-line"></i>Edit</button>
                           </li>
                           <li>
-                            <button class="openDeleteModalButton block w-full px-4 py-1 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-4"><i class="ri-delete-bin-6-line"></i>Delete</a>
+                            <button class="openDeleteModalButton block w-full px-4 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-4"><i class="ri-delete-bin-6-line"></i>Delete</a>
                           </li>
                         </ul>
                     </div>
@@ -238,7 +238,7 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown" class="absolute left-1 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <div id="dropdown" class="absolute left-1 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 border">
                         <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
                             <button type="button" class="openEditModalButton block w-full px-4 py-1 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-4 "><i class="ri-edit-box-line"></i>Edit</button>
@@ -306,7 +306,7 @@
                     type="text"
                     name="create-name"
                     id="create-name"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                    class="bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-lg block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="Please enter an application name"
                     required
                   />
@@ -325,7 +325,7 @@
                     type="text"
                     name="create-websitelink"
                     id="create-websitelink"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                    class="bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-lg block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     placeholder="Please enter http / https link"
                     required
                   />
@@ -342,27 +342,22 @@
                   >
                 </div>
                 <div class="w-2/3">
-                  <select
-                    class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl py-2 px-3"
-                    name="create-applicationgrouping"
-                    id="create-applicationgrouping"
-                  >
-                    <option value="Tool">Tool</option>
-                  </select>
+                  <div class="w-full bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-xl flex items-center justify-between overflow-hidden pl-4" >
+                     Tool
+                           <div class="bg-c-lighten-gray py-1.5 px-4 border-l-2  ">
+                            <i class="ri-arrow-down-s-line text-black"></i>
+                      </div> 
+                 </div>
                 </div>
               </div>
               <div class="flex items-center">
                 <div class="w-1/3"></div>
                 <div class="w-2/3">
-                  <button
-                    type="button"
-                    class="createmore-button bg-gray-50 pl-12 flex gap-4 overflow-hidden items-center justify-between border border-gray-300 text-gray-900 text-sm rounded-xl"
-                  >
-                    More Settings
-                     <div class="bg-white py-1.5 px-4">
-                       <i class="ri-arrow-down-s-line text-black"></i>
-                     </div> 
-                  </button>
+                  <button type="button" class="createmore-button bg-c-lighten-gray overflow-hidden flex items-center pl-4 gap-14 justify-between border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings 
+                                               <div class="bg-c-lighten-gray py-1.5 px-4 border-l-2">
+                                                <i class="ri-arrow-down-s-line text-black"></i>
+                                              </div> 
+                                            </button>
                 </div>
               </div>
               <div class="create-setting mt-4 flex flex-col gap-4 hidden">
@@ -381,7 +376,7 @@
                       id="create-appdescription"
                       name="create-appdescription"
                       type="text"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full py-2 px-3"
+                      class="bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-lg block w-full py-2 px-3"
                       placeholder="Please enter an application description"
                       required
                     />
@@ -395,11 +390,11 @@
                       >Picture icon:<span class="text-red-500">*</span></label
                     >
                   </div>
-                    <div class="w-2/3 bg-gray-50 border border-gray-300 rounded-xl flex items-center overflow-hidden">
+                    <div class="w-2/3 bg-c-lighten-gray border border-gray-300 rounded-xl flex items-center overflow-hidden">
                       <input type="text" id="create-pictureicon" name="create-pictureicon" class="w-5/6 text-gray-900 text-sm py-2 px-3 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
-                       <div class="w-1/6 ml-4">
-                      <img class="w-8 h-8" src="/images/Folder.png" alt="Folder Image">
-                   </div>                                                     
+                      <div class="w-1/6 border-l-2">
+                          <img class="w-6 h-6 ml-4" src="/images/Folder.png" alt="Folder Image">
+                      </div>                                                   
                 </div>
                 </div>
                 <div class="flex items-center">
@@ -414,13 +409,13 @@
                     <button
                       id="create-opentype"
                       type="button"
-                      class="create-newbtn px-8 py-2 bg-gray-400 rounded"
+                      class="create-newbtn px-8 py-2 bg-c-gray-3 rounded"
                     >
                       New window
                     </button>
                     <button
                       type="button"
-                      class="create-Dialog px-14 mt-2 sm:mt-0 py-2 bg-gray-400 rounded"
+                      class="create-Dialog px-14 mt-2 sm:mt-0 py-2 bg-c-gray-3 rounded"
                     >
                       Dialog
                     </button>
@@ -516,15 +511,16 @@
       tabindex="-1"
       class="fixed hidden inset-0 flex items-center justify-center bg-black bg-opacity-50"
     >
-      <div class="relative p-4 w-full max-w-md max-h-full">
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div class="relative p-4 w-full max-w-sm">
+        <div class="relative bg-white rounded-2xl shadow dark:bg-gray-700">
           <div class="p-4 md:p-5 text-center">
-            <div class="delete-header flex items-center gap-2 border-b-2">
-              <i class="ri-delete-bin-6-line" style="color: #fdcf01"></i>
+            <div class="delete-header flex items-center gap-4 mb-2 py-2">
+              <i class="ri-delete-bin-6-line ri-xl" style="color: #fdcf01"></i>
               <h1 class="font-medium">Delete File</h1>
             </div>
+            <hr>
             <div class="mt-4 flex items-center justify-center">
-              <h1 class="text-md font-medium">
+              <h1 class="text-sm font-medium">
                 Are you sure you want to delete the selection?
               </h1>
             </div>
@@ -579,7 +575,7 @@
                                               <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name:<span class="text-red-500">*</span></label>
                                             </div>
                                             <div class="w-2/3">
-                                                <input type="text" name="name" id="name" autocomplete="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter an application name" required />
+                                                <input type="text" name="name" id="name" autocomplete="name" class="bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-xl block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter an application name" required />
                                             </div>
                                           </div>
                                           <div class="flex items-center">
@@ -587,7 +583,7 @@
                                               <label for="website-link" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Website link:<span class="text-red-500">*</span></label>
                                             </div>
                                             <div class="w-2/3">
-                                                <input type="text" name="website-link" id="website-link" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter http / https link" required />
+                                                <input type="text" name="website-link" id="website-link" class="bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-xl block w-full py-2 px-3 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Please enter http / https link" required />
                                             </div>
                                           </div>
                                         <div class="flex items-center">
@@ -595,9 +591,13 @@
                                             <label for="application-grouping" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Application grouping:<span class="text-red-500">*</span></label>
                                           </div>
                                           <div class="w-2/3">
-                                              <select class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl py-2 px-3" name="application-grouping" id="application-grouping">
-                                                <option value="Tool">Tool</option>
-                                              </select>
+                                            <div class="w-full bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-xl flex items-center justify-between overflow-hidden pl-4" >
+                                              Tool
+                                                <div class="bg-c-lighten-gray py-1.5 px-4 border-l-2  ">
+                                                  <i class="ri-arrow-down-s-line text-black"></i>
+                                                </div> 
+                                            </div>
+                                            
                                           </div>
                                         </div>
                                         <div class="flex items-center">
@@ -605,8 +605,8 @@
 
                                           </div>
                                           <div class="w-2/3">
-                                            <button type="button" class="more-settings-button bg-gray-50 overflow-hidden flex items-center pl-12 gap-4 justify-between border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings 
-                                               <div class="bg-white py-1.5 px-4">
+                                            <button type="button" class="more-settings-button bg-c-lighten-gray overflow-hidden flex items-center pl-4 gap-14 justify-between border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings 
+                                               <div class="bg-c-lighten-gray py-1.5 px-4 border-l-2">
                                                 <i class="ri-arrow-down-s-line text-black"></i>
                                               </div> 
                                             </button>
@@ -619,7 +619,7 @@
                                                     <label for="app-description"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Application description:<span class="text-red-500">*</span></label>
                                                   </div>
                                                   <div class="w-2/3">
-                                                    <input type="text" id="app-description" name="app-description" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl block w-full py-2 px-3" placeholder="Please enter an application description" required>
+                                                    <input type="text" id="app-description" name="app-description" class="bg-c-lighten-gray border border-gray-300 text-gray-900 text-sm rounded-xl block w-full py-2 px-3" placeholder="Please enter an application description" required>
                                                   </div>
                                                 </div>
                                                 <div class="flex items-center">
@@ -627,9 +627,9 @@
                                                       <label for="pictureicon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Picture icon:<span class="text-red-500">*</span></label>
                                                   </div>
                                                   <div class="w-2/3 bg-gray-50 border border-gray-300 rounded-xl flex items-center overflow-hidden">
-                                                      <input type="text" id="pictureicon" name="pictureicon" class="w-5/6 text-gray-900 text-sm py-2 px-3 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
-                                                      <div class="w-1/6 ml-4">
-                                                        <img class="w-8 h-8" src="/images/Folder.png" alt="Folder Image">
+                                                      <input type="text" id="pictureicon" name="pictureicon" class="w-5/6  bg-c-lighten-gray text-gray-900 text-sm py-2 px-3 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
+                                                      <div class="w-1/6 border-l-2">
+                                                        <img class="w-6 h-6 ml-4" src="/images/Folder.png" alt="Folder Image">
                                                         </div>
                                                       
                                                   </div>
@@ -639,8 +639,8 @@
                                                       <h3 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Open type:<span class="text-red-500">*</span></h3>
                                                   </div>
                                                   <div class="w-2/3">
-                                                    <button type="button" class="new-window-btn px-8 py-2 bg-gray-400 rounded">New window</button>
-                                                      <button type="button" class="Dialog-btn px-14 mt-2 sm:mt-0 py-2 bg-gray-400 rounded">Dialog</button>
+                                                    <button type="button" class="new-window-btn px-8 py-2 bg-c-gray-3 rounded">New window</button>
+                                                      <button type="button" class="Dialog-btn px-14 mt-2 sm:mt-0 py-2 bg-c-gray-3 rounded">Dialog</button>
                                                   </div>
                                                 </div>
                                                 <div class="Dialog-content flex flex-col gap-3 hidden">
