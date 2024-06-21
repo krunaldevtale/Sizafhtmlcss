@@ -25,7 +25,7 @@
           </li>
           <li class="border-b-2"><a href="#">Upload file</a></li>
           <li><a href="#">New folder</a></li>
-          <li class="flex items-center justify-between">
+          <li class="flex items-center justify-between pr-2">
             <a href="#">New file</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -85,21 +85,27 @@
               </li>
             </ul>
           </li>
-          <li class="flex items-center justify-between">
+          <li class="flex items-center justify-between pr-2">
             <a href="#">Sort by</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
               class="submenu sortby-submenu absolute shadow-md rounded-md hidden"
             >
-              <li class="pl-7"><a href="#">Name</a></li>
-              <li class="pl-7"><a href="#">Type</a></li>
-              <li class="pl-7"><a href="#">Size</a></li>
-              <li class="pl-7 border-b-2"><a href="#">Modification</a></li>
-              <li class="pl-7"><a href="#">Increasing</a></li>
-              <li class="pl-7"><a href="#">Decrement</a></li>
+              <li class="flex items-center pl-4 gap-2">
+                <i class="ri-check-line"></i>
+                <a href="#">Name</a>
+              </li>
+              <li class="flex items-center pl-10"><a href="#">Type</a></li>
+              <li class="flex items-center pl-10"><a href="#">Size</a></li>
+              <li class="flex items-center pl-10 border-b-2"><a href="#">Modification</a></li>
+              <li class="flex items-center pl-4 gap-2">
+                 <i class="ri-check-line"></i>
+                <a href="#">Increasing</a>
+              </li>
+              <li class="flex items-center pl-10"><a href="#">Decrement</a></li>
             </ul>
           </li>
-          <li class="flex items-center justify-between">
+          <li class="flex items-center justify-between pr-2">
             <a href="#">Icon size</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -128,7 +134,7 @@
             </ul>
           </li>
           <li><a href="#">Attribute</a></li>
-          <li class="flex items-center justify-between">
+          <li class="flex items-center justify-between pr-2">
             <a href="#">More</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -163,7 +169,7 @@
             <a href="#">Open</a>
             <p class="menu-sidename">Enter</p>
           </li>
-          <li class="border-b-2 flex items-center justify-between">
+          <li class="border-b-2 flex items-center justify-between pr-2">
             <a href="#">Open with</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -210,7 +216,7 @@
             <a href="#">Delete</a>
             <p class="menu-sidename">Del</p>
           </li>
-          <li class="flex items-center justify-between">
+          <li class="flex items-center justify-between pr-2">
             <a href="#">File tag</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -250,7 +256,7 @@
             <a href="#">Attribute</a>
             <p class="menu-sidename">Alt+I</p>
           </li>
-          <li class="flex items-center justify-between">
+          <li class="flex items-center justify-between pr-2">
             <a href="#">More</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -657,41 +663,7 @@
           menu.classList.remove("hidden");
           menu.style.display = "block";
         }
-        function positionSubmenu(submenu, parentItem) {
-          const submenuRect = submenu.getBoundingClientRect();
-          const parentRect = parentItem.getBoundingClientRect();
-          const viewportWidth = window.innerWidth;
-          const viewportHeight = window.innerHeight;
-
-          // 1. Prioritize right-side placement, but be flexible:
-          let left = parentRect.right; // Default to right side of parent
-          let top = parentRect.top; // Align top edges
-
-          // If going off the right edge, try left side of parent
-          if (left + submenuRect.width > viewportWidth) {
-            left = parentRect.left - submenuRect.width;
-
-            // If still not enough space, adjust to fit on screen
-            if (left < 0) {
-              left = Math.max(0, viewportWidth - submenuRect.width);
-            }
-          }
-
-          // 2. Vertical Placement: Avoid going off the bottom
-          if (top + submenuRect.height > viewportHeight) {
-            // If going off the bottom, try placing above the parent
-            top = parentRect.top - submenuRect.height;
-            // If still not enough space above, align with bottom of viewport
-            if (top < 0) {
-              top = Math.max(0, viewportHeight - submenuRect.height);
-            }
-          }
-
-          // 3. Apply positioning
-          submenu.style.left = `${left}px`;
-          submenu.style.top = `${top}px`;
-        }
-
+      
         // Show submenu on hover
         document.querySelectorAll(".context-menu li").forEach((item) => {
           item.addEventListener("mouseenter", function () {
@@ -700,18 +672,29 @@
               submenu.classList.remove("hidden");
               submenu.style.display = "block";
 
-              // Adjust submenu position
+           // Adjust submenu position
               const submenuRect = submenu.getBoundingClientRect();
               const screenWidth = window.innerWidth;
               const screenHeight = window.innerHeight;
 
+              // Handle right overflow
               if (submenuRect.right > screenWidth) {
                 submenu.style.left = `-${submenuRect.width}px`;
               }
+
+              // Handle left overflow
+              if (submenuRect.left < 50) {
+                submenu.style.left = `${this.offsetWidth}px`;
+              }
+
+              // Handle bottom overflow
               if (submenuRect.bottom > screenHeight) {
-                submenu.style.top = `-${
-                  submenuRect.height - this.offsetHeight
-                }px`;
+                submenu.style.top = `-${submenuRect.height - this.offsetHeight}px`;
+              }
+
+              // Handle top overflow
+              if (submenuRect.top < 0) {
+                submenu.style.top = `${this.offsetHeight}px`;
               }
             }
           });

@@ -37,6 +37,10 @@
     color: var(--color-link-blue);
 }
 
+.text-c-sky{
+    color: var(--color-light-sky);
+}
+
 .text-c-light-black {
     color: var(--color-light-black);
 }
@@ -111,6 +115,12 @@ body.nx {
     display: none;
     position: fixed;
     bottom: 0;
+}
+
+.nx .bg-system{
+    background: url('/images/system.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .nx div[role="dialog"] {
