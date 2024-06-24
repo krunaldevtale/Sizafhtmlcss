@@ -316,7 +316,7 @@
       </div>
 
       <!-- Notification Navbar -->
-        <div class="navbar h-12 pr-5 flex items-center justify-end gap-8 md:pt-5 lg:pt-0">
+        <div class="navbar h-12 pr-5 flex items-center justify-end gap-8 sm:pt-5 lg:pt-1.5">
             <i id="search-icon" class="ri-search-line icon-color"></i>
             <i id="notification-icon" class="ri-notification-3-line icon-color"></i>
             <i class="ri-wifi-line icon-color"></i>
@@ -325,8 +325,8 @@
         </div>
 
       <!-- Desktop apps   -->
-        <div class="desktopapps-div w-full">
-            <div class="desktop-apps p-2 sm:pt-6 w-min h-full flex flex-col gap-4 flex-wrap">
+        <div class="desktopapps-div w-full overflow-x-auto">
+            <div class="desktop-apps p-2 pt-8 w-min h-full flex flex-col gap-4 flex-wrap">
                 <!-- <div class="app-properties absolute z-40 h-32 left-full top-10 invisible text-sm"> 
                         <ul>
                         <li class="flex items-center px-5">
@@ -362,7 +362,7 @@
        <div class="clock flex flex-col items-center" id="clock"></div>
 
         <!-- Notification -->
-        <div id="notification" class="Notification h-56 rounded-lg hidden">
+        <div id="notification" class="Notification h-56 rounded-lg absolute right-10 sm:right-20 top-16 hidden">
           <div class="border-b-2 border-gray-500 p-5 text-center">
             <h1 class="text-normal font-medium">Notification Center</h1>
           </div>
@@ -424,7 +424,7 @@
         </div>
 
          <!-- Right Sidebar -->
-        <div class="dashboard-sidebar w-16 p-1 rounded-3xl">
+        <div class="dashboard-sidebar w-16 p-1 rounded-3xl hidden sm:block">
           <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
           <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
           <img class="mb-1" src="/images/Appstore.png" alt="Appstore" />
@@ -432,7 +432,7 @@
         </div>
 
          <!-- Administrator -->
-        <div id="administrator" class="Administrator h-max rounded-md hidden">
+        <div id="administrator" class="Administrator h-max rounded-md absolute right-5 sm:right-24 bottom-16 hidden">
           <div class="flex items-center gap-5 pl-10 py-5">
             <div class="logo">
               <img class="w-16" src="/images/profile.png" alt="user image" />
@@ -573,6 +573,7 @@
           image: "/images/opensociallogo.png",
           url: "https://social.sizaf.com/html/user/login",
         },
+        
       ];
 
       Desktopapps.forEach((app) => {

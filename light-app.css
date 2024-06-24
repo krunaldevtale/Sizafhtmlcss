@@ -49,8 +49,8 @@ nav ul li:hover {
   width: 60px;
   height: 60px;
   border-radius: 15px;
-  background: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
 }
 
 .add-btn {
@@ -108,8 +108,8 @@ border: 1px solid #686868;
   max-width: 400px;
   height: 220px;
   border-radius: 20px;
-  border: 1px solid #A3A3A3;
-  background: #FDFDFD;
+  border: 1px solid var(--border-light-gray);
+  background: var(--color-dark-white);
 }
 
 @media (max-width:640px) {
