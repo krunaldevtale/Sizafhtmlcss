@@ -88,11 +88,11 @@ border: 1px solid #686868;
     position: relative;
     height: 29px;
     border:none;
-    background: var(--bg-light-gray);
+ border: 2px solid var(--color-dark-yellow);
     border-radius: 2px;
 }
 .ms input[type="checkbox"]:checked{
-    background-color: var(--color-dark-yellow);
+    background-color: var(--color-white);
 }
 .ms input[type="checkbox"]:checked::after {
     content: "✔";
