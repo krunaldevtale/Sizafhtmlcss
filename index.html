@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+      <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
@@ -11,11 +12,12 @@
       href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dashboard.css" />
-    <link rel="stylesheet" href="root.css" />
-  </head>
-  <body class="w-full h-screen">
-    <div class="w-full h-full">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="root.css">
+</head>
+<body class="w-full h-screen">
+    <div class="w-full h-full dashboard">
+
       <!-- Right click Menu -->
       <div id="context-menu" class="context-menu hidden">
         <ul>
@@ -162,7 +164,8 @@
           <li><a href="#">Personal</a></li>
         </ul>
       </div>
-      <!-- Apps context-menu -->
+
+        <!-- Apps context-menu -->
       <div id="app-contextmenu" class="context-menu hidden">
         <ul>
           <li class="flex items-center justify-between pr-4">
@@ -311,28 +314,62 @@
           </li>
         </ul>
       </div>
-      <div class="dashboard w-full h-full bg-no-repeat">
-        <!-- Dashboard Navbar -->
-        <div
-          class="navbar h-12 md:h-16 lg:h-12 pr-5 flex items-center justify-end gap-8"
-        >
-          <i id="search-icon" class="ri-search-line icon-color"></i>
-          <i
-            id="notification-icon"
-            class="ri-notification-3-line icon-color"
-          ></i>
-          <i class="ri-wifi-line icon-color"></i>
-          <i class="ri-volume-up-fill icon-color"></i>
-          <i class="ri-battery-low-line icon-color"></i>
+
+      <!-- Notification Navbar -->
+        <div class="navbar h-12 pr-5 flex items-center justify-end gap-8 md:pt-5 lg:pt-0">
+            <i id="search-icon" class="ri-search-line icon-color"></i>
+            <i id="notification-icon" class="ri-notification-3-line icon-color"></i>
+            <i class="ri-wifi-line icon-color"></i>
+            <i class="ri-volume-up-fill icon-color"></i>
+            <i class="ri-battery-low-line icon-color"></i>
         </div>
 
-        <!-- Desktop apps -->
-        <div class="desktop-apps w-min gap-4 flex flex-col flex-wrap p-5 ">
-          
+      <!-- Desktop apps   -->
+        <div class="desktopapps-div w-full">
+            <div class="desktop-apps p-2 sm:pt-6 w-min h-full flex flex-col gap-4 flex-wrap">
+                <!-- <div class="app-properties absolute z-40 h-32 left-full top-10 invisible text-sm"> 
+                        <ul>
+                        <li class="flex items-center px-5">
+                            <h1 class="font-semibold">Name:</h1>
+                            <p class="pl-2">test.docx</p>
+                        </li>
+                        <li class="flex items-center px-5">
+                            <h1 class="font-semibold">Size:</h1>
+                            <p class="pl-2">32Kb (6 Historic Version)</p>
+                        </li>
+                        <li class="flex items-center px-5">
+                            <h1 class="font-semibold">Creation:</h1>
+                            <p class="pl-2">time</p>
+                        </li>
+                        <li class="flex items-center px-5">
+                            <h1 class="font-semibold">Modification:</h1>
+                            <p class="pl-2">time</p>
+                        </li>
+                        <li class="flex items-center px-5">
+                            <h1 class="font-semibold">Last Visit:</h1>
+                            <p class="pl-2">time</p>
+                        </li>
+                        <li class="flex items-center px-5">
+                            <h1 class="font-semibold">Path:</h1>
+                            <p class="pl-2">path</p>
+                        </li>
+                        </ul>
+                    </div> -->
+            </div>
         </div>
 
         <!-- Clock -->
-        <div class="clock flex flex-col items-center" id="clock"></div>
+       <div class="clock flex flex-col items-center" id="clock"></div>
+
+        <!-- Notification -->
+        <div id="notification" class="Notification h-56 rounded-lg hidden">
+          <div class="border-b-2 border-gray-500 p-5 text-center">
+            <h1 class="text-normal font-medium">Notification Center</h1>
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <p>Empty</p>
+          </div>
+        </div>
 
         <!-- Search Input -->
         <div id="search" class="Search hidden">
@@ -386,7 +423,7 @@
             </div>
         </div>
 
-        <!-- Right Sidebar -->
+         <!-- Right Sidebar -->
         <div class="dashboard-sidebar w-16 p-1 rounded-3xl">
           <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
           <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
@@ -394,17 +431,7 @@
           <img class="mb-4" src="/images/EmptyBin.png" alt="EmptyBin" />
         </div>
 
-        <!-- Notification -->
-        <div id="notification" class="Notification h-56 rounded-lg hidden">
-          <div class="border-b-2 border-gray-500 p-5 text-center">
-            <h1 class="text-normal font-medium">Notification Center</h1>
-          </div>
-          <div class="flex items-center justify-center p-4">
-            <p>Empty</p>
-          </div>
-        </div>
-
-        <!-- Administrator -->
+         <!-- Administrator -->
         <div id="administrator" class="Administrator h-max rounded-md hidden">
           <div class="flex items-center gap-5 pl-10 py-5">
             <div class="logo">
@@ -463,22 +490,21 @@
           </div>
         </div>
 
-        <!-- Footer -->
-        <div
-          class="absolute bottom-2 right-0 px-5"
-        >
+         <!-- Footer -->
+        <div class="absolute bottom-2 right-0 px-5">
             <img
               id="footer-logo"
               class="w-10 h-10"
               src="/images/logo.png"
               alt="Logo"
             />
-      </div>
-      </div>
+        </div>
+
     </div>
 
     <script>
-      //Desktop apps Showing Functionality
+
+      // Dynamically adding Desktop apps
       const container = document.querySelector(".desktop-apps");
       const Desktopapps = [
         {
@@ -553,44 +579,14 @@
         const appDiv = document.createElement("div");
         appDiv.className = "app w-20 h-28 cursor-pointer relative";
         appDiv.innerHTML = `
-        <div class="app-tools absolute flex item-center gap-8 px-2 invisible">
-          <input type="checkbox" name="option"/>
-          <div>
-           <i class="ri-arrow-drop-down-fill ri-xl text-white"></i>
-          </div>
-        </div>
-        <div class="app-properties absolute px-5 w-80 h-36 left-full top-10 z-40 bg-yellow-100 rounded invisible">
-          <ul>
-            <li class="flex items-center px-5">
-              <h1 class="font-semibold">Name:</h1>
-              <p class="pl-2">test.docx</p>
-            </li>
-             <li class="flex items-center px-5">
-              <h1 class="font-semibold">Size:</h1>
-              <p class="pl-2">32Kb (6 Historic Version)</p>
-            </li>
-             <li class="flex items-center px-5">
-              <h1 class="font-semibold">Creation:</h1>
-              <p class="pl-2">time</p>
-            </li>
-             <li class="flex items-center px-5">
-              <h1 class="font-semibold">Modification:</h1>
-              <p class="pl-2">time</p>
-            </li>
-             <li class="flex items-center px-5">
-              <h1 class="font-semibold">Last Visit:</h1>
-              <p class="pl-2">time</p>
-            </li>
-             <li class="flex items-center px-5">
-              <h1 class="font-semibold">Path:</h1>
-              <p class="pl-2">path</p>
-            </li>
-          </ul>
-        </div>
-       <div class="flex flex-col items-center">
-        <img class="w-16 h-16" src="${app.image}" alt="${app.name}">
-        <h2 class="text-center text-white">${app.name}</h2>
-       </div>
+                    <div class="text-center flex flex-col items-center">
+                        <img class="w-16 h-16" src="${app.image}" alt="${app.name}">
+                        <p class="text-white">${app.name}</p>
+                    </div>
+                    <div class="app-tools absolute top-0 flex items-center justify-between gap-9 px-1 invisible">
+                        <input type="checkbox" name="option">
+                        <i class="ri-arrow-drop-down-fill ri-xl text-white"></i>
+                    </div>          
       `;
         container.appendChild(appDiv);
 
@@ -612,7 +608,7 @@
         }
       });
 
-      //Right Click Functionality
+       //Right Click Functionality
       document.addEventListener("DOMContentLoaded", function () {
         const appContextMenu = document.getElementById("app-contextmenu");
         const dashboardContextMenu = document.getElementById("context-menu");
@@ -779,7 +775,7 @@
       });
 
 
-      //Clock Functionality
+       //Clock Functionality
       function updateClock() {
         const clock = document.getElementById("clock");
         const now = new Date();
@@ -823,7 +819,7 @@
       updateClock();
       setInterval(updateClock, 60000);
 
-      //Notification container Functionalit
+       //Notification container Functionality
       document
         .getElementById("notification-icon")
         .addEventListener("click", function () {
@@ -849,13 +845,14 @@
           document.getElementById("search").classList.add("hidden");
         });
 
-      //Administrator Container Functionality
+       //Administrator Container Functionality
       document
         .getElementById("footer-logo")
         .addEventListener("click", function () {
           const administratorDiv = document.getElementById("administrator");
           administratorDiv.classList.toggle("hidden");
         });
+
     </script>
-  </body>
+</body>
 </html>

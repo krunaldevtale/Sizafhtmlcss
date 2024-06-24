@@ -91,41 +91,54 @@ input[type="checkbox"]:checked::after {
     left: 1px;
 }
 
-@media (max-width:480px){
-  .blur-container {
-  width: 400px;
-  height: 500px;
+@media (max-width: 768px) {
+
+    .blur-container, .login-container {
+        width: 90%;
+        max-height: 500px;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
+
+    .login {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    .left-container {
+      display: none;
+    }
+
+    .right-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right-container .userinput {
+        width: 100%;
+    }
+
+    #login-btn {
+        width: 100%;
+    }
 }
 
-.login-container {
-  width: 400px;
-  height: 500px;
-}
+@media (max-width: 480px) {
+    .blur-container, .login-container {
+        width: 100%;
+    }
 
-.vector-img {
- width: 150px;
- height: 150px;
-}
+    .left-container {
+        margin-bottom: 20px;
+    }
 
-.profile-img{
-  width: 70px;
-  height: 70px;
-}
-
-.right-container .userinput {
-  width: 230px;
-}
-
-.login{
-  padding: 0;
-}
-
-.right-container{
-  padding: 0 30px 0 0;
-}
-
-.logo img{
-  width: 60px;
-  height: 60px;
-}
+    .right-container .userinput {
+        height: 40px;
+    }
 }

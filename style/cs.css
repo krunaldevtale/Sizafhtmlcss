@@ -87,6 +87,14 @@
     background: var(--color-light-pink);
 }
 
+.border-c-gray{
+  border: 2px solid var(--color-gray);
+}
+
+.border-c-sky{
+    border-color: var(--color-light-sky);
+}
+
 .border-c-yellow {
     border-color: var(--color-dark-yellow);
 }
@@ -95,11 +103,11 @@
     background: var(--bg-light-gray);
 }
 
-body.nx {
+body.cs {
     overflow-x: hidden;
 }
 
-.nx .main {
+.cs .main {
     background: url('/images/main-bg.png');
     background-size: cover;
     background-position: center;
@@ -108,125 +116,116 @@ body.nx {
 }
 
 @media (width > 768px) {
-    .nx .main {
+    .cs .main {
         /* max-height: calc(100vh - 60px); */
         max-height: calc(100vh);
     }
 }
 
 @media (width < 767.98px) {
-    .nx .main {
+    .cs .main {
         /* max-height: calc(100vh - 45px); */
         max-height: calc(100vh);
     }
 }
 
-.nx .taskbar {
+.cs .taskbar {
     background: url('/images/taskbar-bg.svg');
     background-size: cover;
     background-position: center;
 }
 
-.nx footer {
-    background: url('/images/footer-bg.png');
-    background-size: cover;
-    background-position: center;
-    display: none;
-    position: fixed;
-    bottom: 0;
-}
-
-.nx .bg-system{
+.cs .bg-system{
     background: url('/images/system.png');
     background-size: cover;
     background-position: center;
 }
 
-.nx div[role="dialog"] {
+.cs div[role="dialog"] {
     padding: 20px 10px;
 }
 
-.nx div[role="dialog"] .modal-content {
+.cs div[role="dialog"] .modal-content {
     max-height: 90vh;
     overflow: scroll;
 }
 
-.nx div[role="dialog"] .modal-content::-webkit-scrollbar,
-.nx .main::-webkit-scrollbar,
-.nx-table-container::-webkit-scrollbar,
+.cs div[role="dialog"] .modal-content::-webkit-scrollbar,
+.cs .main::-webkit-scrollbar,
+.cs-table-container::-webkit-scrollbar,
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
 
 @media (width < 768px) {
-    .nx-table-container {
+    .cs-table-container {
         overflow-y: scroll;
     }
 
-    .nx-table-container table {
+    .cs-table-container table {
         min-width: 1000px;
     }
 }
 
-.nx .main .content {
+.cs .main .content {
     min-width: 360px;
 }
 
-.nx .toggle-bg {
+.cs .toggle-bg {
     background: #DCDCDC;
     border: 1px solid var(--color-gray-3);
 }
 
-.nx .toggle-switch input:checked~.dot {
+.cs .toggle-switch input:checked~.dot {
     transform: translateX(118%);
     background: #F9F9F9;
 }
 
-.nx .toggle-switch input:checked~.toggle-bg {
+.cs .toggle-switch input:checked~.toggle-bg {
     background: var(--color-dark-yellow);
 }
-.nx .dropdown-option {
+.cs .dropdown-option {
     display: none;
     background-color: #F9F9F9;
 }
 
-.nx  .tooltip {
+.cs  .tooltip {
     display: none;
 }
-.nx .has-tooltip:hover ~ .tooltip {
+.cs .has-tooltip:hover ~ .tooltip {
     display: block;
 }
-.nx .dropdown-btn:focus~.dropdown-option,
+.cs .dropdown-btn:focus~.dropdown-option,
 .dropdown-option:hover {
     display: block;
 }
 
-.nx .radio-button input {
+.cs .radio-button input {
     display: none;
     white-space: nowrap;
 }
 
-.nx .radio-button span {
+.cs .radio-button span {
     min-width: 80px;
 }
 
 
-.nx .radio-button input:checked~span {
+.cs .radio-button input:checked~span {
     background: #FFD700;
     color: #000;
 }
 
 /* file specific */
 
-.nx #tab-holder {
+.cs #tab-holder {
     position: relative;
 }
 
-.nx #tab-holder .tab-content {
+.cs #tab-holder .tab-content {
     padding-bottom: 1rem;
 }
 
-.nx #tab-holder input.tab-manager[type="radio"] {
+.cs #tab-holder input.tab-manager[type="radio"] {
     position: absolute;
     left: -100%;
     top: -100%;
@@ -234,37 +233,35 @@ body.nx {
     display: none;
 }
 
-.nx #tab-holder input.tab-manager[type="radio"]+div.content-holder>label.tab-label {
+.cs #tab-holder input.tab-manager[type="radio"]+div.content-holder>label.tab-label {
     float: left;
     margin-right: 1rem;
     cursor: pointer;
 }
 
-.nx #tab-holder input.tab-manager[type="radio"]+div.content-holder>div.tab-content {
+.cs #tab-holder input.tab-manager[type="radio"]+div.content-holder>div.tab-content {
     position: absolute;
     width: 100%;
     display: none;
 }
 
-.nx #tab-holder input.tab-manager[type="radio"]:checked+div.content-holder>div.tab-content {
+.cs #tab-holder input.tab-manager[type="radio"]:checked+div.content-holder>div.tab-content {
     display: block;
 }
 
-.nx #tab-holder input.tab-manager[type="radio"]:checked+div.content-holder>label.tab-label {
+.cs #tab-holder input.tab-manager[type="radio"]:checked+div.content-holder>label.tab-label {
     border-bottom: 2px solid var(--color-dark-yellow);
 }
 
-.nx #tab-holder .tab-content form input[type="checkbox"]:checked+label {
+.cs #tab-holder .tab-content form input[type="checkbox"]:checked+label {
     background: var(--color-dark-yellow);
     color: var(--color-light-gray);
 }
 
-.nx button {
+.cs button {
     white-space: nowrap;
 }
-.nx button:active{
-    scale: 0.9;
-}
+
 
 /*multiple select -  css override*/
 .ui.selection.dropdown {
@@ -295,17 +292,17 @@ body.nx {
 }
 
 /* no dark outline on input focus */
-.nx input:focus,
-.nx textarea:focus,
-.nx select:focus{
+.cs input:focus,
+.cs textarea:focus,
+.cs select:focus{
     outline: none;
 }
 
 /* checkbox with yellow border */
-.nx input[type="checkbox"].c-checkbox {
+.cs input[type="checkbox"].c-checkbox {
     accent-color: var(--color-dark-yellow);
 }
-.nx input[type="checkbox"].c-checkbox {
+.cs input[type="checkbox"].c-checkbox {
     appearance: none;
     -webkit-appearance: none;
     display: flex;
@@ -320,10 +317,10 @@ body.nx {
     border: 1px solid var(--color-dark-yellow);
     border-radius: 2px;
 }
-/* .nx input[type="checkbox"].c-checkbox:checked{
+/* .cs input[type="checkbox"].c-checkbox:checked{
     background-color: var(--color-dark-yellow);
 } */
-.nx input[type="checkbox"].c-checkbox:checked::after {
+.cs input[type="checkbox"].c-checkbox:checked::after {
     content: "✔";
     font-size: 10px;
     position: absolute;
@@ -332,8 +329,8 @@ body.nx {
     left: 1px;
 }
 
-.nx select option:checked,
-.nx select option:hover,
-.nx select:focus > option:checked {
+.cs select option:checked,
+.cs select option:hover,
+.cs select:focus > option:checked {
     box-shadow: 0 0 10px 100px var(--color-dark-yellow) inset;
 }

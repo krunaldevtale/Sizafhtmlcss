@@ -25,12 +25,12 @@ hr {
    border: 1px solid var(--border-light-gray);
 }
 
- .nx input[type="checkbox"].d-checkbox {
+.cs input[type="checkbox"].d-checkbox {
     accent-color: var(--color-dark-yellow);
 }
 
 
-.nx input[type="checkbox"].d-checkbox {
+.cs input[type="checkbox"].d-checkbox {
     appearance: none;
     -webkit-appearance: none;
     display: flex;
@@ -45,10 +45,10 @@ hr {
     border: 2px solid var(--color-dark-yellow);
     border-radius: 2px;
 }
-.nx input[type="checkbox"].d-checkbox:checked{
+.cs input[type="checkbox"].d-checkbox:checked{
     background-color: var(--color-white);
 }
-.nx input[type="checkbox"].d-checkbox:checked::after {
+.cs input[type="checkbox"].d-checkbox:checked::after {
     content: "✔";
     font-size: 12px;
     position: absolute;

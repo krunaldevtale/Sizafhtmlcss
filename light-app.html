@@ -14,9 +14,9 @@
     />
     <link rel="stylesheet" href="light-app.css" />
     <link rel="stylesheet" href="root.css" />
-    <link rel="stylesheet" href="style/nx.css">
+    <link rel="stylesheet" href="style/cs.css">
   </head>
-  <body class="h-screen w-full nx">
+  <body class="h-screen w-full cs">
     <main class="flex w-full h-full">
       <!-- Sidebar -->
       <aside class="h-full relative">
@@ -142,7 +142,7 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown" class="absolute left-1 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 overflow-hidden ">
+                    <div id="dropdown" class="absolute left-1 hidden bg-c-lighten-gray divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 overflow-hidden ">
                         <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
                             <button type="button" class="openEditModalButton block w-full px-4 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-4 "><i class="ri-edit-box-line"></i>Edit</button>
@@ -267,7 +267,7 @@
       <div class="relative p-4 w-full max-w-2xl max-h-full">
         <div class="relative bg-white rounded-xl shadow dark:bg-gray-700">
           <div
-            class="flex items-start justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+            class="flex items-start justify-between p-4 md:p-5 border-b rounded-t border-zinc-700"
           >
           <div class="flex items-center gap-4">
              <div
@@ -353,7 +353,8 @@
               <div class="flex items-center">
                 <div class="w-1/3"></div>
                 <div class="w-2/3">
-                  <button type="button" class="createmore-button bg-c-lighten-gray overflow-hidden flex items-center pl-4 gap-14 justify-between border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings 
+                  <button type="button" class="createmore-button w-full md:w-52
+                   bg-c-lighten-gray overflow-hidden flex items-center pl-4 justify-between border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings 
                                                <div class="bg-c-lighten-gray py-1.5 px-4 border-l-2">
                                                 <i class="ri-arrow-down-s-line text-black"></i>
                                               </div> 
@@ -391,9 +392,9 @@
                     >
                   </div>
                     <div class="w-2/3 bg-c-lighten-gray border border-gray-300 rounded-xl flex items-center overflow-hidden">
-                      <input type="text" id="create-pictureicon" name="create-pictureicon" class="w-5/6 text-gray-900 text-sm py-2 px-3 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
-                      <div class="w-1/6 border-l-2">
-                          <img class="w-6 h-6 ml-4" src="/images/Folder.png" alt="Folder Image">
+                      <input type="text" id="create-pictureicon" name="create-pictureicon" class="w-full bg-c-lighten-gray text-gray-900 text-sm py-2 px-3 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
+                      <div class="px-4 border-l-2">
+                          <img class="w-6 h-5 sm:h-6" src="/images/Folder.png" alt="Folder Image">
                       </div>                                                   
                 </div>
                 </div>
@@ -432,7 +433,7 @@
                     </div>
                     <div class="w-2/3 flex items-center gap-3">
                       <div
-                        class="flex items-center border-2 rounded-lg w-1/2 overflow-hidden bg-gray-200"
+                        class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200"
                       >
                         <input
                           id="create-dialogsize"
@@ -443,7 +444,7 @@
                         <h4 class="1/5 px-2">Width</h4>
                       </div>
                       <div
-                        class="flex items-center border-2 rounded-lg w-1/2 overflow-hidden bg-gray-200"
+                        class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200"
                       >
                         <input
                           type="number"
@@ -465,9 +466,8 @@
                       >
                     </div>
                     <div class="w-2/3 flex items-center gap-3">
-                      <div class="ms flex items-center w-1/2 gap-2">
+                      <div class="ms flex items-center w-1/2 gap-3">
                         <input
-                          id="create-moresetting"
                           type="checkbox"
                           name="option"
                           value="option1"
@@ -475,7 +475,7 @@
                         />
                         <h4 class="text-sm">Allow width adjusment</h4>
                       </div>
-                      <div class="ms flex items-center w-1/2 gap-2">
+                      <div class="ms flex items-center w-1/2 gap-3">
                         <input
                           type="checkbox"
                           name="option"
@@ -491,11 +491,11 @@
               <div class="flex items-center justify-end gap-4 pt-16">
                 <button
                   type="button"
-                  class="text-blue-700 bg-white border border-blue-700 font-medium rounded-full text-sm px-8 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="text-c-sky bg-white border border-c-sky font-normal rounded-full text-sm px-10 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Preview
                 </button>
-                <button class="bg-black text-white px-12 py-2 rounded-full">
+                <button class="bg-c-black text-white px-12 py-2 rounded-full">
                   Save
                 </button>
               </div>
@@ -511,25 +511,24 @@
       tabindex="-1"
       class="fixed hidden inset-0 flex items-center justify-center bg-black bg-opacity-50"
     >
-      <div class="relative p-4 w-full max-w-sm">
-        <div class="relative bg-white rounded-2xl shadow dark:bg-gray-700">
+      <div class="delete-modal relative">
+        <div class="relative">
           <div class="p-4 md:p-5 text-center">
-            <div class="delete-header flex items-center gap-4 mb-2 py-2">
+            <div class="delete-header flex items-center gap-4 mb-2 py-1">
               <i class="ri-delete-bin-6-line ri-xl" style="color: #fdcf01"></i>
-              <h1 class="font-medium">Delete File</h1>
+              <h1 class="text-lg font-medium">Delete File</h1>
             </div>
-            <hr>
+            <hr class="border">
             <div class="mt-4 flex items-center justify-center">
-              <h1 class="text-sm font-medium">
+              <h1 class="text-md font-medium">
                 Are you sure you want to delete the selection?
               </h1>
             </div>
             <div class="flex items-center justify-center gap-3 mt-6">
               <button
+              class="bg-c-black text-white"
                 type="submit"
                 style="
-                  background-color: black;
-                  color: white;
                   padding: 9px 64px;
                   border-radius: 50px;
                 "
@@ -550,7 +549,7 @@
     <!-- Edit Button Modal -->
      <div id="Edit-modal" role="dialog" tabindex="-1" aria-hidden="true" class="fixed hidden inset-0 flex items-center justify-center bg-black bg-opacity-50 overflow-y-scroll">
                         <div class="relative p-4 w-full max-w-2xl max-h-full">
-                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <div class="relative bg-white rounded-xl shadow dark:bg-gray-700">
                                 <div class="flex items-start justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                                   <div class="flex items-center gap-4">
                                       <div class="img-container shadow-black flex items-center justify-center">
@@ -605,7 +604,7 @@
 
                                           </div>
                                           <div class="w-2/3">
-                                            <button type="button" class="more-settings-button bg-c-lighten-gray overflow-hidden flex items-center pl-4 gap-14 justify-between border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings 
+                                            <button type="button" class="more-settings-button w-full sm:w-52 bg-c-lighten-gray overflow-hidden flex items-center pl-4  justify-between border border-gray-300 text-gray-900 text-sm rounded-xl">More Settings 
                                                <div class="bg-c-lighten-gray py-1.5 px-4 border-l-2">
                                                 <i class="ri-arrow-down-s-line text-black"></i>
                                               </div> 
@@ -626,10 +625,10 @@
                                                   <div class="w-1/3">
                                                       <label for="pictureicon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Picture icon:<span class="text-red-500">*</span></label>
                                                   </div>
-                                                  <div class="w-2/3 bg-gray-50 border border-gray-300 rounded-xl flex items-center overflow-hidden">
-                                                      <input type="text" id="pictureicon" name="pictureicon" class="w-5/6  bg-c-lighten-gray text-gray-900 text-sm py-2 px-3 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
-                                                      <div class="w-1/6 border-l-2">
-                                                        <img class="w-6 h-6 ml-4" src="/images/Folder.png" alt="Folder Image">
+                                                  <div class="w-2/3  bg-c-lighten-gray border border-gray-300 rounded-xl flex items-center overflow-hidden">
+                                                      <input type="text" id="pictureicon" name="pictureicon" class="w-full bg-c-lighten-gray text-gray-900 text-sm py-2 px-3 focus:outline-none border-none" placeholder="Select the picture or paste the web picture link" required>
+                                                      <div class="px-4 border-l-2">
+                                                        <img class="w-6 h-5 sm:h-6" src="/images/Folder.png" alt="Folder Image">
                                                         </div>
                                                       
                                                   </div>
@@ -664,11 +663,11 @@
                                                     <label for="more-settings" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">More settings:<span class="text-red-500">*</span></label>
                                                   </div>
                                                   <div class="w-2/3 flex items-center gap-3">
-                                                    <div class="ms flex items-center w-1/2 gap-2">
-                                                      <input id="more-settings" type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
+                                                    <div class="ms flex items-center w-1/2 gap-3">
+                                                      <input type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
                                                       <h4 class="text-xs sm:text-sm">Allow width adjusment</h4>
                                                     </div>
-                                                    <div class="ms flex items-center w-1/2 gap-2">
+                                                    <div class="ms flex items-center w-1/2 gap-3">
                                                       <input type="checkbox" name="option" value="option2" class="outline-none focus:outline-none">
                                                       <h4 class="text-xs sm:text-sm">Minimalist title bar</h4>
                                                     </div>
@@ -678,8 +677,15 @@
                                               
                                         </div>
                                         <div class="flex items-center justify-end gap-4 pt-16">
-                                          <button class="text-blue-500 bg-white border border-blue-500 font-medium rounded-full text-sm px-10 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Preview</button>
-                                            <button class="bg-black text-white px-12 py-2 rounded-full">Save</button>
+                                            <button
+                                            type="button"
+                                            class="text-c-sky bg-white border border-c-sky font-normal rounded-full text-sm px-10 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                          >
+                                            Preview
+                                          </button>
+                                          <button class="bg-c-black text-white px-12 py-2 rounded-full">
+                                            Save
+                                          </button>
                                         </div>
                                       </form>
                                 </div>

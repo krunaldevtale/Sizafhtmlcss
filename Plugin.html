@@ -14,9 +14,9 @@
     />
     <link rel="stylesheet" href="plugin.css" />
     <link rel="stylesheet" href="root.css" />
-    <link rel="stylesheet" href="style/nx.css">
+    <link rel="stylesheet" href="style/cs.css">
   </head>
-  <body class="h-screen w-full nx">
+  <body class="h-screen w-full cs">
     <main class="w-full h-full flex">
       <!-- sidebar -->
       <aside class="h-full relative">
@@ -157,32 +157,32 @@
                 </div>
                 <h1 class="font-medium text-lg">Office</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between pl-7 gap-8 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">Enable
+                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between w-40 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">
+                      <div class="title-div flex items-center justify-center w-full">
+                         Enable
+                      </div>
                        <div class="bg-white py-1 px-2">
                         <i class="ri-arrow-down-s-line text-black"></i>
                       </div> 
                     </button>
 
-                    <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <div id="dropdown" class="z-10 hidden bg-c-lighten-gray rounded-lg shadow w-48 left-0 absolute overflow-hidden border border-c-gray">
+                        <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Update</button>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Update</button>
                           </li>
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Manual update</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-delete-bin-6-line"></i>Manual update</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Configure</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Configure</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Disable</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-delete-bin-6-line"></i>Disable</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Uninstall</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Uninstall</a>
                           </li>
-                            <li>
-                          <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Enable</button>
-                      </li>
                         </ul>
                     </div>
                 </div>
@@ -193,7 +193,10 @@
                 </div>
                 <h1 class="font-medium text-lg">WebDAV Mount</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between pl-7 gap-8 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">Enable
+                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between w-40 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">
+                      <div class="title-div flex items-center justify-center w-full">
+                         Enable
+                      </div>
                        <div class="bg-white py-1 px-2">
                         <i class="ri-arrow-down-s-line text-black"></i>
                       </div> 
@@ -229,7 +232,10 @@
                 </div>
                 <h1 class="font-medium text-lg">Internet access</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between pl-7 gap-8 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">Enable
+                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between w-40 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">
+                      <div class="title-div flex items-center justify-center w-full">
+                         Enable
+                      </div>
                        <div class="bg-white py-1 px-2">
                         <i class="ri-arrow-down-s-line text-black"></i>
                       </div> 
@@ -265,7 +271,10 @@
                 </div>
                 <h1 class="font-medium text-lg">Picasa Viewer</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between pl-7 gap-8 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">Enable
+                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between w-40 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">
+                      <div class="title-div flex items-center justify-center w-full">
+                         Enable
+                      </div>
                        <div class="bg-white py-1 px-2">
                         <i class="ri-arrow-down-s-line text-black"></i>
                       </div> 
@@ -301,7 +310,10 @@
                 </div>
                 <h1 class="font-medium text-lg">Minder Diagram</h1>
                 <div> 
-                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between pl-7 gap-8 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">Enable
+                    <button id="dropdownDefaultButton" class="dropdown-button flex items-center justify-between w-40 text-yellow-300 rounded-md text-lg overflow-hidden border border-black" type="button">
+                      <div class="title-div flex items-center justify-center w-full">
+                         Enable
+                      </div>
                        <div class="bg-white py-1 px-2">
                         <i class="ri-arrow-down-s-line text-black"></i>
                       </div> 
@@ -426,6 +438,7 @@
      const dropdownButton = document.querySelector(".dropdown-button");
      const dropdownMenu = document.querySelector("#dropdown");
      const dropdownItems = document.querySelectorAll(".dropdown-item");
+     const title = document.querySelector(".title-div");
 
     // Open/Close Dropdown on Button Click
     dropdownButton.addEventListener("click", function (event) {
@@ -437,7 +450,7 @@
     dropdownItems.forEach((dropdownItem) => {
       dropdownItem.addEventListener("click", function (event) {
         event.stopPropagation(); // Prevent click from bubbling up to the document
-        dropdownButton.innerHTML = this.textContent + ' <div class="bg-white py-1 px-2"><i class="ri-arrow-down-s-line text-black"></i></div>';
+        title.innerHTML = this.textContent ;
         dropdownMenu.classList.add("hidden");
       });
     });
