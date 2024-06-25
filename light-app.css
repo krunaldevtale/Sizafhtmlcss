@@ -45,6 +45,8 @@ nav ul li:hover {
   z-index: 99999;
 }
 
+/* Edit Modal */
+
 #Edit-modal .img-container {
   width: 60px;
   height: 60px;
@@ -61,6 +63,8 @@ nav ul li:hover {
   color: var(--color-dark-yellow);
 }
 
+ /* Dropdown menu and button */
+
 .dropdown-menu{
 border: 1px solid #686868;
 }
@@ -69,6 +73,19 @@ border: 1px solid #686868;
   border-radius: 5px;
   background: var(--color-light-gray);
 }
+
+/* Delete Modal css */
+
+.delete-modal{
+  width: 90%;
+  max-width: 400px;
+  height: 220px;
+  border-radius: 20px;
+  border: 1px solid var(--border-light-gray);
+  background: var(--color-dark-white);
+}
+
+ /* Checkbox css */
 
 .ms input[type="checkbox"] {
     accent-color: var(--color-dark-yellow);
@@ -103,14 +120,7 @@ border: 1px solid #686868;
     left: 6px;
 }
 
-.delete-modal{
-  width: 90%;
-  max-width: 400px;
-  height: 220px;
-  border-radius: 20px;
-  border: 1px solid var(--border-light-gray);
-  background: var(--color-dark-white);
-}
+/* Responsive css */
 
 @media (max-width:480px){
   .small-container {

@@ -55,16 +55,16 @@
   margin-top: 20px;
 }
 
-input::placeholder {
+.cs input::placeholder {
   color: var(--color-pure-black);
 }
 
- input[type="checkbox"] {
+ .cs input[type="checkbox"] {
     accent-color: var(--color-dark-yellow);
 }
 
 
-input[type="checkbox"] {
+.cs input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
     display: flex;
@@ -79,10 +79,10 @@ input[type="checkbox"] {
     border: 1px solid var(--color-pure-black);
     border-radius: 2px;
 }
-input[type="checkbox"]:checked{
+.cs input[type="checkbox"]:checked{
     background-color: rgba(217, 217, 217, 0.41);
 }
-input[type="checkbox"]:checked::after {
+.cs input[type="checkbox"]:checked::after {
     content: "✔";
     font-size: 10px;
     position: absolute;

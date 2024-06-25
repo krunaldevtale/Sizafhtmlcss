@@ -17,6 +17,8 @@ hr {
   z-index: 999;
 }
 
+ /* input and textarea Css */
+
 .add input, textarea{
    border: 1px solid var(--border-light-gray);
 }
@@ -24,6 +26,8 @@ hr {
 .edit input, textarea{
    border: 1px solid var(--border-light-gray);
 }
+
+ /* Checkbox css */
 
 .cs input[type="checkbox"].d-checkbox {
     accent-color: var(--color-dark-yellow);
