@@ -315,7 +315,7 @@ body.cs {
     cursor: pointer;
     position: relative;
     height: 12px;
-    border: 1px solid var(--color-dark-yellow);
+    border: 2px solid var(--color-dark-yellow);
     border-radius: 2px;
 }
 /* .cs input[type="checkbox"].c-checkbox:checked{
@@ -326,7 +326,7 @@ body.cs {
     font-size: 10px;
     position: absolute;
     height: 12px;
-    top: -4px;
+    top: -5px;
     left: 1px;
 }
 

@@ -27,6 +27,10 @@ hr {
    border: 1px solid var(--border-light-gray);
 }
 
+.addModal,.editModal{
+  max-width: 832px;
+}
+
  /* Checkbox css */
 
 .cs input[type="checkbox"].d-checkbox {
