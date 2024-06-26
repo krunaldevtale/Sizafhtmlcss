@@ -39,6 +39,10 @@ nav ul li:hover {
   background: var(--color-light-gray);
 }
 
+.dropdown-menu{
+  border: 1px solid var(--border-light-gray);
+}
+
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
