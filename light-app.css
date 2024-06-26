@@ -1,22 +1,10 @@
 
-.lightapp-heading {
-  color: var(--color-light-gray);
-  font-size: var(--font-size-18);
-  font-weight: var(--font-weight-400);
-}
-
 .all-tab {
   background: var(--color-light-gray);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 
-nav ul li:hover {
-  background: var(--color-light-gray);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--color-dark-yellow);
-}
 
 .lightapp-btn {
   background: var(--color-light-gray);
@@ -78,8 +66,8 @@ border: 1px solid #686868;
 
 .delete-modal{
   width: 90%;
-  max-width: 400px;
-  height: 220px;
+  max-width: 390px;
+  min-height: 210px;
   border-radius: 20px;
   border: 1px solid var(--border-light-gray);
   background: var(--color-dark-white);

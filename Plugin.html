@@ -23,13 +23,13 @@
         <input type="checkbox" class="hidden" id="sidebar-toggle" />
         <label
           for="sidebar-toggle"
-          class="absolute lg:hidden top-2 -right-8 px-1"
+          class="absolute lg:hidden top-6 -right-8 px-1"
         >
-          <i class="ri-bar-chart-horizontal-line"></i>
+         <i class="ri-bar-chart-horizontal-fill"></i>
         </label>
         <div class="sidebar h-full bg-no-repeat bg-cover bg-center">
           <div class="plugin-logo px-9 py-7">
-            <img class="w-20 h-20" src="/images/logo.png" alt="logo" />
+            <img class="w-16 h-16" src="/images/logo.png" alt="logo" />
           </div>
           <nav>
             <ul class="grid gap-2">
@@ -117,7 +117,7 @@
       <!-- main content -->
       <div class="flex-grow border bg-red-500 h-100 main">
         <div class="flex w-full h-full flex-col content">
-          <div class="p-6">
+          <div class="px-9 py-6 lg:p-6">
             <div class="flex items-center gap-4">
               <span class="text-lg text-c-black">Plugin</span>
             </div>
@@ -150,8 +150,8 @@
 
           <!-- content -->
             <div class="plugin-content relative h-full overflow-y-auto">
-              <div class="flex flex-wrap flex-row justify-center sm:justify-start gap-8 py-3 px-7 sm:px-6">
-                <div class="small-container flex flex-col items-center justify-center gap-5 openModal">
+              <div class="flex flex-wrap flex-row justify-center sm:justify-start gap-7 py-3 px-2 sm:px-6">
+                <div class="small-container flex flex-col items-center justify-center gap-5 relative openModal">
                 <div class="img-container rounded-xl bg-white shadow-black flex items-center justify-center">
                     <img class="w-10 h-10" src="images/OfficeImg.png" alt="Office Image">
                 </div>
@@ -166,28 +166,28 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown1" class="dropdown-menu z-10 hidden bg-c-lighten-gray rounded-lg shadow w-48 left-0 absolute overflow-hidden">
+                    <div id="dropdown1" class="dropdown-menu z-10 hidden bg-c-lighten-gray rounded-lg shadow w-48  absolute top-48 sm:right-2 sm:top-52 overflow-hidden">
                         <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
                             <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Update</button>
                           </li>
                           <li>
-                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-delete-bin-6-line"></i>Manual update</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-2-line"></i>Manual update</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Configure</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-tools-fill"></i>Configure</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-delete-bin-6-line"></i>Disable</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-prohibited-line"></i>Disable</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Uninstall</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-uninstall-line"></i>Uninstall</a>
                           </li>
                         </ul>
                     </div>
                 </div>
                 </div>
-               <div class="small-container flex flex-col items-center justify-center gap-5">
+               <div class="small-container flex flex-col items-center justify-center relative gap-5">
                 <div class="img-container rounded-xl bg-white shadow-black flex items-center justify-center">
                     <img class="w-10 h-10" src="images/WebdavImg.png" alt="Office Image">
                 </div>
@@ -202,31 +202,28 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown2" class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <div id="dropdown2" class="dropdown-menu z-10 hidden bg-c-lighten-gray rounded-lg shadow w-48  absolute right-2 top-52 overflow-hidden">
+                        <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Update</button>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Update</button>
                           </li>
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Manual update</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-2-line"></i>Manual update</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Configure</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-tools-fill"></i>Configure</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Disable</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-prohibited-line"></i>Disable</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Uninstall</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-uninstall-line"></i>Uninstall</a>
                           </li>
-                            <li>
-                          <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Enable</button>
-                      </li>
                         </ul>
                     </div>
                 </div>
               </div>
-               <div class="small-container flex flex-col items-center justify-center gap-5">
+               <div class="small-container flex flex-col items-center justify-center gap-5 relative">
                 <div class="img-container rounded-xl bg-white shadow-black flex items-center justify-center">
                     <img class="w-10 h-10" src="images/internetaccessImg.png" alt="Office Image">
                 </div>
@@ -241,31 +238,28 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown3" class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                     <div id="dropdown3" class="dropdown-menu z-10 hidden bg-c-lighten-gray rounded-lg shadow w-48  absolute right-2 top-52 overflow-hidden">
+                        <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Update</button>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Update</button>
                           </li>
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Manual update</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-2-line"></i>Manual update</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Configure</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-tools-fill"></i>Configure</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Disable</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-prohibited-line"></i>Disable</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Uninstall</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-uninstall-line"></i>Uninstall</a>
                           </li>
-                            <li>
-                          <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Enable</button>
-                      </li>
                         </ul>
                     </div>
                 </div>
               </div>
-               <div class="small-container flex flex-col items-center justify-center gap-5">
+               <div class="small-container flex flex-col items-center justify-center gap-5 relative">
                 <div class="img-container rounded-xl bg-white shadow-black flex items-center justify-center">
                     <img class="w-10 h-10" src="images/Picasa.png" alt="Office Image">
                 </div>
@@ -280,31 +274,28 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown4" class="dropdown-menu  z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                     <div id="dropdown4" class="dropdown-menu z-10 hidden bg-c-lighten-gray rounded-lg shadow w-48  absolute right-2 top-52 overflow-hidden">
+                        <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Update</button>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Update</button>
                           </li>
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Manual update</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-2-line"></i>Manual update</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Configure</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-tools-fill"></i>Configure</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Disable</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-prohibited-line"></i>Disable</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Uninstall</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-uninstall-line"></i>Uninstall</a>
                           </li>
-                            <li>
-                          <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Enable</button>
-                      </li>
                         </ul>
                     </div>
                 </div>
               </div>
-               <div class="small-container flex flex-col items-center justify-center gap-5">
+               <div class="small-container flex flex-col items-center justify-center gap-5 relative">
                 <div class="img-container rounded-xl bg-white shadow-black flex items-center justify-center">
                     <img class="w-10 h-10" src="images/MinderImg.png" alt="Office Image">
                 </div>
@@ -319,26 +310,23 @@
                       </div> 
                     </button>
 
-                    <div id="dropdown5" class="dropdown-menu z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                   <div id="dropdown5" class="dropdown-menu z-10 hidden bg-c-lighten-gray rounded-lg shadow w-48  absolute right-2 top-52 overflow-hidden">
+                        <ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Update</button>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-box-line"></i>Update</button>
                           </li>
                           <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Manual update</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-edit-2-line"></i>Manual update</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Configure</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-tools-fill"></i>Configure</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-delete-bin-6-line"></i>Disable</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-prohibited-line"></i>Disable</a>
                           </li>
                            <li>
-                            <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Uninstall</a>
+                            <button type="button" class="dropdown-item w-full px-6 py-1.5 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-3"><i class="ri-uninstall-line"></i>Uninstall</a>
                           </li>
-                            <li>
-                          <button type="button" class="dropdown-item w-full px-4 py-2 text-base hover:bg-yellow-400 hover:text-black flex items-center gap-2"><i class="ri-edit-box-line"></i>Enable</button>
-                      </li>
                         </ul>
                     </div>
                 </div>
@@ -352,30 +340,28 @@
     <!-- Modal -->
 
  <div id="modal" role="dialog" tabindex="-1" aria-hidden="true" class="fixed hidden inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
-   <div class=" max-w-4xl max-h-full mx-auto bg-white shadow-lg rounded-2xl overflow-y-auto">
+   <div class="plugin-modal mx-auto bg-c-lighten-gray overflow-y-auto">
     <button
-      class="py-1.5 px-4 mt-4 ml-4 border bg-c-lightest-gray rounded"
+      class="py-1.5 px-4 mt-4 ml-4 border bg-c-back-btn rounded"
       data-bs-dismiss="modal"
       aria-label="Close"
     >
       <i class="ri-arrow-left-line mr-4"></i>Back
     </button>
-    <h2 class="text-xl font-medium text-center mt-4">Office</h2>
+    <h2 class="text-xl font-medium text-center text-c-black">Office</h2>
     <div class="flex flex-col md:flex-row pb-10 pt-4">
-      <div class="w-full md:w-1/3 md:pl-4 flex justify-center">
-        <div class="modal-container flex flex-col bg-c-gray-3 items-center pt-3 rounded-xl">
+      <div class="w-full md:w-1/4 px-2 flex justify-center">
+        <div class="modal-container flex flex-col bg-c-gray-3 items-center pt-3">
           <img src="images/OfficeImg.png" alt="Office Icon" class="mb-4 w-14 h-14">
           <h2 class="text-xl font-medium mb-4">Office</h2>
-          <button
-            id="dropdownDefaultButton"
-            class="dropdown-button flex items-center justify-between pl-7 gap-8 text-yellow-300 rounded-md text-sm overflow-hidden border border-black"
-            type="button"
-          >
-            Enable
-            <div class="bg-white py-1 px-2">
-              <i class="ri-arrow-down-s-line text-black"></i>
-            </div>
-          </button>
+         <button id="dropdownDefaultButton1" class="dropdown-button flex items-center justify-between w-32 sm:w-36 text-c-yellow rounded-md text-lg overflow-hidden border border-black" type="button">
+                      <div class="title-div flex items-center justify-center w-full">
+                         Enable
+                      </div>
+                       <div class="bg-white py-1 px-2">
+                        <i class="ri-arrow-down-s-line text-black"></i>
+                      </div> 
+                    </button>
           <div class="text-left pt-7">
             <p class="mb-3 text-base">
               <span>Status:</span> Update(Ver 1.28)
@@ -396,15 +382,15 @@
           </div>
         </div>
       </div>
-      <div class="w-full md:w-2/3 md:pr-4 p-2">
-        <p class="text-gray-700 mb-4">
+      <div class="w-full md:w-3/4 p-2">
+        <p class="text-c-black mb-4">
           <strong>Description:</strong> Online preview of office files. This application integrates WebOffice, LibreOffice, office live, Yongzhong office, and other ways to realize the basic preview requirements of office files.
         </p>
-        <p class="text-gray-700 mb-2">
+        <p class="text-c-black mb-2">
           <strong>Description:</strong>
           During the operation of this application, it may involve external network request. Among them, there is no need to request external network for WebOffice and LibreOffice, and other possible external network interfaces are as follows:
         </p>
-        <p class="text-gray-700">
+        <p class="text-c-black">
           <strong>officeLive:</strong>
         </p>
         <ul class="list-disc pl-6 mb-2">
@@ -421,10 +407,10 @@
             <a class="text-c-sky" href="https://view.officeapps.live.com">https://view.officeapps.live.com</a>
           </li>
         </ul>
-        <p class="text-gray-700 mb-4">
+        <p class="text-c-black mb-4">
           <strong>Yozo Office :</strong> http://dcs.yozosoft.com
         </p>
-        <p class="text-gray-700">
+        <p class="text-c-black">
           <strong>Formats :</strong> doc, docx, xls, xlsx, ppt, pptx, csv
         </p>
       </div>
@@ -463,7 +449,7 @@
       }
     });
 
-
+    // handle modal
      const openModalButton = document.querySelectorAll(
         ".openModal"
       );

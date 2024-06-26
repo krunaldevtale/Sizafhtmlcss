@@ -10,6 +10,10 @@
     background: var(--color-light-black);
 }
 
+.bg-c-back-btn{
+    background: var(--color-back-btn);;
+}
+
 .bg-c-gray-2 {
     background: var(--color-gray-2);
 }
@@ -36,6 +40,10 @@
 
 .bg-c-light-white {
     background: var(--color-light-white);
+}
+
+.text-c-white{
+    color: var(--color-white);
 }
 
 .text-c-black {
@@ -89,7 +97,7 @@
 }
 
 .border-c-gray{
-  border: 2px solid var(--color-gray);
+  border-color: var(--color-gray);
 }
 
 .border-c-sky{
@@ -161,6 +169,7 @@ body.cs {
 @media (width < 768px) {
     .cs-table-container {
         overflow-y: scroll;
+        overflow-x:scroll ;
     }
 
     .cs-table-container table {

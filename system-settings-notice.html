@@ -348,7 +348,7 @@
           <!-- top taskbar -->
           <div class="taskbar flex items-center justify-between px-6 py-4">
             <div class="w-full md:w-1/2">
-              <div class="flex items-center gap-2">
+              <div class="flex items-center sm:gap-2">
                 <span class="text-c-light-black"> System settings </span>
                 <i class="ri-arrow-right-line ri-lg"></i>
                 <span class="font-semibold text-c-black"> Notice </span>
@@ -370,108 +370,64 @@
           </div>
 
           <!-- info table -->
-          <div class="p-4 relative h-full flex flex-col">
-            <div class="bg-white cs-table-container rounded-md overflow-x-auto">
-              <table class="table-auto w-full">
-                <thead>
-                  <tr class="bg-c-dark-gray">
-                    <th
-                      class="py-2.5 rounded-tl-md text-white font-normal text-left pl-3"
-                    >
-                      Name
-                    </th>
-                    <th class="py-2.5 text-white text-left font-normal pl-3">
-                      Status
-                    </th>
-                    <th class="py-2.5 text-white text-left font-normal pl-3">
-                      Push date
-                    </th>
-                    <th class="py-2.5 text-white text-left font-normal pl-3">
-                      Push time
-                    </th>
-                    <th class="py-2.5 text-white text-left font-normal pl-3">
-                      Creation date
-                    </th>
-                    <th class="py-2.5 text-white text-left font-normal pl-3">
-                      Creation time
-                    </th>
-                    <th class="py-2.5 text-white text-left font-normal pl-3">
-                      Enable
-                    </th>
-                    <th class="py-2.5 rounded-tr-md text-white text-left pl-3 font-normal">
-                      Action
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="border bg-white">
-                  <tr class="text-sm border-t h-14">
-                    <td class="py-2 pl-3">Dots</td>
-                    <td class="py-2 pl-2">
-                      <div
-                        class="border bg-system py-1.5 text-center w-24 rounded"
-                      >
-                        Pushed
-                      </div>
-                    </td>
-                    <td class="py-2 pl-3">26-02-2024</td>
-                    <td class="py-2 pl-3">14:20:21</td>
-                    <td class="py-2 pl-3">26-02-2024</td>
-                    <td class="py-2 pl-3">14:20:21</td>
-                    <td class="py-2 pl-3">
-                      <label
-                        for="toggle-2"
-                        class="toggle-switch flex items-center cursor-pointer"
-                      >
-                        <div class="relative">
-                          <input
-                            type="checkbox"
-                            id="toggle-2"
-                            class="sr-only"
-                          />
-                          <div
-                            class="block toggle-bg w-14 h-7 rounded-full border"
-                          ></div>
-                          <div
-                            class="dot absolute left-0.5 top-0.5 bg-white w-6 h-6 rounded-full transition shadow-lg"
-                          ></div>
-                        </div>
-                      </label>
-                    </td>
-                    <td class="py-2 pl-3">
-                      <div class="flex relative text-sm gap-3">
-                        <div class="relative">
-                          <button type="button" class="dropdown-btn">
-                            Action&nbsp;<i class="ri-arrow-down-s-line"></i>
-                          </button>
-                          <div
-                            class="absolute text-xs dropdown-option w-20 z-10 min-w-full space-y-1 border rounded-md overflow-hidden"
-                          >
-                            <button
-                              class="block hover-bg-c-yellow w-full px-2 py-1"
-                            >
-                              Run
-                            </button>
-                            <button
-                              class="block hover-bg-c-yellow w-full px-2 py-1"
-                            >
-                              Log
-                            </button>
-                          </div>
-                        </div>
-                        <button class="text-c-sky openAddModalButton" onclick="showModal()">
-                          Edit
-                        </button>
-                        <button class="text-c-sky" onclick="showPreviewModal()">
-                          Preview
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+         <div class="p-4 relative h-full flex flex-col">
+              <div class="bg-white cs-table-container border border-c-gray rounded">
+                <table class="table-auto w-full">
+                  <thead class="h-14">
+                    <tr class="bg-c-dark-gray">
+                      <th class="text-c-white font-medium rounded-tl-md">Name</th>
+                      <th class="text-c-white font-medium">Status</th>
+                      <th class="text-c-white font-medium">Push date</th>
+                      <th class="text-c-white font-medium">Push time</th>
+                      <th class="text-c-white font-medium">Creation date</th>
+                      <th class="text-c-white font-medium">Creation time</th>
+                      <th class="text-c-white font-medium text-left pl-3">Enable</th>
+                      <th class="text-c-white font-medium text-left pl-3 rounded-tr-md">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="h-16">
+                      <td class="font-normal text-c-black text-center px-5">Dots</td>
+                      <td  class="font-normal text-c-black text-center">
+                        <span class="bg-system py-1.5 text-center px-5 font-normal rounded-sm">Pushed</span>
+                      </td>
+                      <td  class="font-normal text-c-black text-center">26-02-2024</td>
+                      <td  class="font-normal text-c-black text-center">14:20:21</td>
+                      <td  class="font-normal text-c-black text-center">26-02-2024</td>
+                      <td  class="font-normal text-c-black text-center">14:20:21</td>
+                      <td class="text-left pl-3">
+                         <label for="toggle-2" class="toggle-switch flex items-center cursor-pointer">
+                                            <div class="relative">
+                                                <input type="checkbox" id="toggle-2" class="sr-only">
+                                                <div class="block toggle-bg w-14 h-7 rounded-full border"></div>
+                                                <div
+                                                    class="dot absolute left-0.5 top-0.5 bg-white w-6 h-6 rounded-full transition shadow-lg">
+                                                </div>
+                                            </div>
+                                        </label>
+                      </td>
+                      <td  class="font-normal text-c-black text-left pl-3">
+                        <div class="flex relative text-sm gap-2">
+                                            <div class="relative">
+                                                <button type="button" class="dropdown-btn">Action&nbsp;<i class="ri-arrow-down-s-line"></i></button>
+                                                <div
+                                                    class="absolute text-xs dropdown-option w-20 z-10 min-w-full space-y-1 border rounded-md overflow-hidden">
+                                                    <button
+                                                        class="block hover-bg-c-yellow w-full px-2 py-1">Run</button>
+                                                    <button
+                                                        class="block hover-bg-c-yellow w-full px-2 py-1">Log</button>
+                                                </div>
+                                            </div>
+                                            <button class="text-c-sky" onclick="showModal()">Edit</button>
+                                               <button class="text-c-sky" onclick="showPreviewModal()">Preview</button>
+                                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             <div class="mt-auto flex justify-end">
-              Total 1 page &nbsp; <span class="text-c-yellow">(1 records)</span>
+              Total 1 page &nbsp; <span class="text-c-yellow">(5 records)</span>
             </div>
           </div>
         </div>
