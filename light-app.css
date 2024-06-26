@@ -118,6 +118,14 @@ border: 1px solid #686868;
 
 }
 
+@media (max-width:821px){
+  .small-container {
+  width: 168px;
+  height: 210px;
+}
+
+}
+
 @media (max-width:640px) {
   
 .ms input[type="checkbox"] {
