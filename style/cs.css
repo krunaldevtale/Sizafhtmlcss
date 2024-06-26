@@ -221,7 +221,7 @@ body.cs {
 
 
 .cs .radio-button input:checked~span {
-    background: #FFD700;
+    background: #FDCF01;
     color: #000;
 }
 
@@ -320,10 +320,10 @@ body.cs {
     justify-content: center;
     font-size: 2rem;
     padding: 0.1rem;
-    width: 12px;
+    width: 15px;
     cursor: pointer;
     position: relative;
-    height: 12px;
+    height: 15px;
     border: 2px solid var(--color-dark-yellow);
     border-radius: 2px;
 }
@@ -335,8 +335,8 @@ body.cs {
     font-size: 10px;
     position: absolute;
     height: 12px;
-    top: -5px;
-    left: 1px;
+    top: -4.5px;
+    left: 2px;
 }
 
 .cs select option:checked,
