@@ -14,20 +14,21 @@
     />
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="style/cs.css">
 </head>
-<body class="w-full h-screen">
-    <div class="w-full h-full dashboard">
+<body class="w-full h-screen dashboard cs">
+    <div class="w-full h-full">
 
       <!-- Right click Menu -->
       <div id="context-menu" class="context-menu hidden">
         <ul>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Refresh</a>
             <p class="menu-sidename">F5</p>
           </li>
-          <li class="border-b-2"><a href="#">Upload file</a></li>
-          <li><a href="#">New folder</a></li>
-          <li class="flex items-center justify-between pr-2">
+          <li class="border-b-2 px-2"><a href="#">Upload file</a></li>
+          <li class="px-2"><a href="#">New folder</a></li>
+          <li class="flex items-center justify-between px-2">
             <a href="#">New file</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -87,7 +88,7 @@
               </li>
             </ul>
           </li>
-          <li class="flex items-center justify-between pr-2">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Sort by</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -107,7 +108,7 @@
               <li class="flex items-center pl-10"><a href="#">Decrement</a></li>
             </ul>
           </li>
-          <li class="flex items-center justify-between pr-2">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Icon size</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -135,8 +136,8 @@
               </li>
             </ul>
           </li>
-          <li><a href="#">Attribute</a></li>
-          <li class="flex items-center justify-between pr-2">
+          <li class="px-2"><a href="#">Attribute</a></li>
+          <li class="flex items-center justify-between px-2">
             <a href="#">More</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -156,23 +157,23 @@
               </li>
             </ul>
           </li>
-          <li><a href="#">Light app</a></li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="px-2"><a href="#">Light app</a></li>
+          <li class="flex items-center justify-between px-2">
             <a href="#">Wallpaper</a>
             <p class="menu-sidename">Alt+I</p>
           </li>
-          <li><a href="#">Personal</a></li>
+          <li class="px-2"><a href="#">Personal</a></li>
         </ul>
       </div>
 
         <!-- Apps context-menu -->
       <div id="app-contextmenu" class="context-menu hidden">
         <ul>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Open</a>
             <p class="menu-sidename">Enter</p>
           </li>
-          <li class="border-b-2 flex items-center justify-between pr-2">
+          <li class="border-b-2 flex items-center justify-between px-2">
             <a href="#">Open with</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -196,30 +197,30 @@
               </li>
             </ul>
           </li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Download</a>
             <p class="menu-sidename">Shift+Enter</p>
           </li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Link sharing</a>
           </li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Copy</a>
             <p class="menu-sidename">Ctrl+C</p>
           </li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Cut</a>
             <p class="menu-sidename">Ctrl+X</p>
           </li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Rename</a>
             <p class="menu-sidename">F2</p>
           </li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Delete</a>
             <p class="menu-sidename">Del</p>
           </li>
-          <li class="flex items-center justify-between pr-2">
+          <li class="flex items-center justify-between px-2">
             <a href="#">File tag</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -255,11 +256,11 @@
               </li>
             </ul>
           </li>
-          <li class="flex items-center justify-between pr-4">
+          <li class="flex items-center justify-between px-2">
             <a href="#">Attribute</a>
             <p class="menu-sidename">Alt+I</p>
           </li>
-          <li class="flex items-center justify-between pr-2">
+          <li class="flex items-center justify-between px-2">
             <a href="#">More</a>
             <i class="ri-arrow-right-s-line"></i>
             <ul
@@ -315,8 +316,8 @@
         </ul>
       </div>
 
-      <!-- Notification Navbar -->
-        <div class="navbar h-12 pr-5 flex items-center justify-end gap-8 sm:pt-5 lg:pt-1.5">
+      <!-- Navbar -->
+        <div class="navbar h-12 pr-8 flex items-center justify-end gap-8 ">
             <i id="search-icon" class="ri-search-line icon-color"></i>
             <i id="notification-icon" class="ri-notification-3-line icon-color"></i>
             <i class="ri-wifi-line icon-color"></i>
@@ -326,59 +327,32 @@
 
       <!-- Desktop apps   -->
         <div class="desktopapps-div w-full overflow-x-auto">
-            <div class="desktop-apps p-2 pt-8 w-min h-full flex flex-col gap-4 flex-wrap">
-                <!-- <div class="app-properties absolute z-40 h-32 left-full top-10 invisible text-sm"> 
-                        <ul>
-                        <li class="flex items-center px-5">
-                            <h1 class="font-semibold">Name:</h1>
-                            <p class="pl-2">test.docx</p>
-                        </li>
-                        <li class="flex items-center px-5">
-                            <h1 class="font-semibold">Size:</h1>
-                            <p class="pl-2">32Kb (6 Historic Version)</p>
-                        </li>
-                        <li class="flex items-center px-5">
-                            <h1 class="font-semibold">Creation:</h1>
-                            <p class="pl-2">time</p>
-                        </li>
-                        <li class="flex items-center px-5">
-                            <h1 class="font-semibold">Modification:</h1>
-                            <p class="pl-2">time</p>
-                        </li>
-                        <li class="flex items-center px-5">
-                            <h1 class="font-semibold">Last Visit:</h1>
-                            <p class="pl-2">time</p>
-                        </li>
-                        <li class="flex items-center px-5">
-                            <h1 class="font-semibold">Path:</h1>
-                            <p class="pl-2">path</p>
-                        </li>
-                        </ul>
-                    </div> -->
+            <div class="desktop-apps p-2 pt-3 w-min h-full flex flex-col gap-1 flex-wrap">
+               
             </div>
         </div>
 
         <!-- Clock -->
-       <div class="clock flex flex-col items-center" id="clock"></div>
+       <div class="clock flex flex-col items-center gap-2" id="clock"></div>
 
         <!-- Notification -->
-        <div id="notification" class="Notification h-56 rounded-lg absolute right-10 sm:right-20 top-16 hidden">
-          <div class="border-b-2 border-gray-500 p-5 text-center">
-            <h1 class="text-normal font-medium">Notification Center</h1>
+        <div id="notification" class="Notification h-56 rounded-lg absolute right-5 sm:right-20 top-16 hidden">
+          <div class="border-b-2 border-c-gray p-5 text-center">
+            <h1 class="text-normal font-normal">Notification Center</h1>
           </div>
-          <div class="flex items-center justify-center p-4">
+          <div class="flex items-center justify-center p-4 text-c-light-black">
             <p>Empty</p>
           </div>
         </div>
 
         <!-- Search Input -->
-        <div id="search" class="Search hidden">
+        <div id="search" class="Search hidden fixed top-60 sm:top-72 md:top-80 lg:top-64">
           <div class="row">
               <i class="ri-search-line search-icon absolute"></i>
                <input type="search" id="searchInput" placeholder="Search">
             <i class="ri-close-line cross-icon absolute"></i>
           </div>
-            <div id="suggestions" class="searchdata px-3 py-3 max-h-96">
+            <div id="suggestions" class="searchdata hidden px-3 py-3 max-h-96">
               <div class="test-file p-3">
                 <ul>
                   <li class="flex items-center gap-4">
@@ -399,23 +373,23 @@
                   </li>
                 </ul>
               </div>
-              <div class="image-file border-t-2 border-black mt-1 p-3">
+              <div class="image-file border-t border-c-dark-gray mt-1 p-3">
                 <h1 class="text-xl font-medium mb-2">Images</h1>
                 <ul>
                   <li class="flex items-center gap-4">
-                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <img class="w-8 h-8" src="/images/imageviewer.png" alt="" />
                     <p>Image File</p>
                   </li>
                   <li class="flex items-center gap-4">
-                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <img class="w-8 h-8" src="/images/imageviewer.png" alt="" />
                     <p>Image File</p>
                   </li>
                   <li class="flex items-center gap-4">
-                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <img class="w-8 h-8" src="/images/imageviewer.png" alt="" />
                     <p>Image File</p>
                   </li>
                   <li class="flex items-center gap-4">
-                    <img class="w-8 h-8" src="/images/imagefile.png" alt="" />
+                    <img class="w-8 h-8" src="/images/imageviewer.png" alt="" />
                     <p>Image File</p>
                   </li>
                 </ul>
@@ -424,66 +398,66 @@
         </div>
 
          <!-- Right Sidebar -->
-        <div class="dashboard-sidebar w-16 p-1 rounded-3xl hidden sm:block">
-          <img class="mb-1 mt-4" src="/images/Dairy.png" alt="Dairy" />
-          <img class="mb-1" src="/images/Calendar.png" alt="Calendar" />
-          <img class="mb-1" src="/images/Appstore.png" alt="Appstore" />
+        <div class="dashboard-sidebar w-16 px-2 hidden sm:block">
+          <img class="mb-2 mt-4" src="/images/Dairy.png" alt="Dairy" />
+          <img class="mb-2" src="/images/Calendar.png" alt="Calendar" />
+          <img class="mb-2" src="/images/Appstore.png" alt="Appstore" />
           <img class="mb-4" src="/images/EmptyBin.png" alt="EmptyBin" />
         </div>
 
          <!-- Administrator -->
-        <div id="administrator" class="Administrator h-max rounded-md absolute right-5 sm:right-24 bottom-16 hidden">
+        <div id="administrator" class="Administrator h-max absolute right-5 sm:right-28 bottom-20 hidden">
           <div class="flex items-center gap-5 pl-10 py-5">
             <div class="logo">
               <img class="w-16" src="/images/profile.png" alt="user image" />
             </div>
             <div class="user-info">
               <h1
-                class="text-lg font-normal underline underline-offset-8 decoration-1"
+                class="text-2xl font-normal underline underline-offset-8 decoration-1"
               >
                 Administrator
               </h1>
-              <h4 class="text-sm">Username</h4>
+              <h4 class="text-sm pt-1">Username</h4>
             </div>
           </div>
-          <div class="bottom border-t-2 border-gray-500">
-            <div class="features-list py-5 px-16">
+          <div class="bottom border-t border-c-dark-gray mt-5">
+            <div class="features-list py-4 px-16">
               <ul>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-folder-3-fill ri-1x Ad-iconcolor"></i>
-                  <a href="#">File manage</a>
+                  <a class="text-sm" href="#">File manage</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-bar-chart-fill ri-1x Ad-iconcolor"></i>
-                  <a href="#">Backend</a>
+                  <a class="text-sm" href="#">Backend</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-user-fill ri-1x Ad-iconcolor"></i>
-                  <a href="#">User manage</a>
+                  <a class="text-sm" href="#">User manage</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-layout-grid-fill ri-1x Ad-iconcolor"></i>
-                  <a href="#">Plugin</a>
+                  <a class="text-sm" href="#">Plugin</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-global-line ri-1x Ad-iconcolor"></i>
-                  <a href="#">Language</a>
+                  <a class="text-sm" href="#">Language</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-fullscreen-fill ri-1x Ad-iconcolor"></i>
-                  <a href="#">Full screen</a>
+                  <a class="text-sm" href="#">Full screen</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-information-fill ri-1x Ad-iconcolor"></i>
-                  <a href="#">About</a>
+                  <a class="text-sm" href="#">About</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-download-2-line ri-1x Ad-iconcolor"></i>
-                  <a href="#">Downloads</a>
+                  <a class="text-sm" href="#">Downloads</a>
                 </li>
-                <li class="flex items-center gap-8 mb-4">
+                <li class="flex items-center gap-8 mb-3">
                   <i class="ri-mail-line ri-1x Ad-iconcolor"></i>
-                  <a href="#">Free edition</a>
+                  <a class="text-sm" href="#">Free edition</a>
                 </li>
               </ul>
             </div>
@@ -491,7 +465,7 @@
         </div>
 
          <!-- Footer -->
-        <div class="absolute bottom-2 right-0 px-5">
+        <div class="absolute bottom-4 right-4 px-5">
             <img
               id="footer-logo"
               class="w-10 h-10"
@@ -528,13 +502,13 @@
         {
           id: 4,
           name: "Excel",
-          image: "/images/xlsx.png",
+          image: "/images/excel.png",
           url: "https://snappy.sizaf.com/example/editor?fileName=new.xlsx&userid=uid-1&lang=en&directUrl=false",
         },
         {
           id: 5,
           name: "PPT",
-          image: "/images/pptx.png",
+          image: "/images/ppt.png",
           url: "https://snappy.sizaf.com/example/editor?fileName=new.pptx&userid=uid-1&lang=en&directUrl=false",
         },
         {
@@ -573,21 +547,31 @@
           image: "/images/opensociallogo.png",
           url: "https://social.sizaf.com/html/user/login",
         },
+        {
+          id:12,
+          name:"New Folder",
+          image:"/images/desktop-folder.png",
+          url:""
+        }
+        
         
       ];
 
       Desktopapps.forEach((app) => {
         const appDiv = document.createElement("div");
-        appDiv.className = "app w-20 h-28 cursor-pointer relative";
+        appDiv.className = "app w-20 h-32 cursor-pointer relative";
         appDiv.innerHTML = `
-                    <div class="text-center flex flex-col items-center">
-                        <img class="w-16 h-16" src="${app.image}" alt="${app.name}">
-                        <p class="text-white">${app.name}</p>
-                    </div>
-                    <div class="app-tools absolute top-0 flex items-center justify-between gap-9 px-1 invisible">
+                    <div class="app-tools absolute top-0 left-1 flex items-center justify-between gap-8 py-0.5 px-1 invisible">
                         <input type="checkbox" name="option">
-                        <i class="ri-arrow-drop-down-fill ri-xl text-white"></i>
-                    </div>          
+                        <i class="ri-arrow-drop-down-fill ri-xl text-black"></i>
+                    </div>  
+                    <div class="text-center flex flex-col items-center px-1 pt-5">
+                        <img class="w-16" src="${app.image}" alt="${app.name}">
+                           <div class="input-wrapper w-16">
+                              <input type="text" class="text-center text-white appinputtext" disabled value="${app.name}">
+                          </div>
+                    </div>
+                            
       `;
         container.appendChild(appDiv);
 
@@ -814,7 +798,7 @@
         const timeString = `${hours}:${minutes}`;
         const dateString = `${day}, ${month} ${date}`;
 
-        clock.innerHTML = `<div class="time text-white text-5xl font-medium">${timeString}</div><div class="date flex font-medium">${dateString}</div>`;
+        clock.innerHTML = `<div class="time text-c-white text-3xl md:text-5xl font-normal">${timeString}</div><div class="date text-sm md:text-base flex font-normal">${dateString}</div>`;
       }
 
       updateClock();
@@ -837,12 +821,24 @@
         });
       const searchInput = document.getElementById("searchInput");
       const suggestions = document.getElementById("suggestions");
+      const Search = document.querySelector(".Search")
 
+      searchInput.addEventListener("input", function () {
+    if (searchInput.value.length > 0) {
+      suggestions.classList.remove("hidden");
+      Search.classList.add("open");
+    } else {
+      suggestions.classList.add("hidden");
+      Search.classList.remove("open");
+    }
+  });
+  
       document
         .querySelector(".cross-icon")
         .addEventListener("click", function () {
           searchInput.value = "";
           suggestions.classList.add("hidden");
+          Search.classList.remove("open");
           document.getElementById("search").classList.add("hidden");
         });
 
@@ -854,6 +850,53 @@
           administratorDiv.classList.toggle("hidden");
         });
 
+      // draggble clock functionality
+    dragElement(document.getElementById("clock"));
+
+    function dragElement(element) {
+      let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      element.onmousedown = dragMouseDown;
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+
+        // set the element's new position:
+        const newTop = element.offsetTop - pos2;
+        const newLeft = element.offsetLeft - pos1;
+
+        // prevent the element from being dragged out of the screen
+        const minTop = 0;
+        const maxTop = window.innerHeight - element.offsetHeight;
+        const minLeft = 0;
+        const maxLeft = window.innerWidth - element.offsetWidth;
+
+        element.style.top = Math.min(Math.max(newTop, minTop), maxTop) + "px";
+        element.style.left = Math.min(Math.max(newLeft, minLeft), maxLeft) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
     </script>
 </body>
 </html>
