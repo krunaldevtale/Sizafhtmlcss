@@ -73,6 +73,20 @@ border: 1px solid #686868;
   background: var(--color-dark-white);
 }
 
+.cs input::placeholder {
+  color: var(--color-gray-2); /* Replace with your desired color */
+}
+
+/* For Internet Explorer 10-11 */
+.cs input:-ms-input-placeholder {
+  color: var(--color-gray-2); /* Replace with your desired color */
+}
+
+/* For Microsoft Edge */
+.cs input::-ms-input-placeholder {
+  color: var(--color-gray-2); /* Replace with your desired color */
+}
+
  /* Checkbox css */
 
 .ms input[type="checkbox"] {
@@ -88,12 +102,12 @@ border: 1px solid #686868;
     justify-content: center;
     font-size: 2rem;
     padding: 0.1rem;
-    width: 29px;
+    width: 16px;
     cursor: pointer;
     position: relative;
-    height: 29px;
+    height: 16px;
     border:none;
- border: 2px solid var(--color-dark-yellow);
+    border: 2px solid var(--color-dark-yellow);
     border-radius: 2px;
 }
 .ms input[type="checkbox"]:checked{
@@ -101,11 +115,11 @@ border: 1px solid #686868;
 }
 .ms input[type="checkbox"]:checked::after {
     content: "✔";
-    font-size: 20px;
+    font-size: 12px;
     position: absolute;
     height: 12px;
     top: -2px;
-    left: 6px;
+    left: 2px;
 }
 
 /* Responsive css */

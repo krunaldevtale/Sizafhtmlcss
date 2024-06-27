@@ -72,6 +72,10 @@
     color: var(--color-dark-gray);
 }
 
+.text-c-medium-gray{
+    color: var(--color-medium-gray);
+}
+
 .text-c-light-white {
     color: var(--color-light-white);
 }
@@ -90,6 +94,18 @@
 
 .bg-light-pink {
     background: var(--color-light-pink);
+}
+
+.border-c-light-gray{
+    border-color: var(--color-light-gray);
+}
+
+.border-gray{
+    border-color: var(--border-light-gray);
+}
+
+.border-c-dark-gray{
+    border-color: var(--border-color);
 }
 
 .border-c-gray{
