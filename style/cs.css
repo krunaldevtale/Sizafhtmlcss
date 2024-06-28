@@ -332,10 +332,10 @@ body.cs {
     justify-content: center;
     font-size: 2rem;
     padding: 0.1rem;
-    width: 15px;
+    width: 16px;
     cursor: pointer;
     position: relative;
-    height: 15px;
+    height: 16px;
     border: 2px solid var(--color-dark-yellow);
     border-radius: 2px;
 }
@@ -344,10 +344,10 @@ body.cs {
 } */
 .cs input[type="checkbox"].c-checkbox:checked::after {
     content: "✔";
-    font-size: 10px;
+    font-size: 12px;
     position: absolute;
     height: 12px;
-    top: -4.5px;
+    top: -2px;
     left: 2px;
 }
 

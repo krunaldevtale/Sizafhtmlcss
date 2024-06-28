@@ -452,9 +452,9 @@
                           id="create-dialogsize"
                           type="number"
                           name="width"
-                          class="w-4/5 text-c-black text-sm outline-none border-none px-3 py-1.5"
+                          class="w-4/5 text-c-black text-sm outline-none border-none px-1 sm:px-3 py-1.5"
                         />
-                        <h4 class="1/5 px-1 sm:px-2 text-c-black">Width</h4>
+                        <h4 class="1/5 px-1 sm:px-2 text-c-black  text-xs sm:text-base">Width</h4>
                       </div>
                       <div
                         class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200"
@@ -462,9 +462,9 @@
                         <input
                           type="number"
                           name="width"
-                          class="w-4/5 text-c-black text-sm outline-none border-none px-3 py-1.5"
+                          class="w-4/5 text-c-black text-sm outline-none border-none px-1 sm:px-3 py-1.5"
                         />
-                        <h4 class="1/5 px-1 sm:px-2 text-c-black">Height</h4>
+                        <h4 class="1/5 px-1 sm:px-2 text-c-black text-xs sm:text-base">Height</h4>
                       </div>
                     </div>
                   </div>
@@ -478,16 +478,24 @@
                         ></label
                       >
                     </div>
-                   <div class="w-2/3 flex items-center gap-1 sm:gap-3 ">
+                  <div class="w-2/3 flex items-center md:gap-3 ">
                                                     <div class="ms flex items-center px-1 gap-2">
-                                                      <input id="create-moresetting" type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
-                                                      <h4 class="text-xs sm:text-sm text-c-black">Allow width adjustment</h4>
+                                                      <div>
+                                                        <input id="create-moresetting" type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
+                                                      </div>
+                                                      <span>
+                                                         <h4 class="text-sm text-c-black">Allow width adjustment</h4>
+                                                      </span>
                                                     </div>
                                                     <div class="ms flex items-center px-1 gap-2">
-                                                      <input type="checkbox" name="option" value="option2" class="outline-none focus:outline-none">
-                                                      <h4 class="text-xs sm:text-sm text-c-black">Minimalist title bar</h4>
+                                                      <div>
+                                                        <input type="checkbox" name="option" value="option2" class="outline-none focus:outline-none">
+                                                      </div>
+                                                      <span>
+                                                           <h4 class="text-sm text-c-black">Minimalist title bar</h4>
+                                                      </span>
                                                     </div>
-                                                  </div>
+                                                  </div>  
                   </div>
                 </div>
               </div>
@@ -648,12 +656,12 @@
                                                   </div>
                                                   <div class="w-2/3 flex items-center gap-3">
                                                     <div class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200">
-                                                      <input id="dialogsize" type="number" name="width" class="w-4/5 text-c-black text-sm outline-none px-3 py-1.5 border-none ">
-                                                      <h4 class="1/5 px-1 sm:px-2 text-c-black">Width</h4>
+                                                      <input id="dialogsize" type="number" name="width" class="w-4/5 text-c-black text-sm outline-none px-1 sm:px-3 py-1.5 border-none ">
+                                                      <h4 class="1/5 px-1 sm:px-2 text-c-black  text-xs sm:text-base">Width</h4>
                                                     </div>
                                                     <div class="flex items-center border-2 rounded-xl w-1/2 overflow-hidden bg-gray-200">
-                                                      <input type="number" name="width" class="w-4/5 text-c-black text-sm outline-none border-none px-3 py-1.5 ">
-                                                      <h4 class="1/5 px-1 sm:px-2 text-c-black">Height</h4>
+                                                      <input type="number" name="width" class="w-4/5 text-c-black text-sm outline-none border-none px-1 sm:px-3 py-1.5 ">
+                                                      <h4 class="1/5 px-1 sm:px-2 text-c-black  text-xs sm:text-base">Height</h4>
                                                     </div>
                                                   </div>
                                                 </div>
@@ -663,12 +671,20 @@
                                                   </div>
                                                   <div class="w-2/3 flex items-center md:gap-3 ">
                                                     <div class="ms flex items-center px-1 gap-2">
-                                                      <input id="more-settings" type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
-                                                      <h4 class="text-xs sm:text-sm text-c-black">Allow width adjustment</h4>
+                                                      <div>
+                                                        <input id="more-settings" type="checkbox" name="option" value="option1" class="outline-none focus:outline-none">
+                                                      </div>
+                                                      <span>
+                                                         <h4 class="text-sm text-c-black">Allow width adjustment</h4>
+                                                      </span>
                                                     </div>
                                                     <div class="ms flex items-center px-1 gap-2">
-                                                      <input type="checkbox" name="option" value="option2" class="outline-none focus:outline-none">
-                                                      <h4 class="text-xs sm:text-sm text-c-black">Minimalist title bar</h4>
+                                                      <div>
+                                                        <input type="checkbox" name="option" value="option2" class="outline-none focus:outline-none">
+                                                      </div>
+                                                      <span>
+                                                           <h4 class="text-sm text-c-black">Minimalist title bar</h4>
+                                                      </span>
                                                     </div>
                                                   </div>  
                                                 </div>
