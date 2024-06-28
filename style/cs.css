@@ -18,6 +18,10 @@
     background: var(--color-gray);
 }
 
+.bg-c-gray-4{
+    background: var(--color-gray-8);
+}
+
 .bg-c-lighten-gray{
     background: var(--color-lighten-gray);
 }
@@ -36,6 +40,10 @@
 
 .bg-c-light-white {
     background: var(--color-light-white);
+}
+
+.text-dark-black{
+    color: var(--color-pure-black);
 }
 
 .text-c-white{
@@ -195,7 +203,7 @@ body.cs {
 
 .cs .toggle-bg {
     background: #DCDCDC;
-    border: 1px solid var(--color-gray-3);
+    border: 1px solid var(--border-light-gray);
 }
 
 .cs .toggle-switch input:checked~.dot {
@@ -347,7 +355,7 @@ body.cs {
     font-size: 12px;
     position: absolute;
     height: 12px;
-    top: -2px;
+    top: -3px;
     left: 2px;
 }
 
@@ -355,4 +363,8 @@ body.cs {
 .cs select option:hover,
 .cs select:focus > option:checked {
     box-shadow: 0 0 10px 100px var(--color-dark-yellow) inset;
+}
+
+.cs #message-content{
+    height: 540px;
 }

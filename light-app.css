@@ -74,17 +74,20 @@ border: 1px solid #686868;
 }
 
 .cs input::placeholder {
-  color: var(--color-gray-2); /* Replace with your desired color */
+  color: var(--color-gray-2); 
+  font-weight: 300;
 }
 
 /* For Internet Explorer 10-11 */
 .cs input:-ms-input-placeholder {
-  color: var(--color-gray-2); /* Replace with your desired color */
+  color: var(--color-gray-2); 
+  font-weight: 300;
 }
 
 /* For Microsoft Edge */
 .cs input::-ms-input-placeholder {
-  color: var(--color-gray-2); /* Replace with your desired color */
+  color: var(--color-gray-2); 
+  font-weight: 300;
 }
 
  /* Checkbox css */

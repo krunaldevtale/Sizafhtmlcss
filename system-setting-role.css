@@ -31,6 +31,23 @@ hr {
   max-width: 832px;
 }
 
+.cs input::placeholder {
+  color: var(--color-gray-2); 
+  font-weight: 300;
+}
+
+/* For Internet Explorer 10-11 */
+.cs input:-ms-input-placeholder {
+  color: var(--color-gray-2); 
+  font-weight: 300;
+}
+
+/* For Microsoft Edge */
+.cs input::-ms-input-placeholder {
+  color: var(--color-gray-2); 
+  font-weight: 300;
+}
+
  /* Checkbox css */
 
 .cs input[type="checkbox"].d-checkbox {
