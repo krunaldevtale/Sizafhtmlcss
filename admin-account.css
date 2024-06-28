@@ -1,0 +1,13 @@
+.enabled-input {
+  width: 100%;
+  max-width: 494px;
+  height: 38px;
+  border-radius: 11px;
+  border: 1px solid #a3a3a3;
+  background: #f9f9f9;
+  padding: 0 10px;
+}
+.bg-edit-mode {
+  border-radius: 5px;
+  background: #efefef;
+}

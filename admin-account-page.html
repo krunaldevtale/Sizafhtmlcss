@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Account Page</title>
+     <link
+      href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin-account.css">
+    <link rel="stylesheet" href="style/cs.css" />
+    <link rel="stylesheet" href="root.css" />
+</head>
+<body class="w-full h-screen cs">
+    <main class="w-full h-full flex">
+    <!-- Sidebar -->
+      <aside class="h-full relative">
+        <input type="checkbox" class="hidden" id="sidebar-toggle" />
+        <label
+          for="sidebar-toggle"
+          class="absolute lg:hidden top-7 -right-8 px-1"
+        >
+           <i class="ri-bar-chart-horizontal-fill"></i>
+        </label>
+        <div class="h-full sidebar">
+          <div class="sidebar-container">
+            <div class="p-6">
+              <img src="/images/logo.png" alt="Dots Logo" />
+            </div>
+            <div class=" py-4 flex flex-col items-center justify-center">
+                <img class="w-24" src="/images/profile.png" alt="Profile image">
+                <div class="flex flex-col justify-center items-center pt-3">
+                    <h1 class="text-2xl font-normal">Administrator</h1>
+                    <p class="font-light text-2xl">Admin</p>
+                </div>
+            </div>
+            <div class="md:pt-6">
+              <ul class="space-y-1">
+                <li>
+                  <div
+                    role="button"
+                    class="drop-menu cursor-pointer rounded-r-lg"
+                  >
+                    <div
+                      class="w-full px-7 py-3 flex justify-between items-center"
+                      href="#"
+                    >
+                      <span> Account </span>
+                      <i
+                        class="ri-arrow-right-s-line text-c-yellow transition-all text-2xl"
+                      ></i>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    role="button"
+                    class="drop-menu cursor-pointer rounded-r-lg"
+                  >
+                    <div
+                      class="w-full px-7 py-3 flex justify-between items-center"
+                      href="#"
+                    >
+                      <span>Wallpapers</span>
+                      <i
+                        class="ri-arrow-right-s-line text-c-yellow transition-all text-2xl"
+                      ></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+       <div class="flex-grow border h-100 main">
+          <div class="flex flex-col w-full h-full content">
+             <div class=" px-9 lg:px-5 py-4">
+               <div class="flex items-center gap-4">
+                <img class="w-14" src="images/profile.png" alt="profile img">
+                <span class="text-2xl font-normal">Administrator</span>
+              </div>
+            </div>
+
+              <!-- top taskbar -->
+            <div class="taskbar bg-no-repeat bg-cover bg-center flex items-center justify-between px-3 sm:px-6 py-4">
+               <div class="flex items-center gap-4 w-full md:w-1/2">
+                        <div class="flex gap-1 sm:gap-2 items-center">
+                            <span class="text-c-black font-medium text-lg">Account</span>
+                        </div>
+               </div>
+            </div>
+
+            <!-- Content -->
+             <div class="w-full h-full px-6">
+                <div class="py-6 flex items-center border-b border-gray">
+                    <div class="w-28">
+                        <span class="text-lg font-bold">Avatar:</span>
+                    </div>
+                    <div class="flex-grow">
+                        <img class="w-12" src="images/profile.png" alt="">
+                    </div>
+                </div>
+                 <div id="nickname-div" class="py-4 flex flex-col sm:flex-row items-start border-b border-gray">
+                    <div class="w-28">
+                        <label for="nickname" class="text-lg font-bold">Nickname:</label>
+                    </div>
+                    <div class="flex-grow flex items-start justify-between w-full">
+                        <div class="w-full">
+                            <div class="flex items-center gap-2 w-full">
+                              <input type="text" id="nickname" class="text-c-black font-normal text-xl" disabled  value="Administrator">
+                              <p id="nickname-hint" class="hidden text-sm font-light text-c-black">Cannot repeat</p>
+                            </div>
+                            <div id="nickname-buttons" class="mt-2 hidden">
+                                <button class="bg-c-black text-white rounded-full px-12 sm:px-14 py-2" type="submit"> OK</button>
+                                <button class="cancel-btn text-c-yellow px-9 sm:px-12 py-2 rounded-full border border-c-yellow">Cancel </button>
+                            </div>
+                        </div>
+                          <button id="nickname-edit" onclick="enableEdit('nickname', 'nickname-hint', 'nickname-buttons', 'nickname-edit', 'nickname-close', 'nickname-div')" class="text-blue-500">Edit</button>
+                            <i id="nickname-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('nickname', 'nickname-hint', 'nickname-buttons', 'nickname-edit', 'nickname-close', 'nickname-div')"></i>
+                    </div> 
+                </div>
+                <div class="py-4 flex items-center border-b border-gray">
+                    <div class="w-28">
+                        <label for="email" class="text-lg font-bold">Email:</label>
+                    </div>
+                    <div class="flex-grow flex items-center justify-between">
+                          <input type="text" id="email" class="text-c-gray-2 font-normal text-xl" disabled  value="Click to blind">
+                         <button class="text-c-sky">Edit</button>
+                    </div>
+                </div>
+                <div class="py-4 flex items-center border-b border-gray">
+                    <div class="w-28">
+                        <label for="password" class="text-lg font-bold">Password:</label>
+                    </div>
+                    <div class="flex-grow flex items-center justify-between">
+                          <input type="text" id="password" class="text-c-gray-2 font-normal text-xl" disabled  value="Click to modify password">
+                         <button class="text-c-sky">Edit</button>
+                    </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </main>
+
+    <script>
+     function enableEdit(inputId, hintId, buttonsId, editBtnId, closeBtnId, divId) {
+      const input = document.getElementById(inputId);
+      const hint = document.getElementById(hintId);
+      const buttons = document.getElementById(buttonsId);
+      const editBtn = document.getElementById(editBtnId);
+      const closeBtn = document.getElementById(closeBtnId);
+      const div = document.getElementById(divId);
+      input.disabled = false;
+      input.classList.add('enabled-input');
+      hint.classList.remove('hidden');
+      buttons.classList.remove('hidden');
+      editBtn.classList.add('hidden');
+      closeBtn.classList.remove('hidden');
+      div.classList.add('bg-edit-mode');
+    }
+
+    function disableEdit(inputId, hintId, buttonsId, editBtnId, closeBtnId, divId) {
+      const input = document.getElementById(inputId);
+      const hint = document.getElementById(hintId);
+      const buttons = document.getElementById(buttonsId);
+      const editBtn = document.getElementById(editBtnId);
+      const closeBtn = document.getElementById(closeBtnId);
+      const div = document.getElementById(divId);
+      input.disabled = true;
+      input.classList.remove('enabled-input');
+      hint.classList.add('hidden');
+      buttons.classList.add('hidden');
+      editBtn.classList.remove('hidden');
+      closeBtn.classList.add('hidden');
+      div.classList.remove('bg-edit-mode');
+    }
+    </script>
+</body>
+</html>
