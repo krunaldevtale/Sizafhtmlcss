@@ -3,11 +3,74 @@
   max-width: 494px;
   height: 38px;
   border-radius: 11px;
-  border: 1px solid #a3a3a3;
-  background: #f9f9f9;
+  border: 1px solid var(--border-light-gray);
+  background: var(--color-lighten-gray);
   padding: 0 10px;
 }
 .bg-edit-mode {
   border-radius: 5px;
   background: #efefef;
 }
+
+.input-div{
+  width: 100%;
+  max-width: 494px;
+  height: 38px;
+  border-radius: 11px;
+  border: 1px solid var(--border-light-gray);
+  overflow: hidden;
+}
+
+.input-div input{
+  width: 80%;
+  height: 38px;
+  padding: 0 10px;
+  background: var(--color-lighten-gray);
+}
+
+.wallpaper-div{
+  max-width: 196px;
+  height: 136px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+
+
+/* @media (min-width:375px){
+  .wallpapers{
+    gap: 22px;
+  }
+}
+
+@media (min-width:393px){
+  .wallpapers{
+    gap: 45px;
+  }
+}
+
+@media (max-width:480px){
+  .wallpaper-div{
+  width: 163px;
+}
+}
+
+@media (min-width:480px){
+    .wallpapers{
+    gap: 25px;
+  }
+
+    .wallpaper-div{
+  width: 163px;
+}
+}
+
+@media (min-width:1000px){
+  .wallpaper-div{
+  width: 100%;
+  max-width: 196px;
+}
+   .wallpapers{
+    gap: 40px;
+  } */
+

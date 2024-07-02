@@ -48,7 +48,7 @@
                   >
                     <div
                       class="w-full px-7 py-3 flex justify-between items-center"
-                      href="#"
+                      href="admin-account-page.html"
                     >
                       <span> Account </span>
                       <i
@@ -99,12 +99,12 @@
             </div>
 
             <!-- Content -->
-             <div class="w-full h-full px-6">
-                <div class="py-6 flex items-center border-b border-gray">
+             <div class="w-full h-full px-3 sm:px-6">
+                <div class="py-6 flex items-center justify-between border-b border-gray">
                     <div class="w-28">
                         <span class="text-lg font-bold">Avatar:</span>
                     </div>
-                    <div class="flex-grow">
+                    <div class="flex-grow w-full">
                         <img class="w-12" src="images/profile.png" alt="">
                     </div>
                 </div>
@@ -115,34 +115,83 @@
                     <div class="flex-grow flex items-start justify-between w-full">
                         <div class="w-full">
                             <div class="flex items-center gap-2 w-full">
-                              <input type="text" id="nickname" class="text-c-black font-normal text-xl" disabled  value="Administrator">
-                              <p id="nickname-hint" class="hidden text-sm font-light text-c-black">Cannot repeat</p>
+                              <input type="text" id="nickname-input" class="text-c-black font-normal text-lg" disabled  value="Administrator">
+                              <p id="nickname-hint" class="text-sm font-light text-c-black hidden">Cannot repeat</p>
                             </div>
                             <div id="nickname-buttons" class="mt-2 hidden">
                                 <button class="bg-c-black text-white rounded-full px-12 sm:px-14 py-2" type="submit"> OK</button>
                                 <button class="cancel-btn text-c-yellow px-9 sm:px-12 py-2 rounded-full border border-c-yellow">Cancel </button>
                             </div>
                         </div>
-                          <button id="nickname-edit" onclick="enableEdit('nickname', 'nickname-hint', 'nickname-buttons', 'nickname-edit', 'nickname-close', 'nickname-div')" class="text-blue-500">Edit</button>
-                            <i id="nickname-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('nickname', 'nickname-hint', 'nickname-buttons', 'nickname-edit', 'nickname-close', 'nickname-div')"></i>
+                          <button id="nickname-edit" onclick="enableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')" class="text-c-sky">Edit</button>
+                            <i id="nickname-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')"></i>
                     </div> 
                 </div>
-                <div class="py-4 flex items-center border-b border-gray">
+                <div id="email-div" class="py-4 flex flex-col sm:flex-row items-start border-b border-gray">
                     <div class="w-28">
-                        <label for="email" class="text-lg font-bold">Email:</label>
+                        <span for="email" class="text-lg font-bold">Email:</span>
                     </div>
-                    <div class="flex-grow flex items-center justify-between">
-                          <input type="text" id="email" class="text-c-gray-2 font-normal text-xl" disabled  value="Click to blind">
-                         <button class="text-c-sky">Edit</button>
+                    <div class="flex-grow flex items-start justify-between w-full">
+                      <div class="w-full">
+                        <span id="email-heading" class="text-c-gray-2 font-normal text-lg">Click to blind</span>
+                        <div id="email-content" class="hidden">
+                          <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 w-full">
+                             <input type="text" class="enabled-input text-c-black font-normal" placeholder="Please input the email address">
+                             <p class="text-sm font-light text-c-black">Some businesses require email verfication</p>
+                          </div>
+                          <div class="input-div relative mt-2">
+                              <input type="text" class="text-c-black font-normal" placeholder="Please enter your email">
+                              <span class="bg-c-gray-4 absolute right-0 h-full p-2 border-l border-gray">
+                                Verification
+                              </span>
+                          </div>
+                          <div class="mt-2">
+                                <button class="bg-c-black text-white rounded-full px-12 sm:px-14 py-2" type="submit"> OK</button>
+                                <button class="cancel-btn text-c-yellow px-9 sm:px-12 py-2 rounded-full border border-c-yellow">Cancel </button>
+                          </div>
+                        </div>
+                      </div>
+                         <button id="email-edit" class="text-c-sky"  onclick="enableEdit('email-content','email-heading', 'email-edit', 'email-close','email-div')">Edit</button>
+                           <i id="email-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('email-content','email-heading', 'email-edit', 'email-close','email-div')"></i>
                     </div>
                 </div>
-                <div class="py-4 flex items-center border-b border-gray">
+                <div class="password-div py-4 flex flex-col sm:flex-row items-start border-b border-gray">
                     <div class="w-28">
-                        <label for="password" class="text-lg font-bold">Password:</label>
+                        <span class="text-lg font-bold">Password:</span>
                     </div>
-                    <div class="flex-grow flex items-center justify-between">
-                          <input type="text" id="password" class="text-c-gray-2 font-normal text-xl" disabled  value="Click to modify password">
-                         <button class="text-c-sky">Edit</button>
+                    <div class="flex-grow flex items-start justify-between w-full">
+                      <div class="w-full">
+                        <span id="password-heading" class="text-c-gray-2 font-normal text-lg">Click to modify password</span>
+                        <div id="password-content" class="hidden">
+                          <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 w-full">
+                            <div class="input-div relative">
+                               <input type="text" class="text-c-black font-normal" placeholder="Old password">
+                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-2 border-l border-gray">
+                              <i class="ri-eye-close-line"></i>
+                              </span>
+                            </div>
+                             <p class="text-sm font-light text-c-black ">Forgot your password? you can <span class="text-c-sky">Reset</span></p>
+                          </div>
+                          <div class="input-div relative mt-2">
+                              <input type="text" class="text-c-black font-normal" placeholder="Please enter a new password">
+                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-2 border-l border-gray">
+                              <i class="ri-eye-close-line"></i>
+                              </span>
+                          </div>
+                           <div class="input-div relative mt-2">
+                              <input type="text" class="text-c-black font-normal" placeholder="Please enter the password again">
+                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-2 border-l border-gray">
+                             <i class="ri-eye-line"></i>
+                              </span>
+                          </div>
+                          <div class="mt-2">
+                                <button class="bg-c-black text-white rounded-full px-12 sm:px-14 py-2" type="submit"> OK</button>
+                                <button class="cancel-btn text-c-yellow px-9 sm:px-12 py-2 rounded-full border border-c-yellow">Cancel </button>
+                          </div>
+                        </div>
+                      </div>
+                      <button id="password-edit" class="text-c-sky" onclick="enableEdit('password-content','password-heading','password-edit','password-close','password-div')">Edit</button>
+                           <i id="password-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('password-content','password-heading','password-edit','password-close','password-div')"></i>
                     </div>
                 </div>
              </div>
@@ -151,15 +200,19 @@
     </main>
 
     <script>
-     function enableEdit(inputId, hintId, buttonsId, editBtnId, closeBtnId, divId) {
+
+      // functionality for nickname inputs
+     function enableNicknameEdit(inputId, hintId, btnId, editId, closeId, mainDiv) {
       const input = document.getElementById(inputId);
       const hint = document.getElementById(hintId);
-      const buttons = document.getElementById(buttonsId);
-      const editBtn = document.getElementById(editBtnId);
-      const closeBtn = document.getElementById(closeBtnId);
-      const div = document.getElementById(divId);
+      const buttons = document.getElementById(btnId);
+      const editBtn = document.getElementById(editId);
+      const closeBtn = document.getElementById(closeId);
+      const div = document.getElementById(mainDiv);
+
       input.disabled = false;
       input.classList.add('enabled-input');
+      input.classList.remove('hidden')
       hint.classList.remove('hidden');
       buttons.classList.remove('hidden');
       editBtn.classList.add('hidden');
@@ -167,13 +220,14 @@
       div.classList.add('bg-edit-mode');
     }
 
-    function disableEdit(inputId, hintId, buttonsId, editBtnId, closeBtnId, divId) {
+    function disableNicknameEdit(inputId, hintId, btnId, editId, closeId, mainDiv) {
       const input = document.getElementById(inputId);
       const hint = document.getElementById(hintId);
-      const buttons = document.getElementById(buttonsId);
-      const editBtn = document.getElementById(editBtnId);
-      const closeBtn = document.getElementById(closeBtnId);
-      const div = document.getElementById(divId);
+      const buttons = document.getElementById(btnId);
+      const editBtn = document.getElementById(editId);
+      const closeBtn = document.getElementById(closeId);
+      const div = document.getElementById(mainDiv);
+
       input.disabled = true;
       input.classList.remove('enabled-input');
       hint.classList.add('hidden');
@@ -182,6 +236,36 @@
       closeBtn.classList.add('hidden');
       div.classList.remove('bg-edit-mode');
     }
+
+   // functionality for email and password
+     function enableEdit(divId, headingId, editId, closeId,mainDiv) {
+       const div = document.getElementById(divId);
+      const heading = document.getElementById(headingId);
+      const edit = document.getElementById(editId);
+      const close = document.getElementById(closeId);
+      const main = document.getElementById(mainDiv);
+
+      div.classList.remove('hidden');
+      heading.classList.add('hidden');
+      edit.classList.add('hidden');
+      close.classList.remove('hidden')
+      main.classList.add('bg-edit-mode');
+    }
+
+      function disableEdit(divId, headingId, editId, closeId,mainDiv) {
+      const div = document.getElementById(divId);
+      const heading = document.getElementById(headingId);
+      const edit = document.getElementById(editId);
+      const close = document.getElementById(closeId);
+      const main = document.getElementById(mainDiv);
+
+      div.classList.add('hidden');
+      heading.classList.remove('hidden');
+      edit.classList.remove('hidden');
+      close.classList.add('hidden')
+      main.classList.remove('bg-edit-mode');
+    }
+
     </script>
 </body>
 </html>

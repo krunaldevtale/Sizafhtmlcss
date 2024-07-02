@@ -235,14 +235,23 @@ body.cs {
     white-space: nowrap;
 }
 
+.cs .radio-border input {
+    display: none;
+    white-space: nowrap;
+}
+
 .cs .radio-button span {
     min-width: 80px;
 }
 
-
 .cs .radio-button input:checked~span {
     background: #FDCF01;
     color: #000;
+}
+
+.cs .radio-border input:checked~span {
+  border-bottom: 4px solid #FDCF01;
+  font-weight: 500;
 }
 
 /* file specific */
@@ -367,4 +376,21 @@ body.cs {
 
 .cs #message-content{
     height: 540px;
+}
+
+.cs input::placeholder {
+  color: var(--color-gray-2); 
+  font-weight: 300;
+}
+
+/* For Internet Explorer 10-11 */
+.cs input:-ms-input-placeholder {
+  color: var(--color-gray-2); 
+  font-weight: 300;
+}
+
+/* For Microsoft Edge */
+.cs input::-ms-input-placeholder {
+  color: var(--color-gray-2); 
+  font-weight: 300;
 }
