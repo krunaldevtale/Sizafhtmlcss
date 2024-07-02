@@ -48,9 +48,6 @@
   justify-content: center;
   
 }
-  .wallpaper-div{
-  max-width: 300px;
-}
 
 }
 
@@ -60,9 +57,7 @@
   gap: 40px;
   
 }
-  .wallpaper-div{
-  max-width: 300px;
-}
+
 
 }
 
