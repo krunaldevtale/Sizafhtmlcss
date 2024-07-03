@@ -10,9 +10,11 @@
 .bg-edit-mode {
   border-radius: 5px;
   background: #efefef;
+  padding: 5px;
+  margin: 10px 0;
 }
 
-.input-div{
+.input-div {
   width: 100%;
   max-width: 494px;
   height: 38px;
@@ -21,60 +23,56 @@
   overflow: hidden;
 }
 
-.input-div input{
-  width: 80%;
+.input-div input {
+  width: 90%;
   height: 38px;
   padding: 0 10px;
   background: var(--color-lighten-gray);
 }
 
-.wallpapers{
+.wallpapers {
   display: grid;
   grid-template-columns: repeat(auto-fit, 13rem);
   justify-content: start;
   gap: 35px;
-  
 }
 
-.wallpaper-div{
+#add-div {
   max-width: 196px;
   height: 136px;
   border-radius: 20px;
   box-shadow: var(--box-shadow);
 }
 
-@media (min-width:320px){
-  .wallpapers{
-  justify-content: center;
-  
+.wallpaper-div {
+  max-width: 196px;
+  height: 136px;
+  border-radius: 20px;
 }
 
+@media (min-width: 320px) {
+  .wallpapers {
+    justify-content: center;
+  }
 }
 
-@media (min-width:600px){
-  .wallpapers{
-  justify-content: center;
-  gap: 40px;
-  
+@media (min-width: 600px) {
+  .wallpapers {
+    justify-content: center;
+    gap: 40px;
+  }
 }
 
-
+@media (min-width: 1000px) {
+  .wallpapers {
+    justify-content: center;
+    gap: 25px;
+  }
 }
 
-@media (min-width:1000px){
-  .wallpapers{
-  justify-content: center;
-  gap: 25px;
-  
-}
-
-}
-
-@media (min-width:1281px){
-  .wallpapers{
-  justify-content: start;
-  gap: 37px;
-  
-}
-
+@media (min-width: 1281px) {
+  .wallpapers {
+    justify-content: start;
+    gap: 37px;
+  }
 }

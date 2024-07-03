@@ -30,7 +30,7 @@
         <div class="h-full sidebar">
           <div class="sidebar-container">
             <div class="p-6">
-              <img src="/images/logo.png" alt="Dots Logo" />
+              <img class="w-24" src="/images/logo.png" alt="Dots Logo" />
             </div>
             <div class=" py-4 flex flex-col items-center justify-center">
                 <img class="w-24" src="/images/profile.png" alt="Profile image">
@@ -65,7 +65,7 @@
              <div class=" px-9 lg:px-5 py-4">
                <div class="flex items-center gap-4">
                 <img class="w-12" src="images/profile.png" alt="profile img">
-                <span class="text-lg font-normal">Administrator</span>
+                <span class="text-lg font-normal text-c-black">Administrator</span>
               </div>
             </div>
 
@@ -82,15 +82,16 @@
              <div class="w-full h-full px-3 sm:px-6">
                 <div class="py-6 flex items-center justify-between border-b border-gray">
                     <div class="w-28">
-                        <span class="text-base font-bold">Avatar:</span>
+                        <span class="text-base font-bold text-c-black">Avatar:</span>
                     </div>
                     <div class="flex-grow w-full">
                         <img class="w-12" src="images/profile.png" alt="">
                     </div>
                 </div>
-                 <div id="nickname-div" class="py-4 flex flex-col sm:flex-row items-start border-b border-gray">
-                    <div class="w-28">
-                        <label for="nickname-input" class="text-base font-bold">Nickname:</label>
+                 <div  class="border-b border-gray">
+                  <div id="nickname-div" class="py-4 flex flex-col sm:flex-row items-start">
+                     <div class="w-28">
+                        <label for="nickname-input" class="text-base font-bold text-c-black">Nickname:</label>
                     </div>
                     <div class="flex-grow flex items-start justify-between w-full">
                         <div class="w-full">
@@ -106,10 +107,12 @@
                           <button id="nickname-edit" onclick="enableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')" class="text-c-sky">Edit</button>
                             <i id="nickname-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')"></i>
                     </div> 
+                  </div>
                 </div>
-                <div id="email-div" class="py-4 flex flex-col sm:flex-row items-start border-b border-gray">
-                    <div class="w-28">
-                        <span for="email" class="text-base font-bold">Email:</span>
+                <div class="border-b border-gray">
+                  <div id="email-div" class="py-4 flex flex-col sm:flex-row items-start">
+                     <div class="w-28">
+                        <span for="email" class="text-base font-bold text-c-black">Email:</span>
                     </div>
                     <div class="flex-grow flex items-start justify-between w-full">
                       <div class="w-full">
@@ -120,8 +123,8 @@
                              <p class="text-sm font-light text-c-black">Some businesses require email verfication</p>
                           </div>
                           <div class="input-div relative mt-2">
-                              <input type="text" class="text-c-black font-normal" placeholder="Please enter your email">
-                              <span class="bg-c-gray-4 absolute right-0 h-full p-2 border-l border-gray">
+                              <input type="text" class="text-c-black font-normal pr-24" placeholder="Please enter your email">
+                              <span class="bg-c-gray-4 absolute right-0 h-full px-2 py-1.5 border-l border-gray text-c-black">
                                 Verification
                               </span>
                           </div>
@@ -134,10 +137,12 @@
                          <button id="email-edit" class="text-c-sky"  onclick="enableEdit('email-content','email-heading', 'email-edit', 'email-close','email-div')">Edit</button>
                            <i id="email-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('email-content','email-heading', 'email-edit', 'email-close','email-div')"></i>
                     </div>
+                  </div> 
                 </div>
-                <div class="password-div py-4 flex flex-col sm:flex-row items-start border-b border-gray">
+                <div class="border-b border-gray">
+                  <div id="password-div" class=" py-4 flex flex-col sm:flex-row items-start">
                     <div class="w-28">
-                        <span class="text-base font-bold">Password:</span>
+                        <span class="text-base font-bold text-c-black">Password:</span>
                     </div>
                     <div class="flex-grow flex items-start justify-between w-full">
                       <div class="w-full">
@@ -173,6 +178,8 @@
                       <button id="password-edit" class="text-c-sky" onclick="enableEdit('password-content','password-heading','password-edit','password-close','password-div')">Edit</button>
                            <i id="password-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('password-content','password-heading','password-edit','password-close','password-div')"></i>
                     </div>
+                  </div>
+                    
                 </div>
              </div>
           </div>
