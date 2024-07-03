@@ -80,7 +80,7 @@
 
             <!-- Content -->
              <div class="w-full h-full px-3 sm:px-6">
-                <div class="py-6 flex items-center justify-between border-b border-gray">
+                <div class="py-6 flex items-center justify-between border-b stroke-color">
                     <div class="w-28">
                         <span class="text-base font-bold text-c-black">Avatar:</span>
                     </div>
@@ -88,98 +88,105 @@
                         <img class="w-12" src="images/profile.png" alt="">
                     </div>
                 </div>
-                 <div  class="border-b border-gray">
-                  <div id="nickname-div" class="py-4 flex flex-col sm:flex-row items-start">
+                 <div  class="border-b stroke-color">
+                  <div id="nickname-div" class="py-4 flex flex-col sm:flex-row items-start relative">
                      <div class="w-28">
                         <label for="nickname-input" class="text-base font-bold text-c-black">Nickname:</label>
                     </div>
                     <div class="flex-grow flex items-start justify-between w-full">
                         <div class="w-full">
-                            <div class="flex items-center gap-2 w-full">
-                              <input type="text" id="nickname-input" class="text-c-black font-normal text-lg" disabled  value="Administrator">
-                              <p id="nickname-hint" class="text-sm font-light text-c-black hidden">Cannot repeat</p>
+                            <div class="flex items-start sm:items-center flex-col sm:flex-row gap-1 sm:gap-2 w-full">
+                              <input type="text" id="nickname-input" class="text-c-black font-normal text-base sm:text-lg" disabled  value="Administrator">
+                              <p id="nickname-hint" class="text-xs sm:text-sm font-light text-c-black hidden pl-1 sm:pl-0">Cannot repeat</p>
                             </div>
-                            <div id="nickname-buttons" class="mt-2 hidden">
-                                <button class="bg-c-black text-white rounded-full px-12 sm:px-14 py-2" type="submit"> OK</button>
-                                <button class="cancel-btn text-c-yellow px-9 sm:px-12 py-2 rounded-full border border-c-yellow">Cancel </button>
+                            <div id="nickname-buttons" class="mt-2 hidden flex gap-4 sm:gap-6">
+                                <button class="bg-c-black text-white rounded-full px-10 py-1 sm:px-14 sm:py-2" type="submit"> OK</button>
+                                <button class="cancel-btn text-c-yellow px-8 py-1 sm:px-12 sm:py-2 rounded-full border border-c-yellow">Cancel </button>
                             </div>
                         </div>
-                          <button id="nickname-edit" onclick="enableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')" class="text-c-sky">Edit</button>
-                            <i id="nickname-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')"></i>
                     </div> 
+                    <div class="absolute right-0">
+                       <button id="nickname-edit" onclick="enableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')" class="text-c-sky">Edit</button>
+                            <i id="nickname-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableNicknameEdit('nickname-input','nickname-hint','nickname-buttons', 'nickname-edit', 'nickname-close','nickname-div')"></i>
+                    </div>    
                   </div>
                 </div>
-                <div class="border-b border-gray">
-                  <div id="email-div" class="py-4 flex flex-col sm:flex-row items-start">
+                <div class="border-b stroke-color">
+                  <div id="email-div" class="py-4 flex flex-col sm:flex-row items-start relative">
                      <div class="w-28">
                         <span for="email" class="text-base font-bold text-c-black">Email:</span>
                     </div>
                     <div class="flex-grow flex items-start justify-between w-full">
                       <div class="w-full">
-                        <span id="email-heading" class="text-c-gray-2 font-normal text-lg">Click to blind</span>
+                        <span id="email-heading" class="text-c-gray-2 font-normal text-base sm:text-lg">Click to blind</span>
                         <div id="email-content" class="hidden">
-                          <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 w-full">
-                             <input type="text" class="enabled-input text-c-black font-normal" placeholder="Please input the email address">
-                             <p class="text-sm font-light text-c-black">Some businesses require email verfication</p>
+                          <div class="flex flex-col lg:flex-row items-start lg:items-center gap-1 sm:gap-2 w-full">
+                             <input type="text" class="enabled-input text-c-black font-normal text-sm sm:text-base" placeholder="Please input the email address">
+                             <p class="text-xs sm:text-sm font-light text-c-black pl-1 sm:pl-0">Some businesses require email verfication</p>
                           </div>
                           <div class="input-div relative mt-2">
-                              <input type="text" class="text-c-black font-normal pr-24" placeholder="Please enter your email">
-                              <span class="bg-c-gray-4 absolute right-0 h-full px-2 py-1.5 border-l border-gray text-c-black">
+                              <input type="text" class="text-c-black text-sm sm:text-base font-normal pr-24" placeholder="Please enter your email">
+                              <span class="bg-c-gray-4 text-sm sm:text-base absolute right-0 h-full px-2 py-1 sm:py-1.5 border-l border-gray text-c-black">
                                 Verification
                               </span>
                           </div>
-                          <div class="mt-2">
-                                <button class="bg-c-black text-white rounded-full px-12 sm:px-14 py-2" type="submit"> OK</button>
-                                <button class="cancel-btn text-c-yellow px-9 sm:px-12 py-2 rounded-full border border-c-yellow">Cancel </button>
+                          <div class="mt-2 flex gap-4 sm:gap-6">
+                               <button class="bg-c-black text-white rounded-full px-10 py-1 sm:px-14 sm:py-2" type="submit"> OK</button>
+                                <button class="cancel-btn text-c-yellow px-8 py-1 sm:px-12 sm:py-2 rounded-full border border-c-yellow">Cancel </button>
                           </div>
                         </div>
                       </div>
-                         <button id="email-edit" class="text-c-sky"  onclick="enableEdit('email-content','email-heading', 'email-edit', 'email-close','email-div')">Edit</button>
+                    </div>
+                    <div class="absolute right-0">
+                      <button id="email-edit" class="text-c-sky"  onclick="enableEdit('email-content','email-heading', 'email-edit', 'email-close','email-div')">Edit</button>
                            <i id="email-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('email-content','email-heading', 'email-edit', 'email-close','email-div')"></i>
                     </div>
                   </div> 
                 </div>
-                <div class="border-b border-gray">
-                  <div id="password-div" class=" py-4 flex flex-col sm:flex-row items-start">
+                <div class="border-b stroke-color">
+                  <div id="password-div" class=" py-4 flex flex-col sm:flex-row items-start relative">
                     <div class="w-28">
                         <span class="text-base font-bold text-c-black">Password:</span>
                     </div>
                     <div class="flex-grow flex items-start justify-between w-full">
                       <div class="w-full">
-                        <span id="password-heading" class="text-c-gray-2 font-normal text-lg">Click to modify password</span>
+                        <span id="password-heading" class="text-c-gray-2 font-normal text-base sm:text-lg">Click to modify password</span>
                         <div id="password-content" class="hidden">
-                          <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 w-full">
+                          <div class="flex flex-col lg:flex-row items-start lg:items-center gap-1 sm:gap-2 w-full">
                             <div class="input-div relative">
-                               <input type="text" class="text-c-black font-normal" placeholder="Old password">
-                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-2 border-l border-gray">
+                               <input type="text" class="text-c-black text-sm sm:text-base font-normal" placeholder="Old password">
+                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-0.5 sm:py-2 border-l border-gray">
                               <i class="ri-eye-close-line"></i>
                               </span>
                             </div>
-                             <p class="text-sm font-light text-c-black ">Forgot your password? you can <span class="text-c-sky">Reset</span></p>
+                             <p class=" text-xs sm:text-sm font-light text-c-black pl-1 sm:pl-0">Forgot your password? you can <span class="text-c-sky">Reset</span></p>
                           </div>
                           <div class="input-div relative mt-2">
-                              <input type="text" class="text-c-black font-normal" placeholder="Please enter a new password">
-                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-2 border-l border-gray">
+                              <input type="text" class="text-c-black text-sm sm:text-base font-normal" placeholder="Please enter a new password">
+                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-0.5 sm:py-2 border-l border-gray">
                               <i class="ri-eye-close-line"></i>
                               </span>
                           </div>
                            <div class="input-div relative mt-2">
-                              <input type="text" class="text-c-black font-normal" placeholder="Please enter the password again">
-                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-2 border-l border-gray">
+                              <input type="text" class="text-c-black text-sm sm:text-base font-normal" placeholder="Please enter the password again">
+                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-0.5 sm:py-2 border-l border-gray">
                              <i class="ri-eye-line"></i>
                               </span>
                           </div>
-                          <div class="mt-2">
-                                <button class="bg-c-black text-white rounded-full px-12 sm:px-14 py-2" type="submit"> OK</button>
-                                <button class="cancel-btn text-c-yellow px-9 sm:px-12 py-2 rounded-full border border-c-yellow">Cancel </button>
+                          <div class="mt-2 flex gap-4 sm:gap-6">
+                               <button class="bg-c-black text-white rounded-full px-10 py-1 sm:px-14 sm:py-2" type="submit"> OK</button>
+                                <button class="cancel-btn text-c-yellow px-8 py-1 sm:px-12 sm:py-2 rounded-full border border-c-yellow">Cancel </button>
                           </div>
                         </div>
                       </div>
-                      <button id="password-edit" class="text-c-sky" onclick="enableEdit('password-content','password-heading','password-edit','password-close','password-div')">Edit</button>
-                           <i id="password-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('password-content','password-heading','password-edit','password-close','password-div')"></i>
+                      <div>
+                      </div>                    
                     </div>
-                  </div>
-                    
+                      <div class="absolute right-0">
+                         <button id="password-edit" class="text-c-sky" onclick="enableEdit('password-content','password-heading','password-edit','password-close','password-div')">Edit</button>
+                           <i id="password-close" class="ri-close-circle-fill ri-lg cursor-pointer hidden" onclick="disableEdit('password-content','password-heading','password-edit','password-close','password-div')"></i>
+                      </div>
+                  </div>  
                 </div>
              </div>
           </div>

@@ -132,6 +132,10 @@
     background: var(--bg-light-gray);
 }
 
+.stroke-color{
+    border-color: var(--stroke-color);
+}
+
 body.cs {
     overflow-x: hidden;
 }
