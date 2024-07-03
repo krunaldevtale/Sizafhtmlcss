@@ -250,7 +250,12 @@ body.cs {
 }
 
 .cs .radio-border input:checked~span {
-  border-bottom: 4px solid #FDCF01;
+  font-weight: 500;
+}
+
+.cs .radio-border input:checked~div {
+  border: 3px solid #FDCF01;
+  border-radius: 10px;
   font-weight: 500;
 }
 
