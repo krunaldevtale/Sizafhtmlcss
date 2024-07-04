@@ -405,7 +405,7 @@ body.cs {
 }
 
 @media (max-width:480px) {
-  .cs input[type="checkbox"].d-checkbox:checked::after {
+  .cs input[type="checkbox"].c-checkbox:checked::after {
     content: "\2713";
     font-size: 12px;
     position: absolute;
