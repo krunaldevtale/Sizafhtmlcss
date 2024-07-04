@@ -74,7 +74,7 @@ hr {
     background-color: var(--color-white);
 }
 .cs input[type="checkbox"].d-checkbox:checked::after {
-    content: "✔";
+    content: "\2714";
     font-size: 12px;
     position: absolute;
     height: 12px;
