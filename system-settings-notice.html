@@ -478,33 +478,45 @@
                                 </label>
                             </div>
                             <div id="users-div" class="w-3/4 ml-auto" style="display: none;">
-                                <div class="bg-c-lighten-gray flex items-center w-full rounded-xl border border-gray overflow-hidden">
-                                    <input type="text" name="users"
-                                    class="w-full text-gray-900 text-sm block p-2 bg-c-lighten-gray"
-                                    placeholder="Please choose user" />
-                                    <div class="bg-c-lighten-gray py-1.5 px-4 border-l border-gray  ">
+                                <div class="custom-select bg-c-lighten-gray flex items-center w-full rounded-xl border border-gray">
+                                  <div class="select-selected py-2 px-3 rounded-xl cursor-pointer text-c-gray-2 flex items-center justify-between">
+                                      Please choose user
                                         <i class="ri-arrow-down-s-line text-black"></i>
-                                    </div> 
+                                  </div>
+                                    <div class="select-items border border-gray-300 rounded-md shadow-lg overflow-hidden">
+                                        <div class="py-2 px-3 cursor-pointer">Option 1</div>
+                                        <div class="py-2 px-3 cursor-pointer">Option 2</div>
+                                        <div class="py-2 px-3 cursor-pointer">Option 3</div>
+                                    </div>
+                                   
                                 </div>
                             </div>
                              <div id="groups-div" class="w-3/4 ml-auto" style="display: none;">
-                                <div class="bg-c-lighten-gray flex items-center w-full rounded-xl border border-gray overflow-hidden">
-                                    <input type="text" name="groups"
-                                    class="w-full text-gray-900 text-sm block p-2 bg-c-lighten-gray"
-                                    placeholder="Please choose group" />
-                                    <div class="bg-c-lighten-gray py-1.5 px-4 border-l border-gray  ">
+                                 <div class="custom-select bg-c-lighten-gray flex items-center w-full rounded-xl border border-gray">
+                                  <div class="select-selected py-2 px-3 rounded-xl cursor-pointer text-c-gray-2 flex items-center justify-between">
+                                      Please choose group
                                         <i class="ri-arrow-down-s-line text-black"></i>
-                                    </div> 
+                                  </div>
+                                    <div class="select-items border border-gray-300 rounded-md shadow-lg overflow-hidden">
+                                        <div class="py-2 px-3 cursor-pointer">Option 1</div>
+                                        <div class="py-2 px-3 cursor-pointer">Option 2</div>
+                                        <div class="py-2 px-3 cursor-pointer">Option 3</div>
+                                    </div>
+                                   
                                 </div>
                             </div>
                              <div id="role-div" class="w-3/4 ml-auto" style="display: none;">
-                                <div class="bg-c-lighten-gray flex items-center w-full rounded-xl border border-gray overflow-hidden">
-                                    <input type="text" name="role"
-                                    class="w-full text-gray-900 text-sm block p-2 bg-c-lighten-gray"
-                                    placeholder="Please choose role" />
-                                    <div class="bg-c-lighten-gray py-1.5 px-4 border-l border-gray  ">
+                                <div class="custom-select bg-c-lighten-gray flex items-center w-full rounded-xl border border-gray">
+                                  <div class="select-selected py-2 px-3 rounded-xl cursor-pointer text-c-gray-2 flex items-center justify-between">
+                                      Please choose role
                                         <i class="ri-arrow-down-s-line text-black"></i>
-                                    </div> 
+                                  </div>
+                                    <div class="select-items border border-gray-300 rounded-md shadow-lg overflow-hidden">
+                                        <div class="py-2 px-3 cursor-pointer">Option 1</div>
+                                        <div class="py-2 px-3 cursor-pointer">Option 2</div>
+                                        <div class="py-2 px-3 cursor-pointer">Option 3</div>
+                                    </div>
+                                   
                                 </div>
                             </div>
                             <div class="w-3/4 ml-auto">
@@ -664,6 +676,34 @@
             if (event.target == previewModal) {
                 previewModal.classList.add('hidden');
             }
+        });
+
+            //for dropdown menu
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var customSelects = document.querySelectorAll(".custom-select");
+
+            customSelects.forEach(function(select) {
+                var selected = select.querySelector(".select-selected");
+                var items = select.querySelector(".select-items");
+
+                selected.addEventListener("click", function() {
+                    items.style.display = items.style.display === "none" || items.style.display === "" ? "block" : "none";
+                });
+
+                items.addEventListener("click", function(event) {
+                    if (event.target.matches(".select-items div")) {
+                        selected.textContent = event.target.textContent;
+                        items.style.display = "none";
+                    }
+                });
+
+                document.addEventListener("click", function(event) {
+                    if (!select.contains(event.target)) {
+                        items.style.display = "none";
+                    }
+                });
+            });
         });
     </script>
   </body>
