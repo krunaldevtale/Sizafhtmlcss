@@ -84,11 +84,11 @@ hr {
 
 @media (max-width:480px) {
   .cs input[type="checkbox"].d-checkbox:checked::after {
-    content: "\2714";
+    content: "\2713";
     font-size: 12px;
     position: absolute;
     height: 12px;
-    top: -4px;
-    left: 1px;
+    top: -3px;
+    left: 2px;
 }
 }
