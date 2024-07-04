@@ -141,4 +141,14 @@
     .right-container .userinput {
         height: 40px;
     }
+
+    .cs input[type="checkbox"]:checked::after {
+    content: "\2713";
+    font-size: 11px;
+    position: absolute;
+    height: 12px;
+    top: -3px;
+    left: 1px;
+}
+
 }

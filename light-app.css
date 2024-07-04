@@ -143,6 +143,7 @@ border: 1px solid #686868;
 
 
   .ms input[type="checkbox"]:checked::after {
+    content: "\2713";
     font-size: 11px;
     height: 12px;
     top: -2px;
