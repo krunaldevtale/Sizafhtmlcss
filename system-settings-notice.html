@@ -528,10 +528,8 @@
                         <div class="w-1/4 font-bold text-c-black">Push time:<span class="text-red-500">*</span> </div>
                             <div class="flex gap-2 ml-auto w-3/4">
                                <div class="bg-c-lighten-gray flex items-center rounded border border-gray overflow-hidden">
-                                     <span class="px-4 font-medium text-c-black">22:00</span>
-                                    <div class="bg-c-lighten-gray py-1.5 px-2 border-l border-gray  ">
-                                        <i class="ri-calendar-2-line text-c-black"></i>
-                                    </div> 
+                                <input type="datetime-local" name="cycle_time" class="text-sm px-1 py-1"
+                                id="cycle_time" />
                                </div>
                             </div>
                      </div>
@@ -539,11 +537,11 @@
                         <div class="w-1/4 font-bold text-c-black">Prompt level:<span class="text-red-500">*</span> </div>
                             <div class="flex gap-4 ml-auto w-3/4">
                                 <div class="flex items-center justify-center gap-1 sm:gap-3">
-                                    <input type="checkbox" class="c-checkbox" name="options" value="weak">
+                                    <input type="radio"  name="options" value="weak">
                                     <span class="text-c-black">Weak hint</span>
                                 </div>
                                  <div class="flex items-center justify-center gap-1 sm:gap-3">
-                                    <input type="checkbox" class="c-checkbox" name="options" value="strong">
+                                    <input type="radio"  name="options" value="strong">
                                     <span class="text-c-black">Strong prompt</span>
                                 </div>
                             </div>
