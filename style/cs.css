@@ -204,7 +204,7 @@ body.cs {
   display: none;
 }
 
-@media (width < 768px) {
+@media (width < 1025px) {
   .cs-table-container {
     overflow-y: scroll;
     overflow-x: scroll;

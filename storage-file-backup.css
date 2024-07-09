@@ -1,0 +1,9 @@
+@media (max-width:320px) {
+    .label{
+        font-size: 12px;
+    }
+    .radio-button span{
+        width: 20px;
+        font-size: 11px;
+    }
+}
