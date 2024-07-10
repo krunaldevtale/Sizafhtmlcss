@@ -6,4 +6,8 @@
         width: 20px;
         font-size: 11px;
     }
+
+ .radio-circle .text {
+    font-size: 12px;
+ }
 }

@@ -454,13 +454,13 @@
             </div>
             <div class="p-5">
                 <div class="rounded-lg bg-c-lighten-gray p-4 border">
-                    <p class="text-c-black text-base font-bold"><span class="underline text-c-black">Instructions for use-</span></p>
+                    <p class="text-c-black text-sm sm:text-base font-bold"><span class="underline text-c-black">Instructions for use-</span></p>
                     <ul class="px-4 list-disc mt-2">
-                        <li class="leading-5 pb-2 text-c-black text-base font-normal">This operation will reset the system data, non-operation and maintenance or related technical personnel should not operate!</li>
-                        <li class="leading-5 pb-2 text-c-black text-base font-normal">By writing the backup database to the new database and setting it as the system default, data recovery is achieved. The new database configuration parameters will be appended to the system configuration file config/setting_user.php. If the system is abnormal after the recovery is executed, the appended part of the file can be removed without affecting the previous system data.</li>
-                        <li class="leading-5 pb-2 text-c-black text-base font-normal">Note: When the database type is MySQL, a new library (original library name_current date_rebuild) will be created based on the current configuration information. Non-root users may not have sufficient permissions, so you need to set permissions for the user first.</li>
-                        <li class="leading-5 pb-2 text-c-black text-base font-normal">For example, the current database configuration information is: user: kod; password: kod123. Use the root account to log in to the database and execute the corresponding SQL statement to set the permissions (the permissions can be revoked after the test is passed and the recovery is successful).</li>
-                        <li class="leading-5 pb-2 text-c-black text-base font-normal">Setting permissions:grant all privileges on *.* to 'kod'@'localhost' identified by 'kod123' with grant option;flush privileges; Revoke permissions:revoke all on *.* from 'kod'@'localhost';flush privileges;</li>
+                        <li class="leading-5 pb-2 text-c-black text-sm sm:text-base font-normal">This operation will reset the system data, non-operation and maintenance or related technical personnel should not operate!</li>
+                        <li class="leading-5 pb-2 text-c-black text-sm sm:text-base font-normal">By writing the backup database to the new database and setting it as the system default, data recovery is achieved. The new database configuration parameters will be appended to the system configuration file config/setting_user.php. If the system is abnormal after the recovery is executed, the appended part of the file can be removed without affecting the previous system data.</li>
+                        <li class="leading-5 pb-2 text-c-black text-sm sm:text-base font-normal">Note: When the database type is MySQL, a new library (original library name_current date_rebuild) will be created based on the current configuration information. Non-root users may not have sufficient permissions, so you need to set permissions for the user first.</li>
+                        <li class="leading-5 pb-2 text-c-black text-sm sm:text-base font-normal">For example, the current database configuration information is: user: kod; password: kod123. Use the root account to log in to the database and execute the corresponding SQL statement to set the permissions (the permissions can be revoked after the test is passed and the recovery is successful).</li>
+                        <li class="leading-5 pb-2 text-c-black text-sm sm:text-base font-normal">Setting permissions:grant all privileges on *.* to 'kod'@'localhost' identified by 'kod123' with grant option;flush privileges; Revoke permissions:revoke all on *.* from 'kod'@'localhost';flush privileges;</li>
                     </ul>
                 </div>
                 <hr class="mt-5 stroke-color">
@@ -485,8 +485,8 @@
                         <div class="flex flex-wrap gap-y-4 items-start sm:items-center">
                             <h3 class="w-1/4 font-bold text-c-black text-sm sm:text-base" for="message-content">Database type:<span class="text-red-500">*</span> </h3>
                             <div class="w-3/4 ml-auto flex flex-col items-start sm:flex-row sm:items-center gap-2 sm:gap-4">
-                                <span class="text-c-black text-base font-normal">MYSQL</span>
-                                <p class="text-sm text-c-black font-light">Depends on the type of system currently used</p>
+                                <span class="text-c-black text-sm sm:text-base font-normal">MYSQL</span>
+                                <p class=" text-xs sm:text-sm text-c-black font-light">Depends on the type of system currently used</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-y-4 items-start">
@@ -499,9 +499,9 @@
                                             <img class="w-6 h-5 sm:h-6" src="/images/Folder.png" alt="Folder Image">
                                         </div>      
                                     </div>
-                                    <span class="text-c-black text-base font-normal">Testing</span>
+                                    <span class="text-c-black text-sm sm:text-base font-normal">Testing</span>
                                 </div>
-                                <p class="text-c-black text-sm font-light sm:mt-3">After the test is being passed, it can be saved.</p>
+                                <p class="text-c-black text-xs sm:text-sm font-light sm:mt-3">After the test is being passed, it can be saved.</p>
                                
                             </div>
                         </div>
@@ -528,7 +528,7 @@
             <div class="p-5">
                 <form class="space-y-4 text-sm">
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <label for="backup-time" class="w-1/4 font-bold text-c-black text-xs sm:text-base">Backup time:<sup class="text-red-500">*</sup></label>
+                        <label for="backup-time" class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Backup time:<sup class="text-red-500">*</sup></label>
                         <div class="w-3/4 ml-auto flex flex-col gap-1">
                             <div class=" flex items-center gap-3">
                                 <input type="text" required name="backup-time" id="backup-time"
@@ -540,7 +540,7 @@
                         </div>        
                     </div>
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <span class="w-1/4 font-bold text-c-black text-xs sm:text-base">Backup location:<sup class="text-red-500">*</sup> </span>
+                        <span class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Backup location:<sup class="text-red-500">*</sup> </span>
                         <div class="w-3/4 ml-auto flex flex-col gap-1">
                             <div>
                                   <div class="w-full bg-c-lighten-gray border border-gray text-c-black text-sm rounded-xl flex items-center justify-between overflow-hidden pl-4" >
@@ -554,18 +554,18 @@
                         </div>
                       </div> 
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <label class="w-1/4 font-bold text-c-black text-xs sm:text-base" for="backup-content">Backup content:<sup class="text-red-500">*</sup> </label>
+                        <label class="w-1/4 font-bold text-c-black text-sm sm:text-base label" for="backup-content">Backup content:<sup class="text-red-500">*</sup> </label>
                         <div class="w-3/4 ml-auto">
                             <div class="flex items-center gap-3">
-                                <label class="flex items-center gap-2">
+                                <label class="flex items-center gap-2 radio-circle">
                                     <input type="radio" name="custom-radio" value="option1">
                                     <span class="custom-radio"></span>
-                                    <span class="text-c-light-black text-xs sm:text-sm">Database & file</span>
+                                    <span class="text-c-light-black text-sm sm:text-sm text">Database & file</span>
                                 </label>
-                                <label class="flex items-center gap-2">
+                                <label class="flex items-center gap-2 radio-circle">
                                     <input type="radio" name="custom-radio" value="option2">
                                     <span class="custom-radio"></span>
-                                    <span class="text-c-light-black text-xs sm:text-sm">Database</span>
+                                    <span class="text-c-light-black text-sm sm:text-sm text">Database</span>
                                 </label>
                             </div>
                             <span class="text-c-black font-light text-xs">The licensed version supports simultaneous backup of databases and files</span>
@@ -573,7 +573,7 @@
                     </div>
                     <hr class="stroke-color" />
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <span class="w-1/4 font-bold text-c-black text-xs sm:text-base">Prompt description:<sup class="text-red-500">*</sup> </span>
+                        <span class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Prompt description:<sup class="text-red-500">*</sup> </span>
                         <div class="w-3/4 ml-auto">
                             <div class=" rounded-lg bg-c-lighten-gray p-4 border">
                                 <ul class="list-disc px-1 sm:px-6">
@@ -587,7 +587,7 @@
                     </div>
                     <hr class="stroke-color" />
                      <div class="flex flex-wrap gap-y-4 pb-2 items-start">
-                        <span for="recovery" class="w-1/4 font-bold text-c-black text-xs sm:text-base">Turn on recovery:</span>
+                        <span for="recovery" class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Turn on recovery:</span>
                         <div class="w-3/4 ml-auto flex items-center gap-3">
                             <label for="toggle-debug-2" class="toggle-switch flex items-center cursor-pointer">
                                 <div class="relative">
