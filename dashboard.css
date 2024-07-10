@@ -196,10 +196,15 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .dashboard .Notification {
   width: 90%;
-  max-width: 320px;
+  max-width: 400px;
   border-radius: 20px;
-  background: var(--bg-linear-gradient);
+  background: var(--color-lighten-gray);
   box-shadow: var(--box-shadow);
+  z-index: 99;
+}
+
+.Notification .scrollbar-div::-webkit-scrollbar{
+  display: none;
 }
 
 /* Administrator */
