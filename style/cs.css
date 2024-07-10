@@ -201,10 +201,12 @@ body.cs {
   overflow: scroll;
 }
 
+
 .cs div[role="dialog"] .modal-content::-webkit-scrollbar,
 .cs .main::-webkit-scrollbar,
 .cs-table-container::-webkit-scrollbar,
-.hide-scrollbar::-webkit-scrollbar {
+.hide-scrollbar::-webkit-scrollbar,
+.modal-info::-webkit-scrollbar {
   display: none;
 }
 
