@@ -7,22 +7,29 @@
      <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
      <link rel="stylesheet" href="root.css">
      <link rel="stylesheet" href="help.css">
+     <link rel="stylesheet" href="style/cs.css">
 </head>
-<body>
+<body class="cs">
    <div class="w-full h-screen flex flex-col">
     <div class="help-page flex-1 flex flex-col">
-        <nav class="py-5 px-4 sm:px-10 flex justify-start">
+        <nav class="py-2 px-4 sm:px-10 flex justify-start">
             <img class="w-12 h-12" src="/images/logo.png" alt="Logo">
         </nav>
         <div class="user-input flex-1 flex flex-col items-center justify-center px-4 sm:px-28">
             <div class="text-center flex flex-col items-center justify-center gap-4 p-4 sm:p-10">
                 <img src="/images/profile.png" alt="Profile" class="w-24 h-24 sm:w-auto sm:h-auto">
-                <h1 class="text-3xl sm:text-5xl font-medium">Hello <span class="username underline underline-offset-8 decoration-1">Rachel!</span></h1>
-                <p class="tracking-wide text-base sm:text-lg text-center">Tell us your problem so we can get the right help and support.</p>
+                <h1 class="text-3xl sm:text-5xl text-c-black font-medium">Hello 
+                    <span class="username">
+                        Rachel!
+                    </span> 
+                    <div class="w-7/12 ml-auto h-1.5 bg-c-yellow rounded-full"></div>
+                   
+                </h1>
+                <p class="tracking-wide text-base sm:text-lg text-c-black text-center">Tell us your problem so we can get the right help and support.</p>
             </div>
             <div class="w-full mt-5">
                 <textarea class="w-full h-10 border-b-2 border-black outline-none" id="textInput" maxlength="90"></textarea>
-                <div class="counter font-medium" id="charCounter">90 Characters remaining</div>
+                <div class="counter text-c-black font-medium" id="charCounter">90 Characters remaining</div>
             </div>
             <div class="submit-btn mt-10 sm:mt-28">
                 <button class="py-1.5 px-10 sm:px-20 text-white rounded">Submit</button>
