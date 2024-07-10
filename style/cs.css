@@ -87,6 +87,10 @@
   color: var(--color-gray-2);
 }
 
+.text-c-time{
+  color: var(--color-time);
+}
+
 .text-c-dark-gray {
   color: var(--color-dark-gray);
 }
