@@ -31,61 +31,59 @@
           <li class="flex items-center justify-between px-2">
             <a href="#">New file</a>
             <i class="ri-arrow-right-s-line"></i>
-            <ul
-              class="submenu newfile-submenu absolute shadow-md rounded-md hidden"
-            >
-              <li class="flex items-center px-5">
-                <img src="/images/txt-file.png" alt="text-file" />
-                <a href="#">txt file</a>
-              </li>
-              <li class="flex items-center px-5">
-                <img src="/images/md-file.png" alt="md-file" />
-                <a href="#">md file</a>
-              </li>
-              <li class="flex items-center px-5 border-b-2">
-                <img src="/images/html-file.png" alt="html file" />
-                <a href="#">html file</a>
-              </li>
-              <li class="flex items-center px-5">
-                <img class="w-5 h-5" src="/images/docx.png" alt="word-file" />
-                <a href="#">Word docx file</a>
-              </li>
-              <li class="flex items-center px-5">
-                <img class="w-5 h-5" src="/images/xlsx.png" alt="excel-file" />
-                <a href="#">Excel xlsx file</a>
-              </li>
-              <li class="flex items-center px-5 border-b-2">
-                <img
-                  class="w-5 h-5"
-                  src="/images/pptx.png"
-                  alt="powerpoint-file"
-                />
-                <a href="#">PowerPoint pptx</a>
-              </li>
-              <li class="flex items-center px-5 border-b-2">
-                <img
-                  class="w-5 h-5"
-                  src="/images/MinderImg.png"
-                  alt="minder-img"
-                />
-                <a href="#">Minder diagram</a>
-              </li>
-              <li class="flex items-center px-5">
-                <img
-                  class="w-5 h-5"
-                  src="/images/lightapp.png"
-                  alt="lightapp"
-                />
-                <a href="#">Light app</a>
-              </li>
-              <li class="flex items-center px-5">
-                <img src="/images/chrome-img.png" alt="Chrome" />
-                <a href="#">New URL</a>
-              </li>
-              <li class="flex items-center px-5">
-                <img src="/images/sharedfolder-img.png" alt="file-shortcut" />
-                <a href="#">File shortcut</a>
-              </li>
+            <ul class="submenu newfile-submenu absolute shadow-md rounded-md hidden">
+                <li class="flex items-center px-5">
+                  <img src="/images/txt-file.png" alt="text-file" />
+                  <a href="#">txt file</a>
+                </li>
+                <li class="flex items-center px-5">
+                  <img src="/images/md-file.png" alt="md-file" />
+                  <a href="#">md file</a>
+                </li>
+                <li class="flex items-center px-5 border-b-2">
+                  <img src="/images/html-file.png" alt="html file" />
+                  <a href="#">html file</a>
+                </li>
+                <li class="flex items-center px-5">
+                  <img class="w-5 h-5" src="/images/docx.png" alt="word-file" />
+                  <a href="#">Word docx file</a>
+                </li>
+                <li class="flex items-center px-5">
+                  <img class="w-5 h-5" src="/images/xlsx.png" alt="excel-file" />
+                  <a href="#">Excel xlsx file</a>
+                </li>
+                <li class="flex items-center px-5 border-b-2">
+                  <img
+                    class="w-5 h-5"
+                    src="/images/pptx.png"
+                    alt="powerpoint-file"
+                  />
+                  <a href="#">PowerPoint pptx</a>
+                </li>
+                <li class="flex items-center px-5 border-b-2">
+                  <img
+                    class="w-5 h-5"
+                    src="/images/MinderImg.png"
+                    alt="minder-img"
+                  />
+                  <a href="#">Minder diagram</a>
+                </li>
+                <li class="flex items-center px-5">
+                  <img
+                    class="w-5 h-5"
+                    src="/images/lightapp.png"
+                    alt="lightapp"
+                  />
+                  <a href="#">Light app</a>
+                </li>
+                <li class="flex items-center px-5">
+                  <img src="/images/chrome-img.png" alt="Chrome" />
+                  <a href="#">New URL</a>
+                </li>
+                <li class="flex items-center px-5">
+                  <img src="/images/sharedfolder-img.png" alt="file-shortcut" />
+                  <a href="#">File shortcut</a>
+                </li>
             </ul>
           </li>
           <li class="flex items-center justify-between px-2">
@@ -829,7 +827,7 @@
         const timeString = `${hours}:${minutes}`;
         const dateString = `${day}, ${month} ${date}`;
 
-        clock.innerHTML = `<div class="time text-c-white text-3xl md:text-5xl font-normal">${timeString}</div><div class="date text-sm md:text-base flex font-normal">${dateString}</div>`;
+        clock.innerHTML = `<div class="time text-c-white text-5xl font-normal">${timeString}</div><div class="date text-sm flex font-normal">${dateString}</div>`;
       }
 
       updateClock();
