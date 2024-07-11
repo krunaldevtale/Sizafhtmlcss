@@ -66,7 +66,7 @@
 
 .context-menu ul {
     list-style: none;
-    padding: 5px 0;
+    padding: 5px 3px;
     margin: 0;
 }
 
@@ -83,7 +83,7 @@
 
 .context-menu ul li:hover {
     background: var(--color-dark-yellow);
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .context-menu ul li:hover>.submenu {
@@ -99,7 +99,7 @@
 .submenu {
     position: absolute;
     min-width: 200px;
-    top: 0;
+    top: -10%;
     left: 100%;
     background-color: var(--color-white);
     border: 1px solid var(--color-gray-2);
@@ -307,6 +307,24 @@ input[type="search"]::-webkit-search-cancel-button {
     left: 1px;
 }
 
+@media (max-width:900px) {
+    .dashboard .clock {
+        top: 28px;
+        left: 70px;
+        align-items: start;
+        gap: 0px;
+    }
+
+    .clock .time {
+        font-size: 2vw;
+        line-height: 0.5;
+    }
+
+    .clock .date {
+        font-size: 1.5vw;
+    }
+}
+
 @media (max-width:480px) {
     .cs .app-tools input[type="checkbox"]:checked::after {
         content: "\2713";
@@ -349,6 +367,8 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 55px;
     }
 }
+
+
 
 /* ****************** This CSS for Login page *********************** */
 
