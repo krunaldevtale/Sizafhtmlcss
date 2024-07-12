@@ -545,11 +545,14 @@
                         <span class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Backup location:<sup class="text-red-500">*</sup> </span>
                         <div class="w-3/4 ml-auto flex flex-col gap-1">
                             <div>
-                                  <div class="w-full bg-c-lighten-gray border border-gray text-c-black text-sm rounded-xl flex items-center justify-between overflow-hidden pl-4" >
-                            Local Storage
-                                <div class="bg-c-lighten-gray py-2 px-4 border-l border-gray  ">
-                                <i class="ri-arrow-down-s-line text-black"></i>
-                                </div> 
+                                <div class="w-full  border border-gray text-c-black text-sm rounded-xl flex items-center justify-between overflow-hidden" >
+                                    <select class="w-full py-2 pl-4 bg-c-lighten-gray appearance-none" name="backup-location">
+                                        <option class="text-c-black" value="0">Local storage</option>
+                                        <option class="text-c-black" value="1">D Drive</option>
+                                    </select>
+                                    <div class="bg-c-lighten-gray py-2 px-4 border-l border-gray  ">
+                                    <i class="ri-arrow-down-s-line text-black"></i>
+                                    </div> 
                             </div>
                             </div>
                               <span class="text-c-black font-light text-xs">If you need to back up files, please create a new storage dedicated for backup <span class="text-c-yellow text-sm font-normal cursor-pointer"><a href="#">Add</a></span>.</span>  
