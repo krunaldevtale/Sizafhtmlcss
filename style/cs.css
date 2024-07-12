@@ -2,6 +2,10 @@
   background: var(--color-light-gray);
 }
 
+.bg-c-white{
+  background: var(--color-white);
+}
+
 .bg-c-yellow {
   background: var(--color-dark-yellow);
 }
@@ -16,6 +20,10 @@
 
 .bg-c-dark-white{
   background: var(--color-dark-white);
+}
+
+.bg-c-gray-3 {
+  background: var(--bg-light-gray);
 }
 
 .bg-c-light-black {
@@ -145,10 +153,6 @@
 
 .border-c-lightgray{
   border-color: var(--border-medium-gray);
-}
-
-.bg-c-gray-3 {
-  background: var(--bg-light-gray);
 }
 
 .stroke-color {
