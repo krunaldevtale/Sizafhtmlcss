@@ -127,10 +127,12 @@
                              <p class="text-xs sm:text-sm font-light text-c-black pl-1 sm:pl-0">Some businesses require email verfication</p>
                           </div>
                           <div class="input-div relative mt-2">
-                              <input type="text" class="text-c-black text-sm sm:text-base font-normal pr-24" placeholder="Please enter your email">
-                              <span class="bg-c-gray-4 text-sm sm:text-base absolute right-0 h-full px-2 py-1 sm:py-1.5 border-l border-gray text-c-black">
+                            <div class="flex items-center h-full">
+                              <input type="text" class="text-c-black text-sm sm:text-base font-normal h-full" placeholder="Please enter your email">
+                              <span class="bg-c-gray-4 text-sm sm:text-base px-2 h-full flex items-center border-l border-gray text-c-black">
                                 Verification
                               </span>
+                            </div>
                           </div>
                           <div class="mt-2 flex gap-4 sm:gap-6">
                                <button class="bg-c-black text-white rounded-full px-10 py-1 sm:px-14 sm:py-2" type="submit"> OK</button>
@@ -157,24 +159,32 @@
                         <div id="password-content" class="hidden">
                           <div class="flex flex-col lg:flex-row items-start lg:items-center gap-1 sm:gap-2 w-full">
                             <div class="input-div relative">
-                               <input type="text" class="text-c-black text-sm sm:text-base font-normal" placeholder="Old password">
-                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-0.5 sm:py-2 border-l border-gray">
-                              <i class="ri-eye-close-line"></i>
-                              </span>
+                              <div class="flex items-center justify-between h-full">
+                                <input type="text" class="text-c-black text-sm sm:text-base font-normal h-full" placeholder="Old password">
+                                <span class="bg-c-gray-4 h-full px-4 flex items-center border-l border-gray">
+                                <i class="ri-eye-close-line"></i>
+                                </span>
+                            </div>
                             </div>
                              <p class=" text-xs sm:text-sm font-light text-c-black pl-1 sm:pl-0">Forgot your password? you can <span class="text-c-sky">Reset</span></p>
                           </div>
                           <div class="input-div relative mt-2">
-                              <input type="text" class="text-c-black text-sm sm:text-base font-normal" placeholder="Please enter a new password">
-                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-0.5 sm:py-2 border-l border-gray">
+                            <div class="flex items-center justify-between h-full">
+                              <input type="text" class="text-c-black text-sm sm:text-base font-normal h-full" placeholder="Please enter a new password">
+                              <span class="bg-c-gray-4 h-full px-4 flex items-center border-l border-gray">
                               <i class="ri-eye-close-line"></i>
                               </span>
+                            </div>
+                            
                           </div>
                            <div class="input-div relative mt-2">
-                              <input type="text" class="text-c-black text-sm sm:text-base font-normal" placeholder="Please enter the password again">
-                              <span class="bg-c-gray-4 absolute right-0 h-full px-4 py-0.5 sm:py-2 border-l border-gray">
+                            <div class="flex items-center justify-between h-full">
+                               <input type="text" class="text-c-black text-sm sm:text-base font-normal h-full" placeholder="Please enter the password again">
+                              <span class="bg-c-gray-4 flex items-center px-4 h-full border-l border-gray">
                              <i class="ri-eye-line"></i>
                               </span>
+                            </div>
+                             
                           </div>
                           <div class="mt-2 flex gap-4 sm:gap-6">
                                <button class="bg-c-black text-white rounded-full px-10 py-1 sm:px-14 sm:py-2" type="submit"> OK</button>
