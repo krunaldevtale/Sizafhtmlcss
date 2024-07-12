@@ -372,17 +372,17 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* ****************** This CSS for Login page *********************** */
 
-.left-background {
+.login .left-background {
     background-image: url("/images/Wallpaper.png");
     border-top-right-radius: 100px;
 }
 
-.right-background {
+.login .right-background {
     background-image: url("/images/Wallpaper.png");
     border-top-left-radius: 100px;
 }
 
-.blur-container {
+.login .blur-container {
     width: 700px;
     height: 600px;
     border-radius: 50px;
@@ -396,7 +396,7 @@ input[type="search"]::-webkit-search-cancel-button {
     transform: translate(-50%, -50%);
 }
 
-.login-container {
+.login .login-container {
     width: 700px;
     height: 600px;
     border-radius: 50px;
@@ -406,12 +406,12 @@ input[type="search"]::-webkit-search-cancel-button {
     transform: translate(-50%, -50%);
 }
 
-.vector-img {
+.login .vector-img {
     position: absolute;
     z-index: -1;
 }
 
-.right-container .userinput {
+.login .right-container .userinput {
     padding: 0px 15px;
     width: 289px;
     height: 32px;
@@ -423,7 +423,7 @@ input[type="search"]::-webkit-search-cancel-button {
     color: var(--color-pure-black);
 }
 
-#login-btn {
+.login #login-btn {
     background: var(--color-light-gray);
     color: var(--color-white);
     margin-top: 20px;
@@ -469,55 +469,55 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @media (max-width: 768px) {
 
-    .blur-container,
-    .login-container {
+    .login .blur-container,
+    .login .login-container {
         width: 90%;
         max-height: 500px;
         border-radius: 20px;
         padding: 20px;
     }
 
-    .logo {
+    .login .logo {
         margin-top: 20px;
     }
 
-    .login {
+    .login .user-login {
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
         padding-left: 0;
     }
 
-    .left-container {
+    .login .left-container {
         display: none;
     }
 
-    .right-container {
+    .login .right-container {
         width: 100%;
         padding: 10px;
     }
 
-    .right-container .userinput {
+    .login .right-container .userinput {
         width: 100%;
     }
 
-    #login-btn {
+    .login #login-btn {
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
 
-    .blur-container,
-    .login-container {
+    .login .blur-container,
+    .login .login-container {
         width: 100%;
     }
 
-    .left-container {
+    .login .left-container {
         margin-bottom: 20px;
     }
 
-    .right-container .userinput {
+    .login .right-container .userinput {
         height: 40px;
     }
 
