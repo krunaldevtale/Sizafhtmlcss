@@ -494,6 +494,87 @@ body.cs {
 }
 
 
+/* Select Dropdown CSS */
+
+.cs .select {
+  position: relative;
+}
+
+.cs .select .selectBtn {
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #a3a3a3;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #f9f9f9;
+  color: #282828;
+}
+
+.cs .select .selectBtn:after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  width: 6px;
+  height: 6px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  transition: 0.2s ease;
+}
+
+.cs .select .selectBtn.toggle {
+  border-radius: 3px 3px 0 0;
+}
+
+.cs .select .selectBtn.toggle:after {
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.cs .select .selectDropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+  background: var(--bg1);
+  border-top: 1px solid #eee;
+  z-index: 1;
+  background: #f9f9f9;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  visibility: hidden;
+  transition: 0.2s ease;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cs .select .selectDropdown .option {
+  padding: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #282828;
+}
+
+.cs .select .selectDropdown .option:hover {
+  background: #fdcf01;
+}
+
+.cs .select .selectDropdown.toggle {
+  visibility: visible;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+
 @media (max-width: 480px) {
   .cs input[type="checkbox"].c-checkbox:checked::after {
     content: "\2713";
