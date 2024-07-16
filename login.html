@@ -6,6 +6,7 @@
     <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="root.css" />
     <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="style/cs.css">
   </head>
   <body class="login">
     <div class="login-screen w-full h-screen flex items-center justify-center gap-2 relative cs">
@@ -38,9 +39,14 @@
               <form>
                 <input class="userinput" type="text" placeholder="Username" required/>
                 <input class="userinput" type="password" placeholder="Password" required />
-                <div class="login-remember pl-2 flex items-center gap-2">
-                  <input type="checkbox" class="border border-yellow-300 mb-px"/>
-                  <p class="text-xs font-normal">Remember me</p>
+                <div class="login-remember px-2 flex items-center justify-between w-72">
+                  <div class="flex items-center gap-2">
+                    <input type="checkbox" class="border border-yellow-300"/>
+                    <p class="text-xs font-normal">Remember me</p>
+                  </div>
+                  <div class="flex items-center">
+                   <a href="forget-password.html" class="hover:text-blue-500 text-xs font-normal text-c-black">Forget Password ?</a>
+                  </div>
                 </div>
                 <button class="userinput" id="login-btn">Login</button>
               </form>
