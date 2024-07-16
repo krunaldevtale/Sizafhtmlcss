@@ -521,6 +521,10 @@ input[type="search"]::-webkit-search-cancel-button {
     .login #login-btn {
         width: 100%;
     }
+
+    .login .login-remember{
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
