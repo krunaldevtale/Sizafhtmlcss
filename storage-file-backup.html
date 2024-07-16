@@ -479,20 +479,20 @@
                                         </div>
                                     </div>
                                 </label>
-                                <p class="text-c-black text-sm font-light">After it is turned on, you can select the backed-up database to restore as needed.</p>
+                                <p class="text-c-black text-xs font-light">After it is turned on, you can select the backed-up database to restore as needed.</p>
                             </div>
                         </div>
                         <div id="database-div" class="border-t pt-6 space-y-6 stroke-color hidden">
                             <div class="flex flex-wrap gap-y-4 items-start sm:items-center">
-                                <h3 class="w-1/4 font-bold text-c-black text-sm sm:text-base" for="message-content">Database type:<span class="text-red-500">*</span> </h3>
-                                <div class="w-3/4 ml-auto flex flex-col items-start sm:flex-row sm:items-center gap-2 sm:gap-4">
+                                <h3 class="w-full sm:w-1/4 font-bold text-c-black text-sm sm:text-base" for="message-content">Database type:<span class="text-red-500">*</span> </h3>
+                                <div class="w-full sm:w-3/4 ml-auto flex flex-col items-start sm:flex-row sm:items-center gap-2 sm:gap-4">
                                     <span class="text-c-black text-sm sm:text-base font-normal">MYSQL</span>
                                     <p class=" text-xs sm:text-sm text-c-black font-light">Depends on the type of system currently used</p>
                                 </div>
                             </div>
                              <div class="flex flex-wrap gap-y-4 items-start">
-                                <h3 class="w-1/4 font-bold text-c-black text-sm sm:text-base" for="message-content">Database backup directory:<span class="text-red-500">*</span> </h3>
-                                <div class="w-3/4 ml-auto">
+                                <h3 class="w-full sm:w-1/4 font-bold text-c-black text-sm sm:text-base" for="message-content">Database backup directory:<span class="text-red-500">*</span> </h3>
+                                <div class="w-full sm:w-3/4 ml-auto">
                                     <div class="w-full sm:w-4/5 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                                         <div class="w-full bg-c-lighten-gray border border-gray rounded-xl flex items-center overflow-hidden">
                                             <input type="text" id="create-pictureicon" name="create-pictureicon" class="w-full bg-c-lighten-gray text-c-black text-sm py-2 px-3 focus:outline-none border-none" required>
@@ -530,8 +530,8 @@
             <div class="p-5 overflow-y-auto modal-info" style="max-height: calc(100vh - 8rem)">
                 <form class="space-y-4 text-sm">
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <label for="backup-time" class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Backup time:<sup class="text-red-500">*</sup></label>
-                        <div class="w-3/4 ml-auto flex flex-col gap-1">
+                        <label for="backup-time" class="w-full sm:w-1/4 font-bold text-c-black text-sm sm:text-base label">Backup time:<sup class="text-red-500">*</sup></label>
+                        <div class="w-full sm:w-3/4 ml-auto flex flex-col gap-1">
                             <div class=" flex items-center gap-3">
                                 <input type="text" required name="backup-time" id="backup-time"
                                 class="w-32 bg-c-lighten-gray border border-gray text-c-black text-sm rounded-xl block p-2 px-4 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
@@ -542,8 +542,8 @@
                         </div>        
                     </div>
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <span class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Backup location:<sup class="text-red-500">*</sup> </span>
-                        <div class="w-3/4 ml-auto flex flex-col gap-1">
+                        <span class="w-full sm:w-1/4 font-bold text-c-black text-sm sm:text-base label">Backup location:<sup class="text-red-500">*</sup> </span>
+                        <div class="w-full sm:w-3/4 ml-auto flex flex-col gap-1">
                             <div>
                                 <div class="w-full  border border-gray text-c-black text-sm rounded-xl flex items-center justify-between overflow-hidden" >
                                     <select class="w-full py-2 pl-4 bg-c-lighten-gray appearance-none" name="backup-location">
@@ -559,8 +559,8 @@
                         </div>
                       </div> 
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <label class="w-1/4 font-bold text-c-black text-sm sm:text-base label" for="backup-content">Backup content:<sup class="text-red-500">*</sup> </label>
-                        <div class="w-3/4 ml-auto">
+                        <label class="w-full sm:w-1/4 font-bold text-c-black text-sm sm:text-base label" for="backup-content">Backup content:<sup class="text-red-500">*</sup> </label>
+                        <div class="w-full sm:w-3/4 ml-auto">
                             <div class="flex items-center gap-3">
                                 <label class="flex items-center gap-2 radio-circle">
                                     <input type="radio" name="custom-radio" value="option1">
@@ -578,8 +578,8 @@
                     </div>
                     <hr class="stroke-color" />
                     <div class="flex flex-wrap gap-y-4 items-start">
-                        <span class="w-1/4 font-bold text-c-black text-sm sm:text-base label">Prompt description:<sup class="text-red-500">*</sup> </span>
-                        <div class="w-3/4 ml-auto">
+                        <span class="w-full sm:w-1/4 font-bold text-c-black text-sm sm:text-base label">Prompt description:<sup class="text-red-500">*</sup> </span>
+                        <div class="w-full sm:w-3/4 ml-auto">
                             <div class=" rounded-lg bg-c-lighten-gray p-4 border description-list">
                                 <ul class="list-disc px-1 sm:px-6">
                                     <li class="text-c-black leading-5 pb-2 text-xs sm:text-sm font-normal">The backup is divided into two parts: database backup and file backup.</li>
