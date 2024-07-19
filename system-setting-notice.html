@@ -17,19 +17,19 @@
       href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/cs.css" />
-    <link rel="stylesheet" href="root.css" />
+    <link rel="stylesheet" href="styles/cs.css" />
+    <link rel="stylesheet" href="styles/root.css" />
   </head>
   <body class="w-full h-screen cs">
     <main class="w-full h-full flex">
       <!-- Sidebar -->
-      <aside class="h-full relative">
+       <aside class="h-full relative">
         <input type="checkbox" class="hidden" id="sidebar-toggle" />
         <label
           for="sidebar-toggle"
           class="absolute lg:hidden top-1 -right-8 px-1"
         >
-           <i class="ri-bar-chart-horizontal-line"></i>
+          <i class="ri-bar-chart-horizontal-line"></i>
         </label>
         <div class="h-full sidebar">
           <div class="sidebar-container">
@@ -67,7 +67,7 @@
                     <ul class="drop-list text-sm space-y-1">
                       <li>
                         <a
-                          href="#"
+                          href="system-setting-basic-page.html"
                           class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center"
                         >
                           <span>Basic</span>
@@ -130,7 +130,7 @@
                     <ul class="drop-list text-sm space-y-1">
                       <li>
                         <a
-                          href="#"
+                          href="admin&users-users&groups.html"
                           class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center"
                         >
                           <span>Users &amp; Groups </span>
@@ -152,7 +152,7 @@
                       </li>
                       <li>
                         <a
-                          href="#"
+                          href="admin&user-document-permission.html"
                           class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center"
                         >
                           <span>Document Permission</span>
@@ -193,7 +193,7 @@
                     <ul class="drop-list text-sm space-y-1">
                       <li>
                         <a
-                          href="#"
+                          href="storage-file.html"
                           class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center"
                         >
                           <span>Storage</span>
@@ -215,7 +215,7 @@
                       </li>
                       <li>
                         <a
-                          href="#"
+                          href="storage-file-share.html"
                           class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center"
                         >
                           <span>Share</span>
@@ -345,13 +345,13 @@
         <div class="flex flex-col w-full h-full content">
           <div class=" px-2 lg:px-5 py-6">
             <div class="flex items-center gap-4">
-              <i class="ri-settings-3-fill ri-xl"></i>
-              <span class="text-lg text-c-black">System settings</span>
-            </div>
+                <i class="ri-settings-3-fill ri-xl"></i>
+                <span class="text-lg text-c-black">System settings</span>
+              </div>
           </div>
 
           <!-- top taskbar -->
-          <div class="taskbar flex items-center justify-between px-3 sm:px-6 py-4">
+          <div class="taskbar flex items-center justify-between px-3 sm:px-6 py-2">
             <div class="w-full md:w-1/2">
               <div class="flex items-center gap-1 sm:gap-2">
                 <span class="text-c-light-black text-base"> System settings </span>
